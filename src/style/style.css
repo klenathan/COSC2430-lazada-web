@@ -1,0 +1,44 @@
+/* main CSS file */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: sans-serif;
+}
+
+main {
+    min-height: 90vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(7, 142, 61);
+    height: 5vh;
+    width: 100%;
+}
+
+.header a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(121, 121, 121);
+    height: 5vh;
+    width: 100%;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}

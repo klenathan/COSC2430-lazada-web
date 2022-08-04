@@ -41,7 +41,6 @@
                 include_once("controller/".$this->controller.".php");
                 $control = new $this->controller;
                 $control->view($this->controller);
-                
             }
         }
 

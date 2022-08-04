@@ -1,6 +1,8 @@
 <?php
 class Auth {
-    private static $userDataFile = "data/user.json";
+    
+    // private static $userDataFile = "../data/accound.db";
+    private static $userDataFile = Config::userDataFile;
 
     public static function login($username, $password){
         $inputUsername = $username;

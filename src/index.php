@@ -5,14 +5,19 @@
     $lightmode = isset($_COOKIE["darkmode"])? $_COOKIE["darkmode"] : "lightmode"
 ?>
 
-<link rel="shortcut icon" href="assets/image/favicon.jpg" type="image/jpg">
-<link rel="stylesheet" href="CSS/<?php echo $lightmode?>/style.css">
-<link rel="stylesheet" href="CSS/<?php echo $lightmode?>/header.css">
+<link rel="shortcut icon" href="assets/image/favicon.png" type="image/png">
+<!-- <link rel="stylesheet" href="CSS/<?php echo $lightmode?>/style.css">
+<link rel="stylesheet" href="CSS/<?php echo $lightmode?>/header.css"> -->
+
 <?php
-    session_start();
+    // session_start();
+    // Core files
     include("core/controller.php");
     include("core/dataHandle.php");
-    
+    include("core/model/authentication.php");
+
+    // Controller
+    include("controller/home.php");
 
     include("core/routing.php");
     #null for default page
