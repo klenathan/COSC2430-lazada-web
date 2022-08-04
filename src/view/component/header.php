@@ -1,18 +1,24 @@
 <div class="header">
-    <a href="#">Logo</a>
-    <a href="#">Name</a>
-    <div>
-        <label for="product-search">Search</label>
-        <input name="product-search" type="text">
-    </div>
+    <a class="header-component" href="/">Logo</a>
+
+    <input name="product-search" 
+    type="text"
+    id="product-search"
+    placeholder="Search product... ">
+
     <?php
     if (isset($_COOKIE["user"])){
-        echo '<a href="login/signOut">Sign out</a>';
-        echo '<a href="#">My Account</a>';
+        echo '
+        <a href="login/signOut">Sign out</a>
+        <div class="user-info-wrapper-header">
+            <a href="/myaccount">My Account</a>
+            <img src="assets/image/test.jpg" 
+            class="header-avatar"
+            alt="User Avatar">
+        </div>';
     } else {
         echo '<a href="login">Login</a>';
     }
     ?>
     
-    <a href="#">Logo</a>
 </div>

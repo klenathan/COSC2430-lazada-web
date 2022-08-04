@@ -1,8 +1,8 @@
 <?php
 class Auth {
     
-    // private static $userDataFile = "../data/accound.db";
-    private static $userDataFile = Config::userDataFile;
+    private static $userDataFile = "../data/account.db";
+    // private static $userDataFile = Config::userDataFile;
 
     public static function login($username, $password){
         $inputUsername = $username;
@@ -30,7 +30,7 @@ class Auth {
             "password"=>$inputPasswordhHash,
             "email"=>$inputEmail);
             
-            Auth::uploadAvt($inputUsername);
+            // Auth::uploadAvt($inputUsername);
             DataHandle::writeData(Auth::$userDataFile, json_encode($userData));
             return "successful";
         } else {

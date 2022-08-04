@@ -19,7 +19,7 @@ class Login extends Controller {
             $_SESSION["err_name"] = "Username does not exist";
             header("location: /login");
         } else {
-            $_SESSION["err_name"] = "unknown error, please contact @klenathan for more information";
+            $_SESSION["err_name"] = "unknown error, please contact us for more information";
             header("location: /login");
         }
     }

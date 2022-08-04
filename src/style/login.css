@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-poster {
+    background-color: rgb(27, 163, 68);
+    width: 50%;
+}
+
+.login-form-wrapper {
+    width: 50%;
+}

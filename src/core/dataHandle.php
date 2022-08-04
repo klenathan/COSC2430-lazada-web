@@ -1,7 +1,6 @@
 <?php
 class DataHandle {
     public static function readData($sourceFile) {
-        
         $dataFile = fopen($sourceFile, "r") or die("Unable to open data!");
         $data = fread($dataFile,filesize($sourceFile));
         fclose($dataFile);

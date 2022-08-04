@@ -9,7 +9,7 @@
             $url_array = $this->UrlProcess();
             unset($url_array[0]);
             
-            ################
+            $url_array[1] = explode("?", $url_array[1])[0];
             if(in_array(strtolower($url_array[1]), $reservedUrl)){
                 if(file_exists("controller/" . $url_array[1] . ".php")){
                     $this->controller = $url_array[1];
@@ -46,7 +46,7 @@
 
         private function UrlProcess() {
             if(isset($_SERVER['REQUEST_URI'])) {
-                return  explode("/", $_SERVER['REQUEST_URI']);
+                return explode("/", $_SERVER['REQUEST_URI']);
             }
         } 
 

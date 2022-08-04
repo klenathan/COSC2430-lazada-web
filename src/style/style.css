@@ -1,16 +1,17 @@
 /* main CSS file */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: 0;
     font-family: sans-serif;
+    --header-avatar-size: 4vh;
 }
 
 main {
     min-height: 90vh;
 }
 
+/* Header */
 .header {
     display: flex;
     flex-direction: row;
@@ -26,6 +27,36 @@ main {
     color: white;
     font-weight: bold;
 }
+
+.user-info-wrapper-header {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+}
+
+.user-info-wrapper-header img {
+    height: var(--header-avatar-size);
+    width: var(--header-avatar-size);
+    object-fit: cover;
+    margin-left: 1rem;
+    border-radius: calc(var(--header-avatar-size)/2);
+}
+
+#product-search {
+    height: 2rem;
+    width: 30%;
+    padding: 0 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+}
+
+#product-search:active {
+    outline: none;
+}
+
+/* Footer */
 
 .footer {
     display: flex;

@@ -10,10 +10,11 @@
 <link rel="stylesheet" href="CSS/<?php echo $lightmode?>/header.css"> -->
 
 <?php
-    // session_start();
+    session_start();
     // Core files
     include("core/controller.php");
     include("core/dataHandle.php");
+    include("config.php");
     include("core/model/authentication.php");
 
     // Controller
@@ -21,7 +22,7 @@
 
     include("core/routing.php");
     #null for default page
-    $reservedUrl = array("home", "login", "signup", "user", "admin", "post", null); 
+    $reservedUrl = array("home", "login", "myaccount", "product", "signup", null); 
     $route = new Route($reservedUrl, "home");
 ?>
 

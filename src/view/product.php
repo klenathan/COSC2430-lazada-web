@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style/style.css">
-    <title>Page not found</title>
+    <title><?php echo isset($_GET["productid"])? $_GET["productid"] : "Invalid product ID";?></title>
 </head>
 <body>
     <header>
@@ -16,7 +16,13 @@
     </header>
 
     <main>
-        page not found
+        <p>
+        <?php
+        echo "Product:\t";
+        echo isset($_GET["productid"])? $_GET["productid"] : "Invalid product ID";
+        ?>
+        </p>
+        
     </main>
 
     <footer>
