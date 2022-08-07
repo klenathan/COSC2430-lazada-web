@@ -1,7 +1,6 @@
 <div class="footer">
-    <a href="#">Hello</a>
-    <a href="#">Hello</a>
-    <a href="#">Hello</a>
-    <a href="#">Hello</a>
-    <a href="#">Hello</a>
+    <a href="#">About</a>
+    <a href="#">Copyright</a>
+    <a href="#">Privacy</a>
+    <a href="#">Help</a>
 </div>

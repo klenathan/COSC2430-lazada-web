@@ -22,7 +22,7 @@
 
     include("core/routing.php");
     #null for default page
-    $reservedUrl = array("home", "login", "myaccount", "product", "signup", null); 
+    $reservedUrl = array("home", "login", "myaccount", "product", "signup", "vendor", null); 
     $route = new Route($reservedUrl, "home");
 ?>
 
