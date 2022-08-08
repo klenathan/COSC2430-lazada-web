@@ -1,0 +1,12 @@
+{
+    "product_id": {
+        "name": "Hello",
+        "price": 100,
+        "category": "Cate1",
+        "sold": 100,
+        "stock": 1120,
+        "desc": ""sfhgjbdnkaelmwa,
+        "vendor" : "abc xyz",
+        "rating: 4.1
+    }
+}

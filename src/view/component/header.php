@@ -9,13 +9,13 @@
     <?php
     if (isset($_COOKIE["user"])){
         echo '
-        <a href="login/signOut">Sign out</a>
         <div class="user-info-wrapper-header">
             <a href="/myaccount">My Account</a>
             <img src="assets/image/test.jpg" 
             class="header-avatar"
             alt="User Avatar">
-        </div>';
+        </div>
+        <a href="login/signOut">Sign out</a>';
     } else {
         echo '<a href="login">Login</a>';
     }

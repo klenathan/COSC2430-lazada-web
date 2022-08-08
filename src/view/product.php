@@ -22,7 +22,11 @@
         echo isset($_GET["productid"])? $_GET["productid"] : "Invalid product ID";
         ?>
         </p>
-        
+        <div>
+            <?php
+            
+            ?>
+        </div>
     </main>
 
     <footer>

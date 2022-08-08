@@ -2,7 +2,6 @@
 class Auth {
     
     private static $userDataFile = "../data/account.db";
-    // private static $userDataFile = Config::userDataFile;
 
     public static function login($username, $password){
         $inputUsername = $username;

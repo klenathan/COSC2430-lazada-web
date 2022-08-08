@@ -16,7 +16,7 @@
     </header>
 
     <main>
-        MAIN
+        <div></div>
     </main>
 
     <footer>
