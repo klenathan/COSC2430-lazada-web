@@ -1,12 +1,33 @@
 {
-    "product_id": {
-        "name": "Hello",
-        "price": 100,
-        "category": "Cate1",
-        "sold": 100,
-        "stock": 1120,
-        "desc": ""sfhgjbdnkaelmwa,
-        "vendor" : "abc xyz",
-        "rating: 4.1
+    "P1": {
+        "name": "NIKE Performance Cushion Crew Socks with Band (6 Pairs)",
+        "price": 713000 ,
+        "category": "Men Fashion",
+        "sold": 17571,
+        "stock": 100,
+        "desc": "76% Cotton/21% Nylon/2% Spandex/1% Polyester\nImported\nMachine Wash\nReinforced heel and toe for enhanced durability in high-wear areas\nRib cuffs for a snug, comfortable fit\nArch support for a secure fit",
+        "vendor" : "Nike",
+        "rating": 5
+    },
+    
+    "P2": {
+        "name": "Roxy Girls' Rg Tomboy Straw Hat",
+        "price": 608000 ,
+        "category": "Girls Fashon",
+        "sold": 1231,
+        "stock": 100,
+        "desc": "100% straw\nImported\noggle closure\nHand Wash Only\nWide brim, straw sun hat\nContrasting fabric trim along the visor\nAdjustable chin strap\nIconic sewn logo patch",
+        "vendor" : "Roxy Store",
+        "rating": 5
+    },
+    "P3": {
+        "name": "Samsung HW-A450/ZA 2.1ch Soundbar with Dolby Audio (2021) , Black",
+        "price": 3043602 ,
+        "category": "Electronics",
+        "sold": 1231,
+        "stock": 100,
+        "desc": "SUBWOOFER INCLUDED - Wireless subwoofer is included so you can enjoy deep bass right out of the box All-in-one",
+        "vendor" : "SAMSUNG Store",
+        "rating": 5
     }
 }
