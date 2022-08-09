@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style/style.css">
-    <title>Lazada Replica</title>
+    <link rel="stylesheet" href="style/home.css">
+    <title>Lazada</title>
 </head>
 <body>
     <header>
@@ -15,8 +16,14 @@
         ?>
     </header>
 
+    <div>asidhbaihdnasid</div>
+
     <main>
-        <div></div>
+        <?php
+        $this->getAllproduct();
+        $this->getAllproduct();
+        $this->getAllproduct();
+        ?>
     </main>
 
     <footer>
