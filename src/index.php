@@ -16,13 +16,18 @@
     include("core/dataHandle.php");
     include("config.php");
     include("core/model/authentication.php");
+    include("model/productModel.php");
 
     // Controller
     include("controller/home.php");
 
+    // Model
+    
+
+    // Routing
     include("core/routing.php");
     #null for default page
-    $reservedUrl = array("home", "login", "myaccount", "product", "signup", "vendor", null); 
+    $reservedUrl = array("home", "login", "myaccount", "cart", "product", "signup", "vendor", null); 
     $route = new Route($reservedUrl, "home");
 ?>
 

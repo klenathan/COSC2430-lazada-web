@@ -22,10 +22,19 @@
         echo isset($_GET["productid"])? $_GET["productid"] : "Invalid product ID";
         ?>
         </p>
+        
         <div>
             <?php
-            
+            if ($this::$productData != null) {
+                foreach ($this::$productData as $key => $value) {
+                    echo "<p>".$key.":".$value."</p>";
+                    echo "\n \n";
+                }
+            } else {
+                echo '<p>Product does not exist</p>';
+            }
             ?>
+            
         </div>
     </main>
 
