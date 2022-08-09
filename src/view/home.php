@@ -16,8 +16,6 @@
         ?>
     </header>
 
-    <div>asidhbaihdnasid</div>
-
     <main>
         <?php
         $this->getAllproduct();

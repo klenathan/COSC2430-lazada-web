@@ -1,0 +1,105 @@
+* {
+    --primary-color: rgb(7, 142, 61);
+    --sub-menu-color: rgb(4, 98, 42);
+    --hover-color: rgb(5, 50, 23);
+}
+
+.breadcumb {
+    width: 80%;
+}
+
+.breadcumb a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.breadcumb a:hover {
+    text-decoration: underline;
+    color: var(--sub-menu-hover-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 245, 245);
+    align-items: center;
+}
+
+img {
+    object-fit: contain;
+}
+
+.product-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+    background: white;
+    width: 80%;
+    padding: 1rem 0;
+}
+
+.product-page-img {
+    display: flex;
+    width: 40%;
+    flex-direction: row;
+    justify-content: space-around;   
+}
+.main-img {
+    height: 50vh;
+    width: 50vh;
+    background-color: white;
+}
+.sub-img {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+}
+
+.sub-img img {
+    height: 33%;
+}
+
+
+
+.product-page-buy {
+    display: flex;
+    width: 40%;
+    flex-direction: column
+}
+
+
+/* Buy Section */
+.product-page-buy p  {
+    margin-left: 10%;
+    padding: 0.5rem 0;
+}
+
+.product-info-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.product-info-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* product DESC */
+
+.product-desc {
+    width: 80%;
+    margin-top: 2rem;
+    background-color: white;
+}
+
+.product-desc h2 {
+    margin: 1rem 2rem
+}
+
+.product-desc p {
+    font-size: 1.2rem;
+    margin: 1rem 2rem;
+}
