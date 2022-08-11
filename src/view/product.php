@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/product.css">
 
-    <title><?php echo isset($this::$name)? $this::$name : "Invalid product ID";?></title>
+    <title><?php echo isset($this::$name) ? $this::$name : "Invalid product ID";?></title>
 </head>
 <body>
     <header>
