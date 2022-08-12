@@ -140,4 +140,12 @@ body, html {
   .homepage{
     display: none;
   }
+@media screen and (max-height: 677px){
+  .login-form-wrapper {
+    top: 5%;
+    min-width: 80%;
+    max-height: 90%;
+  }
+}
+
 }
