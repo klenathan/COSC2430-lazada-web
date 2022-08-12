@@ -1,10 +1,3 @@
-<div class="slider">
-    <div class="product-card">
-        <img src="asset/test.jpg" alt="test-product-img">
-        <div class="product-card-info">
-            <p class="product-card-name"></p>
-            <p class="product-card-price"></p>
-            <p class="product-card-rating"></p>
-        </div>
-    </div>
+<div class="carousel">
+    <img src="https://media.giphy.com/media/iGM5sy0YJ19Yj3X6Gr/giphy.gif" alt="test-product-img">
 </div>
