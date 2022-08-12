@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style/product.css">
 
     <title><?php echo isset($this::$name) ? $this::$name : "Invalid product ID";?></title>
+    <script src="js/Cart/addProductToCart.js"></script>
 </head>
 <body>
     <header>
@@ -44,14 +45,23 @@
                     </div>
                 </div>
                 <div class="product-page-buy">
-                <p><?php echo $this::$productData["category"];?></p>
-                    <p class="product-info-name"><?php echo $this::$productData["name"];?></p>
-                    <p class="product-info-vendor">Sold by: <b><?php echo $this::$productData["vendor"];?></b></p>
-                    <p class="product-info-price"><?php echo number_format($this::$productData["price"]);?> VND</p>
-                    <p class="product-info-sold"><?php echo $this::$productData["sold"];?></p>
-                    <p class="product-info-stock"><?php echo $this::$productData["stock"];?></p>
-                    <p class="product-info-rating"><?php echo $this::$productData["rating"];?>/5</p>
-                    <button>BUY DE</button>
+                    <div class="product-info-wrapper">
+                        <p><?php echo $this::$productData["category"];?></p>
+                        <p class="product-info-name"><?php echo $this::$productData["name"];?></p>
+                        <p class="product-info-vendor">Sold by: 
+                            <a href="/vendor?vendor=<?php echo $this::$productData["vendor"];?>"><?php echo $this::$productData["vendor"];?></a>
+                        </p>
+                        <p class="product-info-price"><?php echo number_format($this::$productData["price"]);?> VND</p>
+                        <p class="product-info-sold">Sold: <?php echo $this::$productData["sold"];?></p>
+                        <p class="product-info-stock">Stock: <?php echo $this::$productData["stock"];?></p>
+                        <p class="product-info-rating"><?php echo $this::$productData["rating"];?>/5</p>
+                    </div>
+                    
+                    <div class="product-button-container">
+                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", 1)' class="product-page-button" id="buy-now-btn">Buy now</button>
+                        <button onclick='testBuy()' class="product-page-button" id="add-cart-btn">Add to cart</button>
+                        <!-- checkCurrentCart() -->
+                    </div>
                 </div>
             </div>
             <div class="product-desc">
