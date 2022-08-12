@@ -10,11 +10,11 @@ class DataHandle {
     }
 
     public static function writeData($sourceFile, $data) {
-        // Use encoded JSON as param
+        // Use stringify JSON as param
         $dataFile = fopen($sourceFile, "w") or die("Unable to open data!");
         fwrite($dataFile, $data);
         fclose($dataFile);
-    } 
+    }
 
     public static function readToJson($sourceFile){
         $data = DataHandle::readData($sourceFile);

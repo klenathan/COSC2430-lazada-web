@@ -16,6 +16,7 @@
                 } elseif ($url_array[1] == null ) {
                     // Homepage case
                     $this->controller = $defaultPage;
+                    
                 } else {
                     echo $url_array[1]." is in reserved list but source file cannot be found.";
                     echo "<br>";
@@ -27,10 +28,13 @@
             ######Process method###########
             if (isset($url_array[2])) {
                 include_once("controller/".$this->controller.".php");
+                $url_array[2] = explode("?", $url_array[2])[0];
                 $target = new $this->controller;
                 if(method_exists($target, $url_array[2])){
                     $this->method = $url_array[2];
                 }
+                
+                // echo ;
                 unset($url_array[2]);
             }
             

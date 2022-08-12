@@ -2,6 +2,7 @@
     --primary-color: rgb(7, 142, 61);
     --sub-menu-color: rgb(4, 98, 42);
     --hover-color: rgb(5, 50, 23);
+    --primary-img-size: 500px;
 }
 
 .breadcumb {
@@ -42,36 +43,48 @@ img {
 
 .product-page-img {
     display: flex;
-    width: 60%;
-    flex-direction: row;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
-    background-color: red;
 }
 .main-img {
-    width: 50%;
-    background-color: blue;
+    width: var(--primary-img-size);
+    height: var(--primary-img-size);
+    aspect-ratio: 1;
+    margin-bottom: 2rem;
+    background-color: white;
 }
 .sub-img {
-    width: 20%;
+    width: var(--primary-img-size);
     display: flex;
-    flex-direction: column;
-    flex: 0;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .sub-img img {
-    height: 33%;
+    --scale-index: 0.32;
+    width: calc(var(--scale-index) * var(--primary-img-size));
+    height: calc(var(--scale-index)  * var(--primary-img-size));
+    background-color: white;
+    border: solid 3px transparent;
+}
+.sub-img img:hover {
+    border: solid 3px var(--primary-color);
 }
 
 .product-page-buy {
     display: flex;
-    width: 30%;
+    width: 60%;
     flex-direction: column
 }
+/* Infor wrapper */
+.product-info-wrapper {
+    flex: 4;
+    margin-left: 5%;
+}
 
-
-/* Buy Section */
 .product-page-buy p  {
-    margin-left: 10%;
     padding: 0.5rem 0;
 }
 
@@ -80,10 +93,56 @@ img {
     font-weight: bold;
 }
 
+.product-info-vendor a {
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .product-info-price {
     font-size: 2.5rem;
     font-weight: bold;
 }
+
+/* Button container */
+
+.product-button-container {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    margin-left: 5%;
+}
+
+.product-page-button {
+    border: none;
+    height: 4rem;
+    font-size: 1.5rem;
+    width: 250px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+#buy-now-btn {
+    background-color: var(--primary-color);
+}
+
+#add-cart-btn {
+    background-color: var(--sub-menu-color);
+}
+
+#buy-now-btn:hover {
+    background-color: var(--hover-color);
+}
+
+#add-cart-btn:hover {
+    background-color: var(--hover-color);
+}
+
 
 /* product DESC */
 
