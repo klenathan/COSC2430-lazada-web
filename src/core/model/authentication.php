@@ -18,14 +18,15 @@ class Auth {
             return "wrong_username";
         }
     }
-    public static function signUp($inputUsername, $inputEmail, $inputPassword){
+    public static function signUp($inputUsername, $inputEmail, $inputPassword, $accountType){
         $inputPasswordhHash = hash("sha256", $inputPassword);
 
         if (!Auth::checkUserExist($inputUsername)){
             $userData = DataHandle::readToJson(Auth::$userDataFile);
             $userData[$inputUsername] = array(
             "password"=>$inputPasswordhHash,
-            "email"=>$inputEmail);
+            "email"=>$inputEmail,
+            "accountType"=>$accountType);
             Auth::uploadAvt($inputUsername);
             DataHandle::writeData(Auth::$userDataFile, json_encode($userData));
             return "successful";

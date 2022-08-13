@@ -12,31 +12,30 @@ body, html {
 .login-poster {
     position: relative; 
     height: 100vh;
-    width: 100%;
+    width: 100%;   
+    content: "";
+    background-image: url('../assets/image/backgroundLogin.jpg');
+    background-position: 80% 0;
+    background-size: cover;
+    /* position: absolute; */
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
 }
-
-.login-poster::before {    
-      content: "";
-      background-image: url('../assets/image/backgroundLogin.jpg');
-      background-position: 80% 0;
-      background-size: cover;
-      position: absolute;
-      background-repeat: no-repeat;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-}
-.homepage{
+.homepage a{
   position: absolute;
   top: 20px;
   left: 30px;
 }
 
 .login-form-wrapper {
-    position: absolute;
+  /* flex: 1; */
+    /* position: absolute; */
     justify-content: center;
-    top: 5%;
+    top: 15%;
     right: 10%;
     width: 30vw;
     min-width: 380px;
@@ -58,21 +57,34 @@ body, html {
 .form-row{
   margin: 10% 0 10% 0;
 }
+
 .input-field{
   width: 100%;
   padding: 5%;
   margin: 5px 0 22px 0;
   border: none;
   border-radius: 10px;
+  border: solid 2px transparent;
   background: #f1f1f1;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
-#loginBtn{
+
+.input-field:focus {
+  outline: none;
+  border: solid 2px gray
+}
+
+#login-btn {
   width: 100%;
   height: 40px;
   margin-top: 20px;
   border-width: 1px;
   border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+#login-btn:hover {
+  /* rgb(232, 98, 175) */
+  background-color: rgb(237, 160, 204);
 }
 #respond-message{
   color: red;
@@ -89,16 +101,12 @@ body, html {
 @media screen and (max-width: 1023px){
   .login-poster{
     display: flex;
+    align-items: center;
     background-position: center;
     justify-content: center;
-  }
-  .login-poster::before{
     /* opacity: 0.5; */
-    background-position: center;
   }
   .login-form-wrapper {
-    position: absolute;
-    top: 15%;
     right: 0;
     margin: 0;
     min-width: 70%;
@@ -106,26 +114,26 @@ body, html {
     padding: 3%;
     font-size: medium;
     background: none;
-    position: relative;
     background: rgba(255,250,250,0.5);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+  }
+
+  .login-form-wrapper h1{
+    margin-bottom: 20px;
+    font-size: x-large;
+  }
+  .input-field{
+    width: 100%;
+    padding: 3%;
+    margin: 5px 0 22px 0;
+    border: none;
+    border-radius: 10px;
+    background: #f1f1f1;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  }
 }
 
-.login-form-wrapper h1{
-  margin-bottom: 20px;
-  font-size: x-large;
-}
-.input-field{
-  width: 100%;
-  padding: 3%;
-  margin: 5px 0 22px 0;
-  border: none;
-  border-radius: 10px;
-  background: #f1f1f1;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-}
-}
 @media screen and (max-width: 500px){
   *{
     font-size: medium;
