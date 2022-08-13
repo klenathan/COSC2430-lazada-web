@@ -8,7 +8,7 @@
     --primary-color: rgb(7, 142, 61);
     --sub-menu-color: rgb(4, 98, 42);
     --sub-menu-hover-color: rgb(22, 118, 60);
-    --hover-color: rgba(0, 0, 0, 0.2);
+    --hover-color: rgb(2, 59, 25);
 }
 
 main {
@@ -59,8 +59,12 @@ main {
     height: 100%;
 }
 
+.header-logo {
+    height: 80%;
+}
+
 .cart-logo {
-    flex: 1;
+    /* flex: 1; */
     padding: 1.2vh;
     height: 2vh;
     fill: white;
@@ -115,8 +119,9 @@ main {
     position: absolute;
     content: ' ';
     width: 200px;
+    background-color: red;
     height: 1vh;
-    top: 10vh;
+    top: 50vh;
 }
 
 /* Arrow on submenu */
@@ -137,7 +142,7 @@ main {
     transform: rotate(45deg) translateY(-200%) translateX(100%);
     border-radius: 5px;
     background-color: var(--sub-menu-color);
-    z-index: 1;
+    z-index: 0;
 }
 
 
@@ -153,7 +158,8 @@ main {
     display: flex;
     display: none;
     flex-direction: column;
-    top: 5.5vh;
+    top: calc(5vh + 2rem);
+    z-index: 2;
     width: 200px;
 }
 

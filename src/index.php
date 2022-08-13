@@ -14,7 +14,6 @@
     // Core files
     include("core/controller.php");
     include("core/dataHandle.php");
-    include("config.php");
     include("core/model/authentication.php");
     include("model/productModel.php");
 
