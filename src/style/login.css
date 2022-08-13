@@ -40,7 +40,6 @@ body, html {
     width: 30vw;
     min-width: 380px;
     height: fit-content;
-    max-height: 800px;
     padding: 3em;
     border-radius: 10px;
     /* font-size: large; */
@@ -52,10 +51,6 @@ body, html {
   text-align: center;
   margin-bottom: 20px;
   font-size: 3em;
-}
-
-.form-row{
-  margin: 10% 0 10% 0;
 }
 
 .input-field{
@@ -78,13 +73,15 @@ body, html {
   width: 100%;
   height: 40px;
   margin-top: 20px;
-  border-width: 1px;
+  border-width: 2px;
   border-radius: 10px;
-  transition: 0.3s ease-in-out;
+  transition: 1s ease-in-out;
+  background-color:rgb(185, 128, 250);
 }
 #login-btn:hover {
-  /* rgb(232, 98, 175) */
-  background-color: rgb(237, 160, 204);
+  /* transition: ease-out 0.4s; */
+  box-shadow: inset 100vh 0 0 0 rgb(223, 91, 166);
+  cursor: pointer;
 }
 #respond-message{
   color: red;
@@ -95,7 +92,7 @@ body, html {
   position: relative;
   justify-content: center;
   padding-top: 2rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 @media screen and (max-width: 1023px){
@@ -104,13 +101,12 @@ body, html {
     align-items: center;
     background-position: center;
     justify-content: center;
-    /* opacity: 0.5; */
   }
   .login-form-wrapper {
     right: 0;
     margin: 0;
     min-width: 70%;
-    max-height: 70%;
+    max-height: 40rem;
     padding: 3%;
     font-size: medium;
     background: none;
@@ -132,6 +128,11 @@ body, html {
     background: #f1f1f1;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   }
+  .signup-link{
+    padding-top: 2rem;
+    margin-top: 5rem;
+  }
+  
 }
 
 @media screen and (max-width: 500px){
@@ -140,18 +141,23 @@ body, html {
   }
 
   .login-form-wrapper {
-    top: 20%;
+    /* top: 20%; */
     min-width: 80%;
-    max-height: 60%;
+    /* max-height: 60%; */
   }
   .homepage{
     display: none;
   }
+  .signup-link{
+    margin-top: 3rem;
+  }
+}
 @media screen and (max-height: 677px){
   .login-form-wrapper {
     min-width: 80%;
     max-height: 90%;
   }
-}
-
+  .signup-link{
+    margin-top: 3rem;
+  }
 }
