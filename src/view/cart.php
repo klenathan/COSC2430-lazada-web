@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
     <!-- Script -->
     <script src="js/Cart/checkout.js" defer></script>
+    <script src="js/Cart/cart.js" defer></script>
     <script src="js/Cart/renderCurrentCart.js" defer></script>
 
     <title>Shopping Cart</title>
@@ -29,7 +30,7 @@
             <p id="total-price">0</p>
         </div>
         
-
+        <button onclick='clearCurrentCart()'> Clear </button>
         <button onclick="checkout()" id="checkout-btn">Check out</button>
     </main>
 

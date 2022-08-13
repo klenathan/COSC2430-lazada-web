@@ -1,4 +1,5 @@
-function addToCart(itemId, quantity) {
+function addToCart(itemId) {
+    quantity = parseInt(document.getElementById("buy-quantity").value)
     currentCart = JSON.parse(localStorage.getItem("cart"))
     if (currentCart == null) {
         currentCart = {}
@@ -12,9 +13,9 @@ function addToCart(itemId, quantity) {
     }
     stringData = JSON.stringify(currentCart)
     localStorage.setItem("cart", stringData);
+    
 }
 
 function checkCurrentCart() {
     currentCart = JSON.parse(localStorage.getItem("cart"))
-    console.log(currentCart);
 }

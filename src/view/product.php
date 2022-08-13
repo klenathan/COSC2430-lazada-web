@@ -55,11 +55,15 @@
                         <p class="product-info-sold">Sold: <?php echo $this::$productData["sold"];?></p>
                         <p class="product-info-stock">Stock: <?php echo $this::$productData["stock"];?></p>
                         <p class="product-info-rating"><?php echo $this::$productData["rating"];?>/5</p>
+                        <input type="text"
+                        name="quantity" 
+                        id="buy-quantity"
+                        value=1>
                     </div>
                     
                     <div class="product-button-container">
-                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", 1)' class="product-page-button" id="buy-now-btn">Buy now</button>
-                        <button onclick='testBuy()' class="product-page-button" id="add-cart-btn">Add to cart</button>
+                        <button onclick='' class="product-page-button" id="buy-now-btn">Buy now</button>
+                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", )' class="product-page-button" id="add-cart-btn">Add to cart</button>
                         <!-- checkCurrentCart() -->
                     </div>
                 </div>

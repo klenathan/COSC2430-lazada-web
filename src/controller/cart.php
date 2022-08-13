@@ -12,6 +12,7 @@ class Cart extends Controller {
             
             $order["cart"] = json_decode($cart);
             $order["total_bill"] = 100;
+            $order["customer"] = $_COOKIE["user"];
             echo '<p>'.$_POST["bill"].'</p>';
             if ($cart == null) {
                 header("Location: /cart");
@@ -60,9 +61,7 @@ class Cart extends Controller {
         
         echo $lastestId + 1;
         echo "<br>";
-        var_dump($currentData);
         $currentData[$newId] = $orderDetail;
-        DataHandle::writeData("test", "hehe");
         DataHandle::writeData($this::$orderFile, json_encode($currentData));
     }
 }

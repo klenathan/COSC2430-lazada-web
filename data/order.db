@@ -1,16 +1,16 @@
 {
   "O0": {
     "cart": {
-      "P1": 1,
-      "P4": 2,
-      "P6": 1
+      "P3": 1
     },
-    "total_bill": 100
+    "total_bill": 100,
+    "customer": "one"
   },
   "O1": {
     "cart": {
-      "P4": 1
+      "P3": 10
     },
-    "total_bill": 100
+    "total_bill": 100,
+    "customer": "one"
   }
 }
