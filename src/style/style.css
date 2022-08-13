@@ -12,7 +12,7 @@
 }
 
 main {
-    min-height: 90vh;
+    min-height: calc(95vh - 5.5rem);
 }
 
 /* Upper header */
@@ -129,8 +129,8 @@ main {
     width: 200px;
     display: none;
     position: absolute;
-    height: 3rem;
-    top: 3rem
+    height: 2rem;
+    top: 5rem
 }
 
 .sub-menu-item:first-child:before {

@@ -1,16 +1,10 @@
 {
   "O0": {
     "cart": {
-      "P3": 1
+      "P5": 1
     },
-    "total_bill": 100,
-    "customer": "one"
-  },
-  "O4": {
-    "cart": {
-      "P3": 1
-    },
-    "total_bill": 358910,
-    "customer": "admin"
+    "total_bill": 1667719,
+    "customer": "one",
+    "hub": "name3"
   }
 }
