@@ -4,15 +4,28 @@ class Signup extends Controller {
         $this->view("signup");
     }
 
-    function handleSignup() {
+    function signupCustomer() {
+        $this->handleSignup("customer");
+    }
+
+    function handleSignUpVendor() {
+        $this->handleSignup("vendor");
+    }
+
+    function handleSignUpShipper() {
+        $this->handleSignup("shipper");
+    }    
+
+    private function handleSignup($accountType) {
         if ($_POST["signupPassword"] != $_POST["confirmPassword"]) {
             $_SESSION["signup_err"] = "Password does not match";
+            
             $this::setValueOnErr();
             header("Location: /signup");
         } else {
-            $signUpRes = Auth::signUp($_POST["signupUsername"], $_POST["signupEmail"], $_POST["signupPassword"], "customer");
+            $signUpRes = Auth::signUp($_POST["signupUsername"], $_POST["signupEmail"], $_POST["signupPassword"], $accountType);
             if ($signUpRes == "successful"){
-                setcookie("user", $_POST["username"], time() + (3600*24*30), "/");
+                setcookie("user", $_POST["signupUsername"], time() + (3600*24*30), "/");
                 unset($_SESSION["signup_err"]);
                 header("Location: /");
             } elseif ($_POST["signupPassword"] != $_POST["confirmPassword"]){

@@ -27,7 +27,7 @@
 
         <div class="final-price">
             <p id="total-price">0</p>
-            <p style="display: hidden" id="total-price-int">0</p>
+            <p style="display: none" id="total-price-int">0</p>
         </div>
         
         <button onclick='clearCurrentCart()'> Clear </button>
