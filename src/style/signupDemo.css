@@ -1,0 +1,15 @@
+.wrapper {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    margin:auto
+}
+
+.tab {
+    width: 100%;
+    border-radius: 16px;
+    border: solid black;
+    height: 50em;
+}

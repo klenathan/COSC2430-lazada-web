@@ -1,0 +1,17 @@
+{
+    "Type1": {
+        "name": "Vendors",
+        "icon": "",
+        "desc": []
+    },
+    "Type2": {
+        "name": "Clients",
+        "icon": "",
+        "desc": []
+    },
+    "Type3": {
+        "name": "Shippers",
+        "icon": "",
+        "desc": []
+    },
+}
