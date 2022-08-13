@@ -8,10 +8,59 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="tab"><a href=""></a></div>
-        <div class="tab"><a href=""></a></div>
-        <div class="tab"><a href=""></a></div>
-    </div>
+    <main id="signup">
+        <section id="intro">
+            <section class="description" id="vendor">
+                <img src="assets/image/signupimage/lazada-background.jpg" alt="lazada background">
+                <div class="left-description-wrapper">
+                    <h2 class="heading">Become vendor</h2>
+                    <p class="main-description">Lorem ipsum iasdasdasxasxadasdasdasdadawdasdasdsd</p>
+                </div>
+                <a class="signup-button" href="">Join with us now</a>
+            </section>
+            <section class="description" id="client">
+                <!-- <img src="" alt=""> -->
+                <div class="right-description-wrapper">
+                    <h2 class="heading">Become client</h2>
+                    <p class="main-description">Lorem ipsum iasdasdasxasxadasdasdasdadawdasdasdsd</p>
+                </div>
+                <a class="signup-button" href="">Join with us now</a>
+            </section>
+            <section class="description" id="shipper">
+                <img src="assets/image/signupimage/lazada-background.jpg" alt="lazada background">
+                <div class="left-description-wrapper">
+                    <h2 class="heading">Become shipper</h2>
+                    <p class="main-description">Lorem ipsum iasdasdasxasxadasdasdasdadawdasdasdsd</p>
+                </div>
+                <a class="signup-button" href="">Join with us now</a>
+            </section>
+        </section>
+        
+        <section id="option">
+            <section class="option-wrapper">
+                <div class="tab">
+                    <img src="assets/image/signupimage/handshake.png" alt="icon">
+                    <h2>Vendor</h2>
+                    <a href="">
+                        Join us now!
+                    </a>
+                </div>
+                <div class="tab">
+                    <img src="assets/image/signupimage/client.png" alt="icon">
+                    <h2>Client</h2>
+                    <a href="">
+                        Join us now!
+                    </a>
+                </div>
+                <div class="tab">
+                    <img src="assets/image/signupimage/delivery_person.png" alt="icon">
+                    <h2>Shipper</h2>
+                    <a href="">
+                        Join us now!
+                    </a>
+                </div>
+            </section>
+        </section>
+    </main>
 </body>
 </html>
