@@ -11,7 +11,7 @@ class Cart extends Controller {
             $cart = $_POST["cart"];
             
             $order["cart"] = json_decode($cart);
-            $order["total_bill"] = 100;
+            $order["total_bill"] = (int) $_POST["bill"];
             $order["customer"] = $_COOKIE["user"];
             echo '<p>'.$_POST["bill"].'</p>';
             if ($cart == null) {

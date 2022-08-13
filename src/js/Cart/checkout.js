@@ -9,7 +9,7 @@ function checkout() {
     data.name = "cart"
 
     const bill = document.createElement('input');
-    bill.value = document.getElementById("total-price").innerHTML;
+    bill.value = document.getElementById("total-price-int").innerHTML;
     bill.name = "bill"
 
     form.appendChild(data);

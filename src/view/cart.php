@@ -22,12 +22,12 @@
 
     <main>
         <div>CART</div>
-        <div id="cart-wrapper">
-            
+            <div id="cart-wrapper">
         </div>
 
         <div class="final-price">
             <p id="total-price">0</p>
+            <p style="display: hidden" id="total-price-int">0</p>
         </div>
         
         <button onclick='clearCurrentCart()'> Clear </button>

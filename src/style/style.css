@@ -114,15 +114,15 @@ main {
     border-radius: calc(var(--header-avatar-size)/2);
 }
 
-
+/* 
 .user-info-wrapper-header img:after {
     position: absolute;
     content: ' ';
     width: 200px;
     background-color: red;
     height: 1vh;
-    top: 50vh;
-}
+    top: 5vh;
+} */
 
 /* Arrow on submenu */
 #emp-div {

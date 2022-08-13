@@ -24,7 +24,8 @@
             ?>   
             <div class="user-info-wrapper-header header-component">
                 <a class="hover-btn my-account-btn" href="/myaccount">My Account</a>
-                <img src="assets/image/test.jpg" 
+                
+                <img src="assets/image/avatar/<?php echo $_COOKIE["user"]?>.jpg" 
                 class="header-avatar"
                 alt="User Avatar">
                 <div id="emp-div"></div>
@@ -43,5 +44,4 @@
         }
         ?>
     </div>
-    
 </div>

@@ -6,11 +6,11 @@
     "total_bill": 100,
     "customer": "one"
   },
-  "O1": {
+  "O4": {
     "cart": {
-      "P3": 10
+      "P3": 1
     },
-    "total_bill": 100,
-    "customer": "one"
+    "total_bill": 358910,
+    "customer": "admin"
   }
 }
