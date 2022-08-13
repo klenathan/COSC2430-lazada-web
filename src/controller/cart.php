@@ -4,6 +4,7 @@ class Cart extends Controller {
     public static $test = "test";
     static $productFile = "../data/product.db";
     static $orderFile = "../data/order.db";
+    static $hubFile = "../data/distributionHub.db";
 
     function checkout() {
         $order;
@@ -11,8 +12,9 @@ class Cart extends Controller {
             $cart = $_POST["cart"];
             
             $order["cart"] = json_decode($cart);
-            $order["total_bill"] = 100;
+            $order["total_bill"] = (int) $_POST["bill"];
             $order["customer"] = $_COOKIE["user"];
+            $order["hub"] = $this->getHub();
             echo '<p>'.$_POST["bill"].'</p>';
             if ($cart == null) {
                 header("Location: /cart");
@@ -48,6 +50,11 @@ class Cart extends Controller {
                     "price"=>$value["price"]);
             }
         }
+    }
+
+    private function getHub() {
+        $hubData = DataHandle::readToJson($this::$hubFile);
+        return array_rand($hubData, 1);
     }
 
     private function addNewOrder($orderDetail){

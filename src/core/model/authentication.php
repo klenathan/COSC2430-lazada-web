@@ -1,5 +1,10 @@
 <?php
 class Auth {
+
+    // function __construct() {
+    //     // echo $this::uploadAvt($_COOKIE["user"])."<br>";
+    //     $this::signUp("testusername", "mail", "123", "customer");
+    // }
     
     private static $userDataFile = "../data/account.db";
 
@@ -23,11 +28,13 @@ class Auth {
 
         if (!Auth::checkUserExist($inputUsername)){
             $userData = DataHandle::readToJson(Auth::$userDataFile);
+            $imgDir = Auth::uploadAvt($inputUsername);
+            
             $userData[$inputUsername] = array(
             "password"=>$inputPasswordhHash,
             "email"=>$inputEmail,
             "accountType"=>$accountType);
-            Auth::uploadAvt($inputUsername);
+            
             DataHandle::writeData(Auth::$userDataFile, json_encode($userData));
             return "successful";
         } else {
@@ -42,26 +49,27 @@ class Auth {
 
     private static function uploadAvt($username){
 
-        $target_dir = "../data/avatar/";
+        $target_dir = "assets/image/avatar/";
         $target_file = $target_dir . $username . ".jpg";
-        $imageFile = "../data/avatar/";
+        $imageFile = "assets/image/avatar/";
         $check = False;
+        $err = "err";
 
-        if (!isset($_FILES["avtImg"]["name"])){
-            $check = False;
-        } else {
+        if (!$_FILES["avtImg"]["name"] == ""){
             $check = True;
+        } else {
+            $check = False;
         }
 
         if($check !== false) {
-            echo (isset($_FILES["avtImg"]["tmp_name"]));
-            echo "file is an image";
             $imageFile = $_FILES["avtImg"]["tmp_name"];
             move_uploaded_file($imageFile, $target_file);
+            return $target_file;
         } else {
-            $imageFile = "../data/avatar/default.jpg";
-            echo "File is not an image.";
+            // $testDir = "../../assets/image/avatar/default.jpg";
+            $imageFile = "assets/image/avatar/default.jpg";
             copy($imageFile, $target_file);
+            return $target_file;
         }
     }
 

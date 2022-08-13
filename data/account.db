@@ -1,10 +1,17 @@
 {
   "one": {
     "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-    "email": "one@c.a"
+    "email": "one@c.a",
+    "accountType": "shipper"
   },
   "dong": {
     "password": "9494a7ed3f783fb8c68e619c05448f2ec2e0b634f3972e7e596e2c60736348dc",
-    "email": "s381968@rmit.edu.vn"
+    "email": "s381968@rmit.edu.vn",
+    "accountType": "customer"
+  },
+  "test": {
+    "password": "df86714fc534e90b5ffa0726164516b16f207e7fb20a3b823be218c26c789f03",
+    "email": "asd@c.a",
+    "accountType": "customer"
   }
 }
