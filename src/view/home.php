@@ -13,9 +13,9 @@
     <header>
         <?php
         include_once("view/component/header.php");
+        include_once("view/component/homeSlider.php");
         ?>
     </header>
-
     <main>
         <?php
         $this->getAllproduct();
