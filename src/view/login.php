@@ -32,10 +32,11 @@
                         <label for="username"><b>Username:</b></label>
                     </div>
                     <div class="form-field">
-                        <input type="text" name="username" id="username" placeholder="Username" class="input-field" value="<?php
-                                                                                                                            echo isset($_SESSION["loginUsername"]) ? $_SESSION["loginUsername"] : "";
-                                                                                                                            unset($_SESSION["loginUsername"]);
-                                                                                                                            ?>" required>
+                        <input type="text" name="username" id="username" placeholder="Username" class="input-field" 
+                        value="<?php
+                        echo isset($_SESSION["loginUsername"]) ? $_SESSION["loginUsername"] : "";
+                        unset($_SESSION["loginUsername"]);
+                        ?>" required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -46,7 +47,7 @@
                         <input class="input-field" type="password" name="password" id="password" placeholder="Password" required>
                     </div>
                     <div class="login-signup-wrap">
-                        <input type="submit" name="loginBtn" id="loginBtn" value="Login" class="form-btn">
+                        <input type="submit" name="loginBtn" id="login-btn" value="Login" class="form-btn">
                     </div>
                     <p id="respond-message">
                         <?php
