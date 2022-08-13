@@ -14,7 +14,7 @@
                 <img src="assets/image/signupimage/lazada-background.jpg" alt="lazada background">
                 <div class="left-description-wrapper">
                     <h2 class="heading">Become vendor</h2>
-                    <p class="main-description">Lorem ipsum iasdasdasxasxadasdasdasdadawdasdasdsd</p>
+                    <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
                 <a class="signup-button" href="">Join with us now</a>
             </section>
@@ -22,7 +22,7 @@
                 <!-- <img src="" alt=""> -->
                 <div class="right-description-wrapper">
                     <h2 class="heading">Become client</h2>
-                    <p class="main-description">Lorem ipsum iasdasdasxasxadasdasdasdadawdasdasdsd</p>
+                    <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
                 <a class="signup-button" href="">Join with us now</a>
             </section>
@@ -30,7 +30,7 @@
                 <img src="assets/image/signupimage/lazada-background.jpg" alt="lazada background">
                 <div class="left-description-wrapper">
                     <h2 class="heading">Become shipper</h2>
-                    <p class="main-description">Lorem ipsum iasdasdasxasxadasdasdasdadawdasdasdsd</p>
+                    <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
                 <a class="signup-button" href="">Join with us now</a>
             </section>

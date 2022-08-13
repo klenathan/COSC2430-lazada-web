@@ -28,38 +28,42 @@ body {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
 }
 
 .left-description-wrapper {
     position: absolute;
     z-index: 2;
-    width: 60%;
+    width: 50%;
     top: 30%;
-    left: 20%;
+    left: 25%;
     right: 20%;
     height: fit-content;
     text-align: left;
-    color: white;
+    color: black;
     transition: 0.4s;
+    padding: 1% 4%;
+    background-color: white;
+    border-radius: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
 }
 .heading {
     font-size: 32px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 500;
+    text-align: center;
 }
 .main-description {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
 }
- .signup-button {
+.signup-button {
     position: absolute;
     width: 200px;
     height: 60px;
     border-radius: 25px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
-    top: 60%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
@@ -70,8 +74,10 @@ body {
     color: black;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
-    font-weight: 600;   
- }
+    font-weight: 600; 
+    transition: 0.4s;  
+}
+
 .right-description-wrapper {
     position: absolute;
     z-index: 2;
@@ -82,15 +88,24 @@ body {
     height: fit-content;
     text-align: right;
     color: black;
+    transition: 0.4s;
+    padding: 4%;
+    background-color: white;
+    border-radius: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
+}
+.right-description-wrapper p {
+    text-align: left;
 }
 
 #option {
     width: 100%;
     height: 100vh;
     display: flex;
-   
     justify-content: center;
 }
+
 .option-wrapper {
     width: 60%;
     display: flex;
@@ -99,17 +114,18 @@ body {
     height: 100%;
     align-items: center;
 }
+
 .tab {
     width: 100%;
     height: 60%;
     border-radius: 16px;
-    border:4px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10%;
     transition: 0.4s;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
 }
 
 .tab img {
@@ -120,7 +136,7 @@ body {
 }
 .tab a {
     border-radius: 25px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
+    box-shadow: 0 1px 8px rgb(0 0 0 / 0.8);
     width: 200px;
     height: 60px;
     text-decoration: none;
@@ -131,8 +147,15 @@ body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-weight: 600;   
+    transition: 0.4s;
 }
 
 .tab:hover {
     transform: scale(1.1);
+}
+.tab a:hover {
+    transform: scale(1.1);
+}
+.signup-button:hover {
+    transform: scale(1.1) translate(-45%, -50%) ;
 }
