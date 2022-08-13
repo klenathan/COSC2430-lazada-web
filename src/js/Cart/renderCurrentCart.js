@@ -15,25 +15,32 @@ fetchData().then(res => {
 
 async function fetchData() {
     var res;
-
-    for (var key in cartData) {
-        url = "cart/getCurrentCartData?productId=" + key
-        const queryRes = await fetch(url, {
-            header: {"Content-type": "application/json; charset=UTF-8"}
-        })
-        .then(response => {
-            return response.json()
-        })
-        .then(data =>{
-            cartDetail[data["productId"]] = {
-                "price": data["price"],
-                "quantity": cartData[data["productId"]]
-            }
-            totalBill += data["price"] * cartData[data["productId"]]
-            appendToCart(data)
-            return totalBill
-        })
-        res = queryRes
+    if (cartData != null) {
+        for (var key in cartData) {
+            url = "cart/getCurrentCartData?productId=" + key
+            const queryRes = await fetch(url, {
+                header: {"Content-type": "application/json; charset=UTF-8"}
+            })
+            .then(response => {
+                return response.json()
+            })
+            .then(data =>{
+                
+                cartDetail[data["productId"]] = {
+                    "price": data["price"],
+                    "quantity": cartData[data["productId"]]
+                }
+                totalBill += data["price"] * cartData[data["productId"]]
+                appendToCart(data)
+                return totalBill
+            })
+            res = queryRes
+        }
+    } else {
+        const wrapper = document.getElementById("cart-wrapper")
+        var newP = document.createElement("p")
+        newP.innerText = "Cart is empty"
+        wrapper.appendChild(newP)
     }
     return res
 }

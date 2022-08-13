@@ -4,7 +4,9 @@
     <a href="/signup">Sign up</a>
 </div>
 <div class="header">
-    <a class="header-component" href="/">Logo</a>
+    <a class="header-component" href="/">
+        <img class="header-logo" src="assets/image/logo.png" alt="logo">
+    </a>
 
     <input name="product-search" 
     type="text"
