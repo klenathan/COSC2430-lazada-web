@@ -15,10 +15,10 @@ class Api {
     }
 
     //POST
-    function testWriteData() {
+    function test() {
         echo '{"test": "'.$_POST["test"].'"}';
     }
-
+    
     function newOrder(){
         // $this->addNewData($this::$orderFile, "O", $_POST["data"]);
         // header("Location: /myaccount");
@@ -35,7 +35,9 @@ class Api {
             "vendor"=>$_COOKIE["user"],
             "rating"=>0,
         );
-        $this->addNewData($this::$productFile, "P", $data);
+        
+        $newId = $this->addNewData($this::$productFile, "P", $data);
+        $this->uploadProductImg($newId);
         header("Location: /myaccount");
     }
 
@@ -50,6 +52,36 @@ class Api {
         }
         $currentData[$newId] = $newData;
         DataHandle::writeData($file, json_encode($currentData));
+        return $newId;
+    }
+
+    private static function uploadProductImg($name){
+
+        $target_dir = "assets/image/product/";
+        $target_file = $target_dir . $name . ".jpg";
+        $imageFile = "assets/image/product/";
+        $check = False;
+        $err = "err";
+
+        if (!$_FILES["pImg"]["name"] == ""){
+            $check = True;
+        } else {
+            $check = False;
+        }
+        echo "here";
+        echo $imageFile = $_FILES["pImg"]["tmp_name"];
+
+        if($check !== false) {
+            $imageFile = $_FILES["pImg"]["tmp_name"];
+
+            move_uploaded_file($imageFile, $target_file);
+            return $target_file;
+        } else {
+            // $testDir = "../../assets/image/avatar/default.jpg";
+            $imageFile = "assets/image/avatar/default.jpg";
+            copy($imageFile, $target_file);
+            return $target_file;
+        }
     }
 }
 ?>

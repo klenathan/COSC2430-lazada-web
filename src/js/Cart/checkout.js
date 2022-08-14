@@ -1,3 +1,4 @@
+console.log(document.cookie);
 function checkout() {
     const form = document.createElement('form');
     form.method = "post";

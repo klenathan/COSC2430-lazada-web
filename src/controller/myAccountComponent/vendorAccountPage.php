@@ -5,7 +5,8 @@ class VendorAccount {
     function __construct() {
         ?>
 
-        <form class="new-product-form" action="api/newProduct" method="post">
+        <form class="new-product-form" action="api/newProduct"
+        method="post" enctype="multipart/form-data">
             <label for="name">Name: </label>
             <input type="text" name="name" id="name" required>
             <label for="price">Price: </label>
@@ -14,7 +15,8 @@ class VendorAccount {
             <input type="text" name="category" id="category" required>
             <label for="desc">Description: </label>
             <textarea name="desc" id="desc" cols="25" rows="5" required></textarea>
-            
+            <input type="file" name="pImg" id="pImg" 
+            accept="image/jpg, image/jpeg" required>
 
             <button type="submit">Submit</button>
         </form>

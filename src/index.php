@@ -2,7 +2,7 @@
     session_start();
     // Core files
     include("core/controller.php");
-    include("core/dataHandle.php");
+    include("core/model/dataHandle.php");
     include("core/model/authentication.php");
     include("model/productModel.php");
 
