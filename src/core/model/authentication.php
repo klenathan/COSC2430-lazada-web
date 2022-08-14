@@ -15,6 +15,7 @@ class Auth {
 
         if (array_key_exists($inputUsername, $userData)){
             if ($inputPasswordhHash == $userData[$inputUsername]["password"]){
+                Auth::setUserDetailSession($_COOKIE["user"]);
                 return "successful";
             } else {
                 return "wrong_password";
@@ -73,10 +74,16 @@ class Auth {
         }
     }
 
-    public static function renewCookie(){
-        if (isset($_COOKIE["user"])){
-            setcookie("user", $_COOKIE["user"], time() + (3600*24*30), "/");
-        } 
+    private static function setUserDetailSession($userid){
+        $userData = DataHandle::readToJson(Auth::$userDataFile);
+        foreach ($userData as $key => $value) {
+            if ($key == $userid) {
+                $_SESSION["user_detail"] = json_encode($value);
+            }
+            else {
+                echo "here";
+            }
+        }
     }
 }
 ?>

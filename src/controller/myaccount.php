@@ -4,8 +4,10 @@ class MyAccount extends Controller {
     private static $accountDetail;
     private static $accountFile = '../data/account.db';
     private static $orderFile = '../data/order.db';
+    private static $productFile = '../data/product.db';
 
     function __construct() {
+        
         $this->getAccountDetail();
     }
 
@@ -13,7 +15,6 @@ class MyAccount extends Controller {
         $accountType = $this::$accountDetail["accountType"];
         if ($accountType == "customer") {
             $this->renderCustomerPage();
-
         } else if ($accountType == "vendor") {
             $this->renderVendorPage();
         } else if ($accountType == "shipper") {
@@ -24,57 +25,41 @@ class MyAccount extends Controller {
     }
 
     private function renderCustomerPage() {
+        include("controller/myAccountComponent/customerAccountPage.php");
+        // Testing purpose
         foreach ($this::$accountDetail as $key => $value) {
             echo '<p>'.$key." ".$value.'</p>';
         }
-
-        $this->getCurrentCustomerOrders();
-
+        //
+        new CustomerAccount();
     }
-    // TODO: query data for vendor;
-    // update hub data structure => hubid: {name: name; add: add}
-    // add order status to order data structure
-    
-    private function renderVendorPage(){
 
+    // TODO: query data for vendor;
+    private function renderVendorPage(){
+        include("controller/myAccountComponent/vendorAccountPage.php");
+        new VendorAccount();
     }
 
     // TODO: shipper add feature of update order status
     private function renderShipperPage(){
-        $this->getCurrentShipperOrders("name3");
+        include("controller/myAccountComponent/shipperAccountPage.php");
+        new ShipperAccount("name3");
+
     }
 
     private function getAccountDetail() {
         $accountData = DataHandle::readToJson($this::$accountFile);
         foreach ($accountData as $key => $value) {
             if ($key == $_COOKIE["user"]) {
+                $_SESSION["user_detail"] = json_encode($value);
                 $this::$accountDetail = $value;
             }
         }
     }
 
-    private function getCurrentCustomerOrders() {
-        $orderData = DataHandle::readToJson($this::$orderFile);
-        foreach ($orderData as $key => $value) {
-            if($value["customer"] == $_COOKIE["user"]) {
-                echo '<p>'.'total bill: '.$value["total_bill"].'</p>';
-                foreach ($value["cart"] as $k => $v) {
-                    echo '<p>'.$k.' | '.'quantity: '.$v.'</p>';
-                }
-            }
-        }
-    }
+    // APIs
 
-    private function getCurrentShipperOrders($hub) {
-        $orderData = DataHandle::readToJson($this::$orderFile);
-        foreach ($orderData as $key => $value) {
-            if ($value["hub"] == $hub) {
-                echo '<p>'.'total bill: '.$value["total_bill"].'</p>';
-                foreach ($value["cart"] as $k => $v) {
-                    echo '<p>'.$k.' | '.'quantity: '.$v.'</p>';
-                } 
-            }
-        }
-    }
+
+    
 }
 ?>

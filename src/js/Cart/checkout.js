@@ -1,5 +1,4 @@
 function checkout() {
-    console.log("checkout");
     const form = document.createElement('form');
     form.method = "post";
     form.action = "cart/checkout";

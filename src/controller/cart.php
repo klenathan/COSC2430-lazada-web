@@ -15,6 +15,7 @@ class Cart extends Controller {
             $order["total_bill"] = (int) $_POST["bill"];
             $order["customer"] = $_COOKIE["user"];
             $order["hub"] = $this->getHub();
+            $order["order_status"] = "hub";
             echo '<p>'.$_POST["bill"].'</p>';
             if ($cart == null) {
                 header("Location: /cart");

@@ -1,7 +1,8 @@
 <?php
 class Product extends Controller {
     public static $productData;
-    public static $name, $price, $category, $sold, $stock, $desc, $vendor, $rating;
+    public static $name, $vendor;
+
 
     function __construct () {
         $model = new ProductModel();
@@ -11,6 +12,7 @@ class Product extends Controller {
             
         }
         $this::$name = $this::$productData["name"];
+        $this::$vendor = $model->getVendorName($this::$productData["vendor"]);
     }
 }
 ?>
