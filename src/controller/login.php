@@ -26,6 +26,7 @@ class Login extends Controller {
     }
     function signOut(){
         setcookie("user", null, -1, "/");
+        unset($_SESSION["user_detail"]);
         header("location: /");
     }
 }

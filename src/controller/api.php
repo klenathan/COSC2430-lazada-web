@@ -18,11 +18,6 @@ class Api {
     function test() {
         echo '{"test": "'.$_POST["test"].'"}';
     }
-    
-    function newOrder(){
-        // $this->addNewData($this::$orderFile, "O", $_POST["data"]);
-        // header("Location: /myaccount");
-    }
 
     function newProduct(){
         $data = array(
@@ -38,7 +33,21 @@ class Api {
         
         $newId = $this->addNewData($this::$productFile, "P", $data);
         $this->uploadProductImg($newId);
-        header("Location: /myaccount");
+        header("Location: /");
+    }
+
+    function updateOrderStatus(){
+        $orderid = $_POST["order_id"];
+        $status = $_POST["status"];
+        $orderData = DataHandle::readToJson($this::$orderFile);
+        foreach ($orderData as $key => $value) {
+            if ($key == $orderid) {
+                $orderData[$key]["order_status"] = $status;
+            }
+            
+        }
+        DataHandle::writeData($this::$orderFile, json_encode($orderData));
+        header("Location: /");
     }
 
     private function addNewData($file, $prefix, $newData){

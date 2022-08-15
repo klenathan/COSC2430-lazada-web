@@ -10,11 +10,21 @@
   },
   "O1": {
     "cart": {
-      "P5": 1
+      "P5": 1,
+      "P2": 3
     },
     "total_bill": 1667719,
     "customer": "one",
     "hub": "name3",
+    "order_status": "hub"
+  },
+  "O2": {
+    "cart": {
+      "P2": 1
+    },
+    "total_bill": 7489282,
+    "customer": "one",
+    "hub": "hub2",
     "order_status": "hub"
   }
 }

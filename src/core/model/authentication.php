@@ -1,10 +1,11 @@
 <?php
 class Auth {
 
-    // function __construct() {
-    //     // echo $this::uploadAvt($_COOKIE["user"])."<br>";
-    //     $this::signUp("testusername", "mail", "123", "customer");
-    // }
+    function __construct() {
+        if (isset($_COOKIE["user"])) {
+            Auth::setUserDetailSession($_COOKIE["user"]);
+        }   
+    }
     
     private static $userDataFile = "../data/account.db";
 
@@ -74,16 +75,23 @@ class Auth {
         }
     }
 
-    private static function setUserDetailSession($userid){
+    public static function setUserDetailSession($userid){
         $userData = DataHandle::readToJson(Auth::$userDataFile);
         foreach ($userData as $key => $value) {
             if ($key == $userid) {
                 $_SESSION["user_detail"] = json_encode($value);
             }
-            else {
-                echo "here";
+        }
+    }
+
+    public static function getUserDetail($userid) {
+        $userData = DataHandle::readToJson(Auth::$userDataFile);
+        foreach ($userData as $key => $value) {
+            if ($key == $userid) {
+                return $value;
             }
         }
+        return null;
     }
 }
 ?>
