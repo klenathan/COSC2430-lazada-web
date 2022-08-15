@@ -5,32 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/signupDemo.css">
+    <script src="js/signupClickable.js"></script>
     <title>Document</title>
 </head>
 <body>
     <main id="signup">
         <section id="intro">
-            <section class="description" id="vendor">
+            <section class="description">
                 <img src="assets/image/signupimage/lazada-background.jpg" alt="lazada background">
-                <div class="left-description-wrapper">
-                    <h2 class="heading">Become vendor</h2>
-                    <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <div class="description-wrapper" id="customer">
+                    <h2>Customer</h2>
+                    <div class="see-more" id="customer-button" onclick="SeeMoreCustomer()">Click to see more</div>
                 </div>
                 <a class="signup-button" href="">Join with us now</a>
             </section>
-            <section class="description" id="client">
+            <section class="description">
                 <!-- <img src="" alt=""> -->
-                <div class="right-description-wrapper">
-                    <h2 class="heading">Become client</h2>
-                    <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <div class="description-wrapper" id="vendor">
+                    <h2>Vendor</h2>
+                    <div class="see-more" id="vendor-button" onclick="SeeMoreVendor()">Click to see more</div>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> -->
                 </div>
+                
                 <a class="signup-button" href="">Join with us now</a>
             </section>
-            <section class="description" id="shipper">
+            <section class="description">
                 <img src="assets/image/signupimage/lazada-background.jpg" alt="lazada background">
-                <div class="left-description-wrapper">
-                    <h2 class="heading">Become shipper</h2>
-                    <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <div class="description-wrapper" id="shipper">
+                    <h2>Shipper</h2>
+                    <div class="see-more" id="shipper-button" onclick="SeeMoreShipper()">Click to see more</div>
                 </div>
                 <a class="signup-button" href="">Join with us now</a>
             </section>

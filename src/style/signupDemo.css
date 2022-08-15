@@ -30,33 +30,39 @@ body {
     object-fit: cover;
 }
 
-.left-description-wrapper {
+.description-wrapper {
     position: absolute;
     z-index: 2;
     width: 50%;
     top: 30%;
     left: 25%;
-    right: 20%;
+    /* transform: translate(50%, -50%); */
     height: fit-content;
     text-align: left;
     color: black;
-    transition: 0.4s;
     padding: 1% 4%;
     background-color: white;
     border-radius: 16px;
     box-sizing: border-box;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
+    background-color: none;
+    transition: 0.4s;
 }
-.heading {
+.description-wrapper h2 {
     font-size: 32px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 500;
     text-align: center;
 }
-.main-description {
+.description-wrapper p {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
 }
+.see-more {
+    text-align: center;
+    text-decoration: underline;
+}
+
 .signup-button {
     position: absolute;
     width: 200px;
@@ -78,26 +84,6 @@ body {
     transition: 0.4s;  
 }
 
-.right-description-wrapper {
-    position: absolute;
-    z-index: 2;
-    width: 60%;
-    top: 30%;
-    left: 20%;
-    right: 20%;
-    height: fit-content;
-    text-align: right;
-    color: black;
-    transition: 0.4s;
-    padding: 4%;
-    background-color: white;
-    border-radius: 16px;
-    box-sizing: border-box;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
-}
-.right-description-wrapper p {
-    text-align: left;
-}
 
 #option {
     width: 100%;
@@ -112,7 +98,7 @@ body {
     flex-direction: row;
     gap: 4%;
     height: 100%;
-    align-items: center;
+    margin-top: 4%;
 }
 
 .tab {
@@ -158,4 +144,8 @@ body {
 }
 .signup-button:hover {
     transform: scale(1.1) translate(-45%, -50%) ;
+}
+
+.description-wrapper:hover > .main-description {
+    visibility: visible;
 }
