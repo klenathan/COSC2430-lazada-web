@@ -34,7 +34,7 @@ class ShipperAccount {
                         <?php
                     }
                     ?>
-                    <button>Cancel</button>
+                    <button onclick='updateOrderStatus("<?php echo $key?>", "cancel")'>Cancel</button>
                     <button onclick='updateOrderStatus("<?php echo $key?>", "delivered")'>Delivered</button>
                 </div>
                 <?php

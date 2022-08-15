@@ -21,6 +21,7 @@
     </header>
 
     <main>
+        <h1>Welcome to shipper's homepage</h1>
         <?php
         $shipper->getCurrentShipperOrders();
         ?>
