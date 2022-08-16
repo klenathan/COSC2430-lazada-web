@@ -17,7 +17,7 @@
                     <h2>Customer</h2>
                     <div class="see-more" id="customer-button" onclick="SeeMoreCustomer()">Click to see more</div>
                 </div>
-                <a class="signup-button" href="">Join with us now</a>
+                <a class="intro-signup-button" href="/signupforcustomer">Join with us now</a>
             </section>
             <section class="description">
                 <!-- <img src="" alt=""> -->
@@ -27,7 +27,7 @@
                     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> -->
                 </div>
                 
-                <a class="signup-button" href="">Join with us now</a>
+                <a class="intro-signup-button" href="">Join with us now</a>
             </section>
             <section class="description">
                 <img src="assets/image/signupimage/lazada-background.jpg" alt="lazada background">
@@ -35,7 +35,7 @@
                     <h2>Shipper</h2>
                     <div class="see-more" id="shipper-button" onclick="SeeMoreShipper()">Click to see more</div>
                 </div>
-                <a class="signup-button" href="">Join with us now</a>
+                <a class="intro-signup-button" href="">Join with us now</a>
             </section>
         </section>
         
@@ -44,21 +44,21 @@
                 <div class="tab">
                     <img src="assets/image/signupimage/handshake.png" alt="icon">
                     <h2>Vendor</h2>
-                    <a href="">
+                    <a class= "signup-button" href="">
                         Join us now!
                     </a>
                 </div>
                 <div class="tab">
                     <img src="assets/image/signupimage/client.png" alt="icon">
                     <h2>Client</h2>
-                    <a href="">
+                    <a class= "signup-button" href="">
                         Join us now!
                     </a>
                 </div>
                 <div class="tab">
                     <img src="assets/image/signupimage/delivery_person.png" alt="icon">
                     <h2>Shipper</h2>
-                    <a href="">
+                    <a class= "signup-button" href="">
                         Join us now!
                     </a>
                 </div>

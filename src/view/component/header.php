@@ -1,7 +1,7 @@
 <div class="upper-header">
-    <a href="#">Register to be a vendor</a>
+    <a href="">Register to be a vendor</a>
     <a href="#">Register to be a shipper</a>
-    <a href="/signupDemo">Sign up</a>
+    <a href="/signupdemo">Sign up</a>
 </div>
 <div class="header">
     <a class="header-component" href="/">

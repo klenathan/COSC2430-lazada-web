@@ -63,7 +63,7 @@ body {
     text-decoration: underline;
 }
 
-.signup-button {
+.intro-signup-button {
     position: absolute;
     width: 200px;
     height: 60px;
@@ -120,11 +120,11 @@ body {
     box-sizing: border-box;
     object-fit: cover;
 }
-.tab a {
+.signup-button {
     border-radius: 25px;
     box-shadow: 0 1px 8px rgb(0 0 0 / 0.8);
     width: 200px;
-    height: 60px;
+    height: 40px;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -139,10 +139,10 @@ body {
 .tab:hover {
     transform: scale(1.1);
 }
-.tab a:hover {
+.signup-button:hover {
     transform: scale(1.1);
 }
-.signup-button:hover {
+.intro-signup-button:hover {
     transform: scale(1.1) translate(-45%, -50%) ;
 }
 

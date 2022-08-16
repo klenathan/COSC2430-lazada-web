@@ -24,9 +24,10 @@
                 </svg>
             </a>
         </div>
-        <div class="login-form-wrapper">
+        <!-- <div class="login-form-wrapper"> -->
+        <div class="form-wrapper">
             <form action="login/handleLogin" name="login" method="post">
-                <h1>Login</h1>
+                <h2>Login</h2>
                 <div class="form-row">
                     <div class="form-label">
                         <label for="username"><b>Username:</b></label>
@@ -56,8 +57,8 @@
                         ?>
                     </p>
             </form>
-            <div class="signup-link">
-                <a href="/signup">
+            <div class="signup-login-link">
+                <a href="/signupdemo">
                     <p>Don't have an account? Sign up now!</p>
                 </a>
             </div>
