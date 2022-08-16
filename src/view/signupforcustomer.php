@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/signupforcustomer.css">
     <title>Sign up for customer</title>
+    <script src="js/signupClickable.js"></script>
 </head>
 <body>
     <header>
@@ -16,6 +17,10 @@
         <div class="form-wrapper">
             <h2>Sign up for Customer</h2>
             <form action="signup/handleSignup" name="signup" method="get">
+                <div class="form-row avatar">
+                    <input type="file" id="imgupload" style="display:none"/> 
+                    <img class="avatar-image" id="customer-img" src="assets/image/signupimage/Ellipse 2.png" alt="blank avatar" onclick="chooseFile()">
+                </div>
                 <div class="form-row">
                     <div class="form-label">
                         <label for="username"><b>Username:</b></label>
@@ -24,12 +29,29 @@
                         <input type="text" name="username" id="customer-signup-username" placeholder="Username" class="input-field">
                     </div>
                 </div>
+                
                 <div class="form-row">
                     <div class="form-label">
                         <label for="email"><b>Email:</b></label>
                     </div>
                     <div class="form-field">
                         <input type="email" name="email" id="customer-signup-email" placeholder="Email" class="input-field">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-label">
+                        <label for="password"><b>Password:</b></label>
+                    </div>
+                    <div class="form-field">
+                        <input type="password" name="password" id="customer-signup-password" placeholder="Password" class="input-field">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-label">
+                        <label for="re-password"><b>Retype password:</b></label>
+                    </div>
+                    <div class="form-field">
+                        <input type="password" name="re-password" id="customer-signup-re-password" placeholder="Retype password" class="input-field">
                     </div>
                 </div>
                 <div class="form-row">
@@ -50,18 +72,10 @@
                 </div>
                 <div class="form-row">
                     <div class="form-label">
-                        <label for="password"><b>Password:</b></label>
+                        <label for="Phone"><b>Phone:</b></label>
                     </div>
                     <div class="form-field">
-                        <input type="password" name="password" id="customer-signup-password" placeholder="Password" class="input-field">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-label">
-                        <label for="re-password"><b>Retype password:</b></label>
-                    </div>
-                    <div class="form-field">
-                        <input type="password" name="re-password" id="customer-signup-re-password" placeholder="Retype password" class="input-field">
+                        <input type="phone" name="phone" id="customer-signup-phone" placeholder="Phone" class="input-field">
                     </div>
                 </div>
             </form>

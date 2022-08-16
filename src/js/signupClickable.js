@@ -38,3 +38,8 @@ function SeeMoreShipper() {
     var seeMore = document.getElementById("shipper-button");
     seeMore.style.cssText = cssSeeMore;
 }
+
+
+function chooseFile() {
+  document.getElementById('imgupload').click();
+}
