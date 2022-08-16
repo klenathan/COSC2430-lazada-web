@@ -1,8 +1,3 @@
-<!-- <div class="upper-header">
-    <a href="#">Register to be a vendor</a>
-    <a href="#">Register to be a shipper</a>
-    <a href="/signup">Sign up</a>
-</div> -->
 <div class="header">
     <a class="header-component" href="/">
         <img class="header-logo" src="assets/image/logo.png" alt="logo">
