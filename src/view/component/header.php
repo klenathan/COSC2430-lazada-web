@@ -30,7 +30,6 @@
                 alt="User Avatar">
                 <div id="emp-div"></div>
                 <div class="sub-menu">
-                    <a class="sub-menu-item" href="/myorder">My orders</a>
                     <a class="sub-menu-item" href="login/signOut">Sign out</a>
                 </div>
             </div>

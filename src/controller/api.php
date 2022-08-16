@@ -35,7 +35,7 @@ class Api {
         $this->uploadProductImg($newId);
         header("Location: /");
     }
-
+    
     function updateOrderStatus(){
         $orderid = $_POST["order_id"];
         $status = $_POST["status"];
@@ -44,7 +44,6 @@ class Api {
             if ($key == $orderid) {
                 $orderData[$key]["order_status"] = $status;
             }
-            
         }
         DataHandle::writeData($this::$orderFile, json_encode($orderData));
         header("Location: /");
