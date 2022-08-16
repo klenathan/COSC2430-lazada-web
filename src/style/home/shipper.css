@@ -36,7 +36,6 @@
 .shipper-product {
     display: flex;
     flex-direction: row;
-    /* background-color: yellow; */
     width: 90%;
     align-self: center;
     padding: 0.5rem 0;

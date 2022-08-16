@@ -56,6 +56,7 @@ class Signup extends Controller {
             setcookie("user", $_POST["username"], time() + (3600*24*30), "/");
             unset($_SESSION["signup_err"]);
             // Write to database
+            uploadProfileImg($_POST["username"]);
             DataHandle::writeData($this::$accountFile, json_encode($currentData));
             header("Location: /");
         } else {
@@ -74,6 +75,32 @@ class Signup extends Controller {
     private static function checkUserExist($username){
         $userData = DataHandle::readToJson(Signup::$accountFile);
         return array_key_exists($username, $userData) ? True : False;
+    }
+
+    private static function uploadProfileImg($userid){
+
+        $target_dir = "assets/image/avatar/";
+        $target_file = $target_dir . $userid . ".jpg";
+        $imageFile = "assets/image/avatar/";
+        $check = False;
+
+        if (!$_FILES["pImg"]["name"] == ""){
+            $check = True;
+        } else {
+            $check = False;
+        }
+        echo $imageFile = $_FILES["avatar"]["tmp_name"];
+
+        if($check !== false) {
+            $imageFile = $_FILES["avatar"]["tmp_name"];
+
+            move_uploaded_file($imageFile, $target_file);
+            return $target_file;
+        } else {
+            $imageFile = "assets/image/avatar/default.jpg";
+            copy($imageFile, $target_file);
+            return $target_file;
+        }
     }
 }
 ?>

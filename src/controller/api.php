@@ -35,7 +35,7 @@ class Api {
         $this->uploadProductImg($newId);
         header("Location: /");
     }
-    
+
     function updateOrderStatus(){
         $orderid = $_POST["order_id"];
         $status = $_POST["status"];
@@ -69,14 +69,12 @@ class Api {
         $target_file = $target_dir . $name . ".jpg";
         $imageFile = "assets/image/product/";
         $check = False;
-        $err = "err";
 
         if (!$_FILES["pImg"]["name"] == ""){
             $check = True;
         } else {
             $check = False;
         }
-        echo "here";
         echo $imageFile = $_FILES["pImg"]["tmp_name"];
 
         if($check !== false) {
