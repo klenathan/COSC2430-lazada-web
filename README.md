@@ -16,7 +16,7 @@ todo: change src to www
 {
     "customer": {
         "password":"hashed_password",
-        "name": "User One",
+        "name": "Customer",
         "email": "one@one.com",
         "address" : "Q7, HCM",
         "accountType": "customer"
@@ -30,7 +30,7 @@ todo: change src to www
 {
     "shipper": {
         "password":"hashed_password",
-        "name": "User One",
+        "name": "Shipper",
         "email": "one@one.com",
         "hub" : "hub_q7",
         "accountType": "shipper"
@@ -44,7 +44,7 @@ todo: change src to www
 {
     "vendor": {
         "password":"hashed_password",
-        "name": "User One",
+        "name": "Vendor",
         "email": "one@one.com",
         "address" : "Q7, HCM",
         "accountType": "vendor"

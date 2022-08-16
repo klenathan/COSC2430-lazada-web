@@ -176,7 +176,7 @@
     "sold": 1231,
     "stock": 100,
     "desc": "The Phantom 4 Pro V2.0 camera drone comes equipped with a 3-axis motorized gimbal and a 1-inch 20MP CMOS sensor with a mechanical shutter that eliminates rolling shutter distortion.\nThe standard controller features a smartphone holder. You will need to install the DJI GO 4 App on your phone to fly your drone.\nThe Phantom 4 Pro V2.0 is a beast when it comes to flight performance. It has a maximum flight speed of 72 kph and an 8km transmission range with 1080p livestreaming and automatic frequency switching thanks to OcuSync 2.0.\nThe Phantom 4 Pro V2.0 offers Intelligent Flight Modes such as TapFly, ActiveTrack, Draw mode, Gesture mode, and more. Draw lets you control the flight path with a fixed altitude simply by creating a route on the screen.\nDJI GO 4 App requires iOS 10.0.2, Android 5.0 or above. Compatible devices include: iPhone 11 Pro Max, 11 Pro, 11, XS Max, XS, XR, X, 8 Plus, 8, 7 Plus, 7, 6s Plus, 6s, 6 Plus, 6, SE, iPad Pro, iPad, Air 2, mini 4. Samsung Galaxy S10+, S10, S9+, S9, S8+, S7, S7 Edge, S6, S6 Edge, Note 8, Huawei P30 Pro, P30, P20 Pro, P20, P10 Plus, P10, Mate 10 Pro, Mate 10, Mate 9 Pro, Mate 9, Mate 8, Honor 8X, 10, 9, 20 Pro, Magic 2, Vivo X20, X9, NEX, X27, X21, X20A, Oppo Find X, R15, R11, Xiaomi Mi Mix 2S, 2, 8, 6, Redmi Note 5, OnePlus 7, 6T, 5, Pixel 3 XL, 2 XL, 2, Google Pixel 2XL, OnePlus 6, 5T.\nWhat you get: DJI Phantom 4 Pro V2.0, Remote Controller, Intelligent Flight, Battery, Charger, Power Cable, 4x Propellers (pair), Gimbal Clamp, microSD Card (32GB), Micro USB Cable, Carrying Case\nVideo capture resolution: 4K UHD 2160p",
-    "vendor": "one",
+    "vendor": "dji_store",
     "rating": 5
   },
   "P19": {
@@ -186,37 +186,7 @@
     "sold": 1231,
     "stock": 100,
     "desc": "The Phantom 4 Pro V2.0 camera drone comes equipped with a 3-axis motorized gimbal and a 1-inch 20MP CMOS sensor with a mechanical shutter that eliminates rolling shutter distortion.\nThe standard controller features a smartphone holder. You will need to install the DJI GO 4 App on your phone to fly your drone.\nThe Phantom 4 Pro V2.0 is a beast when it comes to flight performance. It has a maximum flight speed of 72 kph and an 8km transmission range with 1080p livestreaming and automatic frequency switching thanks to OcuSync 2.0.\nThe Phantom 4 Pro V2.0 offers Intelligent Flight Modes such as TapFly, ActiveTrack, Draw mode, Gesture mode, and more. Draw lets you control the flight path with a fixed altitude simply by creating a route on the screen.\nDJI GO 4 App requires iOS 10.0.2, Android 5.0 or above. Compatible devices include: iPhone 11 Pro Max, 11 Pro, 11, XS Max, XS, XR, X, 8 Plus, 8, 7 Plus, 7, 6s Plus, 6s, 6 Plus, 6, SE, iPad Pro, iPad, Air 2, mini 4. Samsung Galaxy S10+, S10, S9+, S9, S8+, S7, S7 Edge, S6, S6 Edge, Note 8, Huawei P30 Pro, P30, P20 Pro, P20, P10 Plus, P10, Mate 10 Pro, Mate 10, Mate 9 Pro, Mate 9, Mate 8, Honor 8X, 10, 9, 20 Pro, Magic 2, Vivo X20, X9, NEX, X27, X21, X20A, Oppo Find X, R15, R11, Xiaomi Mi Mix 2S, 2, 8, 6, Redmi Note 5, OnePlus 7, 6T, 5, Pixel 3 XL, 2 XL, 2, Google Pixel 2XL, OnePlus 6, 5T.\nWhat you get: DJI Phantom 4 Pro V2.0, Remote Controller, Intelligent Flight, Battery, Charger, Power Cable, 4x Propellers (pair), Gimbal Clamp, microSD Card (32GB), Micro USB Cable, Carrying Case\nVideo capture resolution: 4K UHD 2160p",
-    "vendor": "one",
+    "vendor": "dji_store",
     "rating": 5
-  },
-  "P20": {
-    "name": "12",
-    "price": 12,
-    "category": "12",
-    "sold": 0,
-    "stock": 999,
-    "desc": "12",
-    "vendor": "one",
-    "rating": 0
-  },
-  "P21": {
-    "name": "123",
-    "price": 123,
-    "category": "123",
-    "sold": 0,
-    "stock": 999,
-    "desc": "123",
-    "vendor": "one",
-    "rating": 0
-  },
-  "P22": {
-    "name": "Test the new product",
-    "price": 123000,
-    "category": "Category",
-    "sold": 0,
-    "stock": 999,
-    "desc": "asd",
-    "vendor": "one",
-    "rating": 0
   }
 }

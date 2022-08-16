@@ -20,6 +20,7 @@ class Api {
     }
 
     function newProduct(){
+        echo "HELP";
         $data = array(
             "name"=>$_POST["name"],
             "price"=>(int) $_POST["price"],
@@ -32,6 +33,7 @@ class Api {
         );
         
         $newId = $this->addNewData($this::$productFile, "P", $data);
+        echo $newId;
         $this->uploadProductImg($newId);
         header("Location: /");
     }
@@ -47,6 +49,16 @@ class Api {
         }
         DataHandle::writeData($this::$orderFile, json_encode($orderData));
         header("Location: /");
+    }
+
+    // GET 
+
+    function getLoginStatus() {
+        if(isset($_COOKIE["user"])) {
+            echo '{"status": "true"}';
+        } else {
+            echo '{"status": "false"}';
+        }
     }
 
     private function addNewData($file, $prefix, $newData){

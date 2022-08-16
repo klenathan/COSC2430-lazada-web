@@ -12,6 +12,13 @@
     <script src="js/Cart/renderCurrentCart.js" defer></script>
 
     <title>Shopping Cart</title>
+
+    <style>
+        #login-warn {
+            color: red;
+            display: none
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -21,8 +28,10 @@
     </header>
 
     <main>
-        <div>CART</div>
-            <div id="cart-wrapper">
+        <h1>CART</h1>
+        <p id="login-warn">Please login to checkout</p>
+        <div id="cart-wrapper">
+            <!-- Reserve for cart products -->
         </div>
 
         <div class="final-price">
