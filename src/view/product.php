@@ -35,14 +35,24 @@
 
             <div class="product-page">
                 <div class="product-page-img">
-                    <img src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" 
-                    class="main-img"
-                    alt="" srcset="">
-                    <div class="sub-img">
-                        <img src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="" srcset="">
-                        <img src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="" srcset="">
-                        <img src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="" srcset="">
+                    <div class="sub-img-row">
+                        <div class="column"> 
+                            <img class="sub-images" src="assets/image/product/P7.jpg" alt="" srcset="" onload="tabbedImage(this);" onclick="tabbedImage(this);">
+                        </div>
+                        <div class="column"> 
+                            <img  class="sub-images" src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="" srcset="" onclick="tabbedImage(this);"> 
+                        </div>
+                        <div class="column"> 
+                            <img class="sub-images" src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="" srcset=""onclick="tabbedImage(this);">
+                        </div>
                     </div>
+                    <div class="container">
+                        <!-- the under line is for close button if needed -->
+                        <!-- <span onclick="this.parentElement.style.display='none'" class="closeButton">&times; </span> --> 
+                        <img id="expanded" style="width:100%">
+                        <div id="text">
+                    </div>
+                </div>
                 </div>
                 <div class="product-page-buy">
                     <div class="sidebar"> 
