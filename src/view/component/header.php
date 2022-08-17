@@ -27,9 +27,9 @@
         <input name="product-search" type="text" id="product-search" placeholder="Search product... ">
     </div>
 
-    <div class="header-right">
+    <!-- <div class="header-right"> -->
 
-        <div class="header-extra header-component">
+        <div class="header-extra header-component header-right">
             <a class="header-component cart-icon-wrapper" href="/cart">
                 <svg id="cart-logo" class="cart-logo hover-btn" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512">
@@ -66,5 +66,5 @@
         }
         ?>
         </div>
-    </div>
+    <!-- </div> -->
 </div>
