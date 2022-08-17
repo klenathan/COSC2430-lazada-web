@@ -16,9 +16,10 @@
 
     include("core/routing.php");
     #null for default page
+
     $reservedUrl = array("home", "myaccount", 
     "cart", "product", "signupdemo", "login", 
     "signupforcustomer", "signup", 
-    "search", "api", null); 
+    "search", "api", null);
     $route = new Route($reservedUrl, "home");
 ?>
