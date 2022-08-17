@@ -45,7 +45,8 @@
                     </div>
                 </div>
                 <div class="product-page-buy">
-                    <div class="product-info-wrapper">
+                    <div class="sidebar"> 
+                        <div class="product-info-wrapper">
                         <p><?php echo $this::$productData["category"];?></p>
                         <p class="product-info-name"><?php echo $this::$productData["name"];?></p>
                         <p class="product-info-vendor">Sold by: 
@@ -59,12 +60,13 @@
                         name="quantity" 
                         id="buy-quantity"
                         value=1>
-                    </div>
+                        </div>
                     
-                    <div class="product-button-container">
-                        <button onclick='' class="product-page-button" id="buy-now-btn">Buy now</button>
-                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", )' class="product-page-button" id="add-cart-btn">Add to cart</button>
+                        <div class="product-button-container">
+                        <button onclick='' class="product-page-button" id="buy-now-btn"><p> Buy now </p> <p>➜</p> </button>   
+                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", )' class="product-page-button" id="add-cart-btn"><p> Add to cart </p> <p>➜</p></button>
                         <!-- checkCurrentCart() -->
+                        </div>
                     </div>
                 </div>
             </div>

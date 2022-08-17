@@ -26,6 +26,24 @@ body, html {
       right: 0px;
       bottom: 0px;
       left: 0px;
+      animation: change 5s ease-in-out;
+}
+@keyframes change {
+  0%
+  {
+    background-image: url('../assets/image/blackwhite_loginBackground.png');
+  }
+  30%{
+    background-image: url('../assets/image/blackwhite_loginBackground.png');
+  }
+  50%
+  {
+    background-image: url('../assets/image/backgroundLogin.jpg');
+  }
+  100%
+  {
+    background-image: url('../assets/image/backgroundLogin.jpg');
+  }
 }
 .homepage{
   position: absolute;
@@ -139,6 +157,7 @@ body, html {
   .homepage{
     display: none;
   }
+  
 @media screen and (max-height: 677px){
   .login-form-wrapper {
     min-width: 80%;
