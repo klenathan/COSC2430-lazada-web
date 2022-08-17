@@ -1,0 +1,8 @@
+.shipper-product {
+    display: flex;
+    flex-direction: row;
+}
+
+.shipper-product-img {
+    width: 150px;
+}

@@ -1,32 +1,79 @@
 <?php
 class Signup extends Controller {
+    static $accountFile = "../data/account.db";
+
     function __construct() {
         $this->view("signup");
     }
 
-    function handleSignup() {
-        $signUpRes = Auth::signUp($_POST["signupUsername"], $_POST["signupEmail"], $_POST["signupPassword"], "customer");
-        if ($signUpRes == "successful"){
+    function signupCustomer() {
+        $data = array(
+            "password"=>$_POST["password"],
+            "name"=>$_POST["name"],
+            "email"=>$_POST["email"],
+            "address"=>$_POST["address"],
+            "accountType"=>"customer"
+        );
+        $this->handleSignup($data);
+    }
+
+    function handleSignUpVendor() {
+        $data = array(
+            "password"=>$_POST["password"],
+            "name"=>$_POST["name"],
+            "email"=>$_POST["email"],
+            "address"=>$_POST["address"],
+            "accountType"=>"vendor"
+        );
+        $this->handleSignup($data);
+    }
+
+    function handleSignUpShipper() {
+        $data = array(
+            "password"=>$_POST["password"],
+            "name"=>$_POST["name"],
+            "email"=>$_POST["email"],
+            "hub"=>$_POST["hub"],
+            "accountType"=>"shipper"
+        );
+        $this->handleSignup($data);
+    }    
+
+    private function handleSignup($data) {
+        $inputUsername = $_POST["username"];
+        if ($_POST["password"] != $_POST["password"]){
+            Signup::setValueOnErr();
+            $_SESSION["signup_err"] = "Password does not match";
+            header("Location: /test.php");
+        } else if ($this::checkUserExist($inputUsername)) {
+            Signup::setValueOnErr();
+            $_SESSION["signup_err"] = "Username existed";
+            header("Location: /test.php");
+        } else if (!$this::checkUserExist($inputUsername)){
+            $currentData = json_decode(DataHandle::readData($this::$accountFile), true);
+            $currentData[$_POST["username"]] = $data;
+
             setcookie("user", $_POST["username"], time() + (3600*24*30), "/");
             unset($_SESSION["signup_err"]);
-            header("location: /");
-        } elseif ($_POST["signupPassword"] != $_POST["confirmPassword"]){
-            Signup::setValueOnErr();
-            $_SESSION["signup_err"] = "Username already exist";
-        } elseif ($signUpRes == "username_exist"){
-            Signup::setValueOnErr();
-            $_SESSION["signup_err"] = "Username already exist";
-            header("location: /signup");
+            // Write to database
+            DataHandle::writeData($this::$accountFile, json_encode($currentData));
+            header("Location: /");
         } else {
-            $_SESSION["signup_err"] = "Err";
-            header("location: /signup");
+            Signup::setValueOnErr();
+            $_SESSION["signup_err"] = "undefined error";
+            header("Location: /test.php");
         }
     }
 
     private static function setValueOnErr(){
-        $_SESSION["signupUsername"] = $_POST["signupUsername"];
-        $_SESSION["signupEmail"] = $_POST["signupEmail"];
-        $_SESSION["signupPassword"] = $_POST["signupPassword"];
+        $_SESSION["signupUsername"] = $_POST["username"];
+        $_SESSION["signupEmail"] = $_POST["email"];
+        $_SESSION["signupPassword"] = $_POST["password"];
+    }
+
+    private static function checkUserExist($username){
+        $userData = DataHandle::readToJson(Signup::$accountFile);
+        return array_key_exists($username, $userData) ? True : False;
     }
 }
 ?>

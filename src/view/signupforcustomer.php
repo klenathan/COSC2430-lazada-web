@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/signupforcustomer.css">
     <title>Sign up for customer</title>
     <script src="js/signupClickable.js"></script>
+    <script src="js/updateProfileImg.js"></script>
 </head>
 <body>
     <header>
@@ -18,8 +19,10 @@
             <h2>Sign up for Customer</h2>
             <form action="signup/handleSignup" name="signup" method="get">
                 <div class="form-row avatar">
-                    <input type="file" id="imgupload" style="display:none"/> 
-                    <img class="avatar-image" id="customer-img" src="assets/image/signupimage/Ellipse 2.png" alt="blank avatar" onclick="chooseFile()">
+                    <input type="file" id="imgupload"
+                    onchange="loadFile(event)" style="display:none"/> 
+                    <img class="avatar-image" id="customer-img" 
+                    src="assets/image/signupimage/Ellipse 2.png" alt="blank avatar" onclick="chooseFile()">
                 </div>
                 <div class="form-row">
                     <div class="form-label">

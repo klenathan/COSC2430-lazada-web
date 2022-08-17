@@ -1,6 +1,30 @@
 <?php
 class Home extends Controller {
     public static $bestSeller;
+
+    // Overwrite view function
+    function view($view) {
+        echo '<link rel="shortcut icon" href="assets/image/favicon.png" type="image/png">';
+        if(isset($_SESSION["user_detail"])) {
+            $userDetail = json_decode($_SESSION["user_detail"], true);
+            if ($userDetail["accountType"] == "customer") {
+                include("view/home/customerHome.php");
+            } else if ($userDetail["accountType"] == "shipper") {
+                include("controller/myAccountComponent/shipperAccountPage.php");
+                $shipper = new ShipperAccount("name3");
+                include("view/home/shipperHome.php");
+            } else if ($userDetail["accountType"] == "vendor") {
+                include("controller/myAccountComponent/vendorAccountPage.php");
+                $vendor = new VendorAccount;
+                include("view/home/vendorHome.php");
+                
+            }
+        } else {
+            include("view/home/customerHome.php");
+        }
+        
+    }
+
     private static $productFile = "../data/product.db";
     function getBestSeller() {
         $data = dataHandle::readToJson($this::$productFile);

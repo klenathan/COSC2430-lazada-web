@@ -11,6 +11,7 @@ fetchData().then(res => {
     }
     
     document.getElementById("total-price").innerText = formatted + " VND"
+    document.getElementById("total-price-int").innerText = res
 })
 
 async function fetchData() {
