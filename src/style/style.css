@@ -213,13 +213,22 @@ main {
 #product-search {
     height: 2rem;
     width: 30%;
+}
+
+#search {
+    height: 2rem;
+    width: 100%;
     padding: 0 1rem;
     border-radius: .5rem;
     border: none;
     outline: none;
 }
 
-#product-search:active {
+#product-search button{
+    visibility: hidden;
+}
+
+#search:active {
     outline: none;
 }
 

@@ -3,7 +3,10 @@ class Signup extends Controller {
     static $accountFile = "../data/account.db";
 
     function __construct() {
-        $this->view("signup");
+        if (isset($_COOKIE["user"])) {
+            header("Location: /");
+        }
+        // $this->view("signup");
     }
 
     function signupCustomer() {

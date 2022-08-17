@@ -51,6 +51,25 @@ class Api {
         header("Location: /");
     }
 
+    public function editCustomerProfile(){
+        $data = array(
+            "name"=>$_POST["name"],
+            "email"=>$_POST["email"],
+            "address"=>$_POST["address"],
+        );
+        $this->updateProfile($data);
+    }
+
+    private function updateProfile($data){
+        $currentData = json_decode(DataHandle::readData($this::$accountFile), true);
+        // $currentData[$_COOKIE["user"]] = $data;
+        foreach ($data as $key => $value) {
+            $currentData[$_COOKIE["user"]][$key] = $value;
+        }
+        DataHandle::writeData($this::$accountFile, json_encode($currentData));
+        header("Location: /myaccount");
+    }
+
     // GET 
 
     function getLoginStatus() {

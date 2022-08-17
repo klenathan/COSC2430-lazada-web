@@ -1,0 +1,110 @@
+main {
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.profile-wrapper {
+    margin-top: 2rem;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    transform: translateY(15%);
+    border: purple 2px solid
+}
+
+.info-section {
+    background-color: white;
+    width: 100%;
+    border-radius: 2rem;
+    border: purple 1px solid;
+    box-shadow: 0 0 10px 0 rgba(154, 45, 154, 0.5);
+
+    /* transform: rotateY(180deg); */
+}
+
+.info-child {
+    display: flex;
+    flex-direction: column;
+}
+
+#info-render {
+    visibility: visible;
+}
+
+#info-edit {
+    background: white;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem
+}
+
+#modal-off-button {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 90%;
+    cursor: pointer;
+    color: white;
+    background-color: purple;
+    border: none
+}
+
+#info-edit-modal {
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form input {
+    height: 2rem;
+}
+
+.edit-profile-btn {
+    border: none;
+    margin-left: auto;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.edit-profile-btn:hover {
+    background: purple
+}
+
+.info-section p {
+    margin: 1rem 1rem;
+}
+
+
+/* ORDER SECTION */
+
+.profile-order {
+    width: 60%;
+    background-color: purple;
+}

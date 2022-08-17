@@ -1,0 +1,6 @@
+.product-result-grid {
+    display: grid;
+    width: 100%;
+    max-width: 1188px;
+    grid-template-columns: 1fr 1fr 1fr;
+}

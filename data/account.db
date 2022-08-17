@@ -1,9 +1,10 @@
 {
   "one": {
+    "name": "User One Edit",
     "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-    "name": "User One",
     "email": "one@c.a",
-    "accountType": "shipper"
+    "address": "Q7, HCM",
+    "accountType": "customer"
   },
   "1": {
     "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
@@ -21,12 +22,12 @@
     "accountType": "customer"
   },
   "vendor": {
-    "password":"a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+    "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
     "name": "Vendor",
     "email": "one@one.com",
-    "address" : "Q7, HCM",
+    "address": "Q7, HCM",
     "accountType": "vendor"
-    },
+  },
   "nike": {
     "name": "Nike Store"
   },

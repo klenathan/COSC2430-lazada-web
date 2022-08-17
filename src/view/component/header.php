@@ -3,10 +3,14 @@
         <img class="header-logo" src="assets/image/logo.png" alt="logo">
     </a>
 
-    <input name="product-search" 
-    type="text"
-    id="product-search"
-    placeholder="Search product... ">
+    <form id="product-search" action="search" method="get">
+        <input name="search" 
+        type="text"
+        id="search"
+        placeholder="Search product... ">
+        <button type="submit"></button>
+    </form>
+    
 
     <div class="header-extra header-component">
         <a class="header-component cart-icon-wrapper" href="/cart">

@@ -7,19 +7,23 @@
 
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/home.css">
-    <title>Lazada</title>
+    <link rel="stylesheet" href="style/search.css">
+
+    <title>Search</title>
 </head>
 <body>
-    <header>
+<header>
         <?php
         include_once("view/component/header.php");
-        include_once("view/component/homeSlider.php");
         ?>
-    </header>
+</header>
     <main>
-        <?php
-            $this->getAllproduct();
-        ?>
+        <div class="product-result-grid">
+            <?php
+            $this->searchQuery($this->keyword);
+            ?>
+        </div>
+        
     </main>
 
     <footer>

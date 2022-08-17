@@ -1,7 +1,9 @@
 <?php
 class Login extends Controller {
     public function __construct () {
-        $this->view("login");
+        if (isset($_COOKIE["user"])) {
+            header("Location: /");
+        }
     }
     function handleLogin(){
         $loginStatus = Auth::login($_POST["username"], $_POST["password"]);
