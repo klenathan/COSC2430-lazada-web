@@ -1,5 +1,6 @@
 <?php
-class Home extends Controller {
+class Home extends Controller
+{
     public static $bestSeller;
 
     // Overwrite view function
@@ -26,43 +27,57 @@ class Home extends Controller {
     }
 
     private static $productFile = "../data/product.db";
-    function getBestSeller() {
+    function getBestSeller()
+    {
         $data = dataHandle::readToJson($this::$productFile);
         foreach ($data as $key => $value) {
             echo $key;
             foreach ($value as $k => $v) {
-                echo $k."->".$v."<br>";
+                echo $k . "->" . $v . "<br>";
             }
             echo "<br>";
         }
     }
-    function getAllProduct() {
+    function getAllProduct()
+    {
         $data = dataHandle::readToJson($this::$productFile);
-        ?>
-        <div class="slider-wrapper">
-            <p class="slider-header">All products</p>
-            <div class="slider">
-        <?php
-            foreach ($data as $key => $value) {
-                ?>
-                <a href="/product?productid=<?php echo $key;?>" class="product-card">
-                    <?php
-                    echo '
-                    <img src="assets/image/product/'.$key.'.jpg" alt="'.$value["name"].'">
-                    <div class="product-card-info">
-                        <p class="product-card-name">'.$value["name"].'</p>
-                        <p class="product-card-price">'.number_format($value["price"]).' VND</p>
-                        <p class="product-card-rating">Rating: '.$value["rating"].'</p>
-                    </div>
-                    ';
-                ?>
-                </a>
+?>
+
+        <section class="product">
+            <h2 class="product-category"> All products</h2>
+
+            <button class="pre-btn"><img src="../assets/arrow.png" alt=""></button>
+            <button class="nxt-btn"><img src="../assets/arrow.png" alt=""></button>
+
+            <div class="product-container">
                 <?php
-            }
-        ?>
+                foreach ($data as $key => $value) {
+                ?>
+                    <!-- <div > -->
+                    <a class="product-card" href="/product?productid=<?php echo $key; ?>">
+                        <?php
+                        echo '
+                        <div class="product-image">
+                            <span class="discount-tag">50% off</span>
+                            <img src="assets/image/product/' . $key . '.jpg" class="product-thumb" alt="' . $value["name"] . '">  
+                            <button class="card-btn">add to wishlist</button>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-card-name">' . $value["name"] . '</p>
+                            <p class="product-card-price">' . number_format($value["price"]) . ' VND</p>
+                            <p class="product-card-rating">Rating: ' . $value["rating"] . '</p>
+                        </div>
+                    ';
+                        ?>
+                    </a>
+                    <!-- </div> -->
+                <?php
+                }
+                ?>
             </div>
-        </div>
-        <?php
+        </section>
+        <script src="../js/slider.js"></script>
+<?php
     }
 }
 ?>
