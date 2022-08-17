@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
     <!-- <link rel="stylesheet" href="style/home.css"> -->
     <link rel="stylesheet" href="style/clonehome.css">
-    <link rel="stylesheet" href="style/sliderproduct.css">
+    <!-- <link rel="stylesheet" href="style/sliderproduct.css"> -->
 
     <title>Lazada</title>
 </head>
