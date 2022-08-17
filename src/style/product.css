@@ -1,163 +1,217 @@
 * {
-    --primary-color: rgb(39, 26, 97);
-  --sub-menu-color: rgb(86, 51, 125);
-  --sub-menu-hover-color: rgb(39, 26, 97);
-  --hover-color: rgb(223, 91, 166);
-    --primary-img-size: 500px;
+  --primary-color: rgb(7, 142, 61);
+  --sub-menu-color: rgb(4, 98, 42);
+  --hover-color: rgb(5, 50, 23);
+  --primary-img-size: 500px;
 }
 
 .breadcumb {
-    width: 80%;
+  width: 80%;
 }
 
 .breadcumb a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: bold;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
 .breadcumb a:hover {
-    text-decoration: underline;
-    color: var(--sub-menu-hover-color);
+  text-decoration: underline;
+  color: var(--sub-menu-hover-color);
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(245, 245, 245);
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(245, 245, 245);
+  align-items: center;
 }
 
 img {
-    object-fit: contain;
+  object-fit: contain;
 }
 
 .product-page {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 2rem;
-    background: white;
-    width: 80%;
-    padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+  background: white;
+  width: 100%;
 }
 
 .product-page-img {
-    display: flex;
-    width: 40%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+  padding: 4rem;
+  background-color: rgb(237, 239, 240);
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .main-img {
-    width: var(--primary-img-size);
-    height: var(--primary-img-size);
-    aspect-ratio: 1;
-    margin-bottom: 2rem;
-    background-color: white;
+  width: 50%;
+  height: auto;
+  aspect-ratio: 1;
+  margin-bottom: 0.1rem;
+  background-color: white;
 }
+.main-img:hover {
+  border: solid 3px var(--primary-color);
+}
+
 .sub-img {
-    width: var(--primary-img-size);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .sub-img img {
-    --scale-index: 0.32;
-    width: calc(var(--scale-index) * var(--primary-img-size));
-    height: calc(var(--scale-index)  * var(--primary-img-size));
-    background-color: white;
-    border: solid 3px transparent;
+  --scale-index: 0.32;
+  width: calc(var(--scale-index) * var(--primary-img-size));
+  height: calc(var(--scale-index) * var(--primary-img-size));
+  background-color: white;
+  border: solid 3px transparent;
+  border-style: solid;
+  border-color: gray;
+  margin: 2% 2% 0 2%;
 }
 .sub-img img:hover {
-    border: solid 3px var(--primary-color);
+  border: solid 3px var(--primary-color);
 }
 
 .product-page-buy {
-    display: flex;
-    width: 60%;
-    flex-direction: column
+  position: relative;
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+}
+.sidebar {
+  top: 0;
+  position: sticky;
+  bottom: 0;
 }
 /* Infor wrapper */
 .product-info-wrapper {
-    flex: 4;
-    margin-left: 5%;
+  flex: 4;
+  margin-left: 5%;
+  margin-bottom: 5%;
 }
 
-.product-page-buy p  {
-    padding: 0.5rem 0;
+.product-page-buy p {
+  padding: 0.5rem 0;
 }
 
 .product-info-name {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .product-info-vendor a {
-    color: var(--primary-color);
-    font-weight: bold;
-    cursor: pointer;
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .product-info-price {
-    font-size: 2.5rem;
-    font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 /* Button container */
 
 .product-button-container {
-    display: flex;
-    width: 80%;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex: 1;
-    margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 5%;
+  flex: 1;
 }
 
 .product-page-button {
-    border: none;
-    height: 4rem;
-    font-size: 1.5rem;
-    width: 250px;
-    cursor: pointer;
-    font-weight: bold;
-    color: white;
-    transition: 0.3s ease-in-out;
+  border: none;
+  height: 4rem;
+  font-size: 1.5rem;
+  width: 250px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  transition: 0.2s ease-in-out;
+  margin-bottom: 5%;
+  height: 80%;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 #buy-now-btn {
-    background-color: var(--primary-color);
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 142, 209);
 }
 
 #add-cart-btn {
-    background-color: var(--sub-menu-color);
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 142, 209);
 }
 
 #buy-now-btn:hover {
-    background-color: var(--hover-color);
+  color: rgb(50, 49, 49);
 }
 
 #add-cart-btn:hover {
-    background-color: var(--hover-color);
+  color: rgb(50, 49, 49);
 }
-
+.product-info-sold {
+  font-weight: bold;
+}
 
 /* product DESC */
 
 .product-desc {
-    width: 80%;
-    margin-top: 2rem;
-    background-color: white;
+  width: 80%;
+  margin-top: 2rem;
+  background-color: white;
 }
 
 .product-desc h2 {
-    margin: 1rem 2rem
+  margin: 1rem 2rem;
 }
 
 .product-desc p {
-    font-size: 1.2rem;
-    margin: 1rem 2rem;
+  font-size: 1.2rem;
+  margin: 1rem 2rem;
+}
+@media screen and (max-width: 500px) {
+  .product-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+    background: white;
+    width: 80%;
+    padding: 1rem 0;
+  }
+  .product-page-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main-img {
+    display: flex;
+    justify-content: center;
+  }
+  .sub-img {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
 }
