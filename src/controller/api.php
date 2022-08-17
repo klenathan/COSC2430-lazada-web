@@ -18,13 +18,9 @@ class Api {
     function test() {
         echo '{"test": "'.$_POST["test"].'"}';
     }
-    
-    function newOrder(){
-        // $this->addNewData($this::$orderFile, "O", $_POST["data"]);
-        // header("Location: /myaccount");
-    }
 
     function newProduct(){
+        echo "HELP";
         $data = array(
             "name"=>$_POST["name"],
             "price"=>(int) $_POST["price"],
@@ -37,8 +33,51 @@ class Api {
         );
         
         $newId = $this->addNewData($this::$productFile, "P", $data);
+        echo $newId;
         $this->uploadProductImg($newId);
+        header("Location: /");
+    }
+
+    function updateOrderStatus(){
+        $orderid = $_POST["order_id"];
+        $status = $_POST["status"];
+        $orderData = DataHandle::readToJson($this::$orderFile);
+        foreach ($orderData as $key => $value) {
+            if ($key == $orderid) {
+                $orderData[$key]["order_status"] = $status;
+            }
+        }
+        DataHandle::writeData($this::$orderFile, json_encode($orderData));
+        header("Location: /");
+    }
+
+    public function editCustomerProfile(){
+        $data = array(
+            "name"=>$_POST["name"],
+            "email"=>$_POST["email"],
+            "address"=>$_POST["address"],
+        );
+        $this->updateProfile($data);
+    }
+
+    private function updateProfile($data){
+        $currentData = json_decode(DataHandle::readData($this::$accountFile), true);
+        // $currentData[$_COOKIE["user"]] = $data;
+        foreach ($data as $key => $value) {
+            $currentData[$_COOKIE["user"]][$key] = $value;
+        }
+        DataHandle::writeData($this::$accountFile, json_encode($currentData));
         header("Location: /myaccount");
+    }
+
+    // GET 
+
+    function getLoginStatus() {
+        if(isset($_COOKIE["user"])) {
+            echo '{"status": "true"}';
+        } else {
+            echo '{"status": "false"}';
+        }
     }
 
     private function addNewData($file, $prefix, $newData){
@@ -61,14 +100,12 @@ class Api {
         $target_file = $target_dir . $name . ".jpg";
         $imageFile = "assets/image/product/";
         $check = False;
-        $err = "err";
 
         if (!$_FILES["pImg"]["name"] == ""){
             $check = True;
         } else {
             $check = False;
         }
-        echo "here";
         echo $imageFile = $_FILES["pImg"]["tmp_name"];
 
         if($check !== false) {

@@ -1,7 +1,8 @@
 * {
-    --primary-color: rgb(7, 142, 61);
-    --sub-menu-color: rgb(4, 98, 42);
-    --hover-color: rgb(5, 50, 23);
+    --primary-color: rgb(39, 26, 97);
+  --sub-menu-color: rgb(86, 51, 125);
+  --sub-menu-hover-color: rgb(39, 26, 97);
+  --hover-color: rgb(223, 91, 166);
     --primary-img-size: 500px;
 }
 

@@ -6,28 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style/style.css">
-    <!-- <link rel="stylesheet" href="style/home.css"> -->
-    <link rel="stylesheet" href="style/clonehome.css">
-    <link rel="stylesheet" href="style/sliderproduct.css">
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/home/shipper.css">
 
-    <title>Lazada</title>
+    <script src="js/homepage/updateOrderStatus.js"></script>
+
+    <title>Lazada's Shipper Port</title>
 </head>
 <body>
     <header>
         <?php
         include_once("view/component/header.php");
-        include_once("view/component/homeSlider.php");
         ?>
     </header>
-    <main>
-        
-        <?php
-        $this->getAllproduct();
-        // $this->getAllproduct();
-        // $this->getAllproduct();
-        ?>
-    </main>
 
+    <main>
+        <!-- <h1>Welcome to shipper's homepage</h1> -->
+        <img class="shipper-welcome-img" src="assets/image/backgroundLogin.jpg" alt="" srcset="">
+        <div class="shipper-order-container">
+            <?php
+            $shipper->getCurrentShipperOrders();
+            ?>
+        </div>
+    </main>
 
     <footer>
         <?php
@@ -35,5 +36,4 @@
         ?>
     </footer>
 </body>
-
 </html>

@@ -5,16 +5,20 @@
   box-sizing: 0;
   font-family: sans-serif;
   --header-avatar-size: 3rem;
-  /*  */
   --primary-color: rgb(39, 26, 97);
   --sub-menu-color: rgb(86, 51, 125);
-  --sub-menu-hover-color: rgb(22, 118, 60);
+  --sub-menu-hover-color: rgb(39, 26, 97);
   --hover-color: rgb(223, 91, 166);
 
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+}
+
 main {
-  min-height: calc(95vh - 5.5rem);
+    min-height: calc(95vh - 3rem);
 }
 /* 
 /* Upper header */
@@ -51,7 +55,19 @@ main {
   width: 100%;
 }
 .header-logo {
-  height: 80%;
+    height: 3rem;
+}
+
+.cart-logo {
+    /* flex: 1; */
+    padding: 0.6rem;
+    height: 1.5rem;
+    fill: white;
+    cursor: pointer;
+    /* background-color: red; */
+    /* transition: 0.3s ease-in-out; */
+    border-radius: .5rem;
+    height: 80%;
 }
 
 .header a {
@@ -62,7 +78,7 @@ main {
 }
 
 .header-left {
-  flex: 1.25;
+  flex: 1;
   display: flex;
   justify-items: baseline;
   align-items: center;
@@ -107,8 +123,9 @@ main {
   filter: invert(1);
 }
 .header-mid {
-  flex: 2;
+  flex: 1;
 }
+
 #product-search {
   height: 2rem;
   width: 100%;
@@ -116,6 +133,10 @@ main {
   border-radius: 0.5rem;
   border: none;
   outline: none;
+}
+
+#submit-btn{
+    visibility: hidden;
 }
 
 #product-search:active {
@@ -127,9 +148,9 @@ main {
 }
 
 .header-right {
-  flex: 1.25;
+  flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   height: 3rem;
 }
@@ -145,21 +166,28 @@ main {
   border-radius: 0.5rem;
 }
 
-.loginsignup {
+.login-signup-wrapper {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   color: white;
+
   margin: 0 5rem 0 4rem;
 }
-.loginsignup p {
-  margin: 0 0.5rem 0 0.5rem;
-  padding: 0;
+.login-signup-wrapper a {
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
+
 .hover-btn {
   transition: 0.3s ease-in-out;
   font-size: 1.2rem;
 }
+
 .hover-btn:hover{
-    color:rgb(214, 37, 67);
+    /* color: rgb(223, 91, 166); */
+    background-color: rgb(223, 91, 166);
 }
 
 .cart-logo:hover {
@@ -203,11 +231,11 @@ main {
 
 /* Arrow on submenu */
 #emp-div {
-  width: 200px;
-  display: none;
-  position: absolute;
-  height: 2rem;
-  top: 5rem;
+    width: 200px;
+    display: none;
+    position: absolute;
+    height: 2rem;
+    top: 3rem;
 }
 
 .sub-menu-item:first-child:before {
@@ -218,7 +246,7 @@ main {
   /* rotate(45deg)  */
   transform: rotate(45deg) translateY(-200%) translateX(100%);
   border-radius: 5px;
-  background-color: var(--sub-menu-color);
+  background-color: var(--primary-color);
   z-index: 0;
 }
 
@@ -230,22 +258,21 @@ main {
 }
 
 .sub-menu {
-  position: absolute;
-  display: flex;
-  display: none;
-  flex-direction: column;
-  top: 6rem;
-  z-index: 2;
-  width: 200px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 4rem;
+    z-index: 2;
+    width: 200px;
 }
 
 .sub-menu-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 2.5rem;
-  border-bottom: 2px solid black;
-  background-color: var(--sub-menu-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 2.5rem;
+    /* border-bottom: 2px solid black; */
+    background-color: var(--primary-color);
 }
 
 .sub-menu-item:hover {
@@ -253,7 +280,7 @@ main {
 }
 
 .sub-menu-item:first-child {
-  border-radius: 1rem 1rem 0 0;
+    border-radius: 1rem;
 }
 
 .sub-menu-item:first-child:hover:before {
@@ -263,12 +290,6 @@ main {
 .sub-menu:first-child::before:hover {
   opacity: 0.7;
 }
-
-.sub-menu-item:last-child {
-  border-radius: 0 0 1rem 1rem;
-  border-bottom: none;
-}
-
 .login-btn {
   height: 100%;
   display: flex;
@@ -278,12 +299,42 @@ main {
 }
 
 .login-btn p {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 80%;
-  padding: 0 2rem;
-  border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80%;
+    padding: 0 2rem;
+    border-radius: 1rem;
+}
+
+#search {
+    height: 2rem;
+    width: 100%;
+    padding: 0 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+}
+
+.header-mid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-mid form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%
+}
+
+#product-search button{
+    visibility: hidden;
+}
+
+#search:active {
+    outline: none;
 }
 
 /* Footer */

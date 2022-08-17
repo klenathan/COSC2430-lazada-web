@@ -3,43 +3,29 @@ class VendorAccount {
     private static $productFile = '../data/product.db';
 
     function __construct() {
-        ?>
+        
+    }
 
-        <form class="new-product-form" action="api/newProduct"
-        method="post" enctype="multipart/form-data">
-            <label for="name">Name: </label>
-            <input type="text" name="name" id="name" required>
-            <label for="price">Price: </label>
-            <input type="text" name="price" id="price" required>
-            <label for="price">Category: </label>
-            <input type="text" name="category" id="category" required>
-            <label for="desc">Description: </label>
-            <textarea name="desc" id="desc" cols="25" rows="5" required></textarea>
-            <input type="file" name="pImg" id="pImg" 
-            accept="image/jpg, image/jpeg" required>
-
-            <button type="submit">Submit</button>
-        </form>
-        <?php
+    function renderAllProduct() {
         $productData = DataHandle::readToJson($this::$productFile);
         foreach ($productData as $key => $value) {
             if ($value["vendor"] == $_COOKIE["user"]) {
-                echo str_repeat("=", 20)."<br>";
                 ?>
-                <img src="assets/image/product/<?php echo $key;?>.jpg" alt="<?php echo $key;?>"r>
+                <div class="vendor-product-card">
+                    <img class="product-img" src="assets/image/product/<?php echo $key;?>.jpg" alt="<?php echo $key;?>"r>
+                    <div class="vendor-product-info">
+                        <p class="vendor-product-name"><?php echo $value["name"]?></p>
+                        <p>ID: <?php echo $key?></p>
+                        <p class="vendor-product-price"><?php echo number_format($value["price"])?> VND</p>
+                        <p class="vendor-product-category">Category: <?php echo $value["category"]?></p>
+                        <p class="vendor-product-sold">Sold: <?php echo $value["sold"]?></p>
+                        <p class="vendor-product-stock">Stock: <?php echo $value["stock"]?></p>
+                    </div>
+                </div>
                 <?php
-                echo "<p>"."Name: ".$value["name"]."</p>";
-                echo "<p>"."Price ".$value["price"]."</p>";
-                echo "<p>"."Cat ".$value["category"]."</p>";
-                echo "<p>"."Sold ".$value["sold"]."</p>";
-                echo "<p>"."Stock ".$value["stock"]."</p>";
                 // echo $value["desc"]."<br>";
             }
         }
-    }
-
-    function addNewProduct() {
-        
     }
 }
 ?>
