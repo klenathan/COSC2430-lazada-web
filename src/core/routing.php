@@ -25,6 +25,7 @@
                 $this->controller = "notfound";
             }
             unset($url_array[1]);
+
             ######Process method###########
             if (isset($url_array[2])) {
                 include_once("controller/".$this->controller.".php");
@@ -33,7 +34,6 @@
                 if(method_exists($target, $url_array[2])){
                     $this->method = $url_array[2];
                 }
-                
                 // echo ;
                 unset($url_array[2]);
             }

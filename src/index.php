@@ -2,7 +2,7 @@
     session_start();
     // Core files
     include("core/controller.php");
-    include("core/dataHandle.php");
+    include("core/model/dataHandle.php");
     include("core/model/authentication.php");
     include("model/productModel.php");
 
@@ -13,9 +13,13 @@
     
 
     // Routing
+
     include("core/routing.php");
     #null for default page
-    $reservedUrl = array("home", "login", "myaccount", "cart", "product", "signup", "vendor", "myorder", null); 
+
+    $reservedUrl = array("home", "myaccount", 
+    "cart", "product", "signupdemo", "login", 
+    "signupforcustomer", "signup", 
+    "search", "api", null);
     $route = new Route($reservedUrl, "home");
 ?>
-

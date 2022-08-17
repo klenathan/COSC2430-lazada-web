@@ -1,7 +1,9 @@
 <?php
 class Login extends Controller {
     public function __construct () {
-        $this->view("login");
+        if (isset($_COOKIE["user"])) {
+            header("Location: /");
+        }
     }
     function handleLogin(){
         $loginStatus = Auth::login($_POST["username"], $_POST["password"]);
@@ -9,6 +11,7 @@ class Login extends Controller {
         if ($loginStatus == "successful") {
             setcookie("user", $_POST["username"], time() + (3600*24*30), "/");
             unset($_SESSION["err_name"]);
+            unset($_SESSION["loginUsername"]);
             header("location: /");
         } elseif ($loginStatus == "wrong_password"){
             $_SESSION["loginUsername"] = $_POST["username"];
@@ -25,6 +28,7 @@ class Login extends Controller {
     }
     function signOut(){
         setcookie("user", null, -1, "/");
+        unset($_SESSION["user_detail"]);
         header("location: /");
     }
 }

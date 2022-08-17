@@ -7,21 +7,27 @@
 
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/home.css">
-    <title>Lazada</title>
+    <link rel="stylesheet" href="style/home/shipper.css">
+
+    <script src="js/homepage/updateOrderStatus.js"></script>
+
+    <title>Lazada's Shipper Port</title>
 </head>
 <body>
     <header>
         <?php
         include_once("view/component/header.php");
-        include_once("view/component/homeSlider.php");
         ?>
     </header>
+
     <main>
-        <?php
-        $this->getAllproduct();
-        $this->getAllproduct();
-        $this->getAllproduct();
-        ?>
+        <!-- <h1>Welcome to shipper's homepage</h1> -->
+        <img class="shipper-welcome-img" src="assets/image/backgroundLogin.jpg" alt="" srcset="">
+        <div class="shipper-order-container">
+            <?php
+            $shipper->getCurrentShipperOrders();
+            ?>
+        </div>
     </main>
 
     <footer>

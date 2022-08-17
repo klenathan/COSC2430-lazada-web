@@ -1,5 +1,11 @@
 <?php
 class Auth {
+
+    function __construct() {
+        if (isset($_COOKIE["user"])) {
+            Auth::setUserDetailSession($_COOKIE["user"]);
+        }   
+    }
     
     private static $userDataFile = "../data/account.db";
 
@@ -10,6 +16,7 @@ class Auth {
 
         if (array_key_exists($inputUsername, $userData)){
             if ($inputPasswordhHash == $userData[$inputUsername]["password"]){
+                Auth::setUserDetailSession($_COOKIE["user"]);
                 return "successful";
             } else {
                 return "wrong_password";
@@ -18,15 +25,18 @@ class Auth {
             return "wrong_username";
         }
     }
-    public static function signUp($inputUsername, $inputEmail, $inputPassword){
+    public static function signUp($inputUsername, $inputEmail, $inputPassword, $accountType){
         $inputPasswordhHash = hash("sha256", $inputPassword);
 
         if (!Auth::checkUserExist($inputUsername)){
             $userData = DataHandle::readToJson(Auth::$userDataFile);
+            $imgDir = Auth::uploadAvt($inputUsername);
+            
             $userData[$inputUsername] = array(
             "password"=>$inputPasswordhHash,
-            "email"=>$inputEmail);
-            Auth::uploadAvt($inputUsername);
+            "email"=>$inputEmail,
+            "accountType"=>$accountType);
+            
             DataHandle::writeData(Auth::$userDataFile, json_encode($userData));
             return "successful";
         } else {
@@ -41,33 +51,47 @@ class Auth {
 
     private static function uploadAvt($username){
 
-        $target_dir = "../data/avatar/";
+        $target_dir = "assets/image/avatar/";
         $target_file = $target_dir . $username . ".jpg";
-        $imageFile = "../data/avatar/";
+        $imageFile = "assets/image/avatar/";
         $check = False;
+        $err = "err";
 
-        if (!isset($_FILES["avtImg"]["name"])){
-            $check = False;
-        } else {
+        if (!$_FILES["avtImg"]["name"] == ""){
             $check = True;
+        } else {
+            $check = False;
         }
 
         if($check !== false) {
-            echo (isset($_FILES["avtImg"]["tmp_name"]));
-            echo "file is an image";
             $imageFile = $_FILES["avtImg"]["tmp_name"];
             move_uploaded_file($imageFile, $target_file);
+            return $target_file;
         } else {
-            $imageFile = "../data/avatar/default.jpg";
-            echo "File is not an image.";
+            // $testDir = "../../assets/image/avatar/default.jpg";
+            $imageFile = "assets/image/avatar/default.jpg";
             copy($imageFile, $target_file);
+            return $target_file;
         }
     }
 
-    public static function renewCookie(){
-        if (isset($_COOKIE["user"])){
-            setcookie("user", $_COOKIE["user"], time() + (3600*24*30), "/");
-        } 
+    public static function setUserDetailSession($userid){
+        $userData = DataHandle::readToJson(Auth::$userDataFile);
+        foreach ($userData as $key => $value) {
+            if ($key == $userid) {
+                $_SESSION["user_detail"] = json_encode($value);
+            }
+        }
+    }
+
+    public static function getUserDetail($userid) {
+        $userData = DataHandle::readToJson(Auth::$userDataFile);
+        foreach ($userData as $key => $value) {
+            if ($key == $userid) {
+                return $value;
+            }
+        }
+        return null;
     }
 }
 ?>
