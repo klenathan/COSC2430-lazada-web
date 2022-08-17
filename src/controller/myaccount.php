@@ -7,8 +7,12 @@ class MyAccount extends Controller {
     private static $productFile = '../data/product.db';
 
     function __construct() {
+        if (!isset($_COOKIE["user"])) {
+            header("Location: /");
+        } else {
+            $this->getAccountDetail();
+        }
         
-        $this->getAccountDetail();
     }
 
     function renderPage(){
@@ -84,7 +88,7 @@ class MyAccount extends Controller {
     }
 
     public function getUserOrder(){
-        
+
     }
 
     private function renderCustomerPage() {

@@ -259,7 +259,6 @@ main {
 
 .sub-menu {
     position: absolute;
-    display: flex;
     display: none;
     flex-direction: column;
     top: 4rem;
@@ -291,13 +290,6 @@ main {
 .sub-menu:first-child::before:hover {
   opacity: 0.7;
 }
-
-
-/* .sub-menu-item:last-child {
-  border-radius: 0 0 1rem 1rem;
-  border-bottom: none;
-} */
-
 .login-btn {
   height: 100%;
   display: flex;
@@ -314,11 +306,6 @@ main {
     padding: 0 2rem;
     border-radius: 1rem;
 }
-
-/* #product-search {
-    height: 2rem;
-    width: 30%;
-} */
 
 #search {
     height: 2rem;

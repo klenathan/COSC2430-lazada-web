@@ -9,6 +9,11 @@ class Signup extends Controller {
         // $this->view("signup");
     }
 
+    function view($view) {
+        include_once("view/signupdemo.php");
+
+    }
+
     function signupCustomer() {
         $data = array(
             "password"=>$_POST["password"],

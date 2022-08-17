@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/signupDemo.css">
     <script src="js/signupClickable.js"></script>
-    <title>Document</title>
+    <title>Signup</title>
 </head>
 <body>
     <main id="signup">
