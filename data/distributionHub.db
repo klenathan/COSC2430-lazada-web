@@ -1,5 +1,14 @@
 {
-    "name": "address",
-    "name2" : "add2",
-    "name3": "add3"
+    "hub1": {
+        "name": "Hub 1",
+        "address": "Q7, HCM"
+    },
+    "hub2": {
+        "name": "Hub 2",
+        "address": "Q1, HCM"
+    },
+    "hub3": {
+        "name": "Hub 3",
+        "address": "Q5, HCM"
+    }
 }

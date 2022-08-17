@@ -20,7 +20,15 @@ function addToCart(itemId) {
         localStorage.setItem("cart", stringData);
     }
     
+    const cartLogo = document.getElementById('cart-logo');
+    cartLogo.style.backgroundColor = "rgb(2, 59, 25)";
+    setTimeout(function(){cartLogo.style.backgroundColor = "transparent"}, 350)
     
+}
+
+function buyNow(itemId) {
+    addToCart(itemId);
+    location.href="/cart"
 }
 
 function checkCurrentCart() {
