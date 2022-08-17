@@ -18,7 +18,6 @@ class Home extends Controller
                 include("controller/myAccountComponent/vendorAccountPage.php");
                 $vendor = new VendorAccount;
                 include("view/home/vendorHome.php");
-                
             }
         } else {
             include("view/home/customerHome.php");
@@ -53,24 +52,19 @@ class Home extends Controller
                 <?php
                 foreach ($data as $key => $value) {
                 ?>
-                    <!-- <div > -->
                     <a class="product-card" href="/product?productid=<?php echo $key; ?>">
                         <?php
                         echo '
                         <div class="product-image">
-                            <span class="discount-tag">50% off</span>
                             <img src="assets/image/product/' . $key . '.jpg" class="product-thumb" alt="' . $value["name"] . '">  
-                            <button class="card-btn">add to wishlist</button>
                         </div>
                         <div class="product-info">
                             <p class="product-card-name">' . $value["name"] . '</p>
                             <p class="product-card-price">' . number_format($value["price"]) . ' VND</p>
                             <p class="product-card-rating">Rating: ' . $value["rating"] . '</p>
-                        </div>
-                    ';
+                        </div>';
                         ?>
                     </a>
-                    <!-- </div> -->
                 <?php
                 }
                 ?>
