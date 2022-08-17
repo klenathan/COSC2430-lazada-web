@@ -34,7 +34,6 @@ class Home extends Controller
                         <?php
                         echo '
                         <div class="product-image">
-                            <span class="discount-tag">50% off</span>
                             <img src="assets/image/product/' . $key . '.jpg" class="product-thumb" alt="' . $value["name"] . '">  
                             <button class="card-btn">add to wishlist</button>
                         </div>
