@@ -50,12 +50,6 @@ action="" method="post" enctype = "multipart/form-data">
         onchange="loadFile(event)"
         type="file" name="image" id="image">
     </label>
-    
-    
-    
-
-    <input type="submit" value="hello">
-    <p id="temp-name">tmp_name: <?php echo $_FILES["image"]["tmp_name"];?></p>
-    <img id="upload-img" src="<?php echo $_FILES["image"]["tmp_name"];?>.jpg" alt="" srcset="">
+    <img id="upload-img" src="" alt="" srcset="">
 
 </form>

@@ -1,8 +1,82 @@
+.shipper-welcome-img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.shipper-order-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shipper-order-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin-bottom: 2rem;
+    max-width: 1188px;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.shipper-order-wrapper:first-child {
+    margin-top: 2rem
+}
+
+.order-id {
+    margin-left: 2rem
+}
+
+.order-total-bill {
+    margin-left: 2rem
+}
+
 .shipper-product {
     display: flex;
     flex-direction: row;
+    width: 90%;
+    align-self: center;
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+    height: 200px;
+    border-bottom: 1px gray solid;
 }
 
 .shipper-product-img {
-    width: 150px;
+    width: 200px;
+    object-fit: contain;
+    background-color: white;
+}
+
+.shipper-product-info {
+    margin-left: 1rem;
+}
+
+.shipper-product-info p {
+    line-height: 2rem;
+}
+
+.shipper-product-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.shipper-button-wrapper {
+    width: 90%;
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.shipper-button-wrapper button {
+    border: none;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.shipper-button-wrapper button:hover {
+    background-color: green;
 }

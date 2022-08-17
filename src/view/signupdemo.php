@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style/signupforall.css">
     <!-- <link rel="stylesheet" href="style/home.css"> -->
     <script src="js/signupClickable.js"></script>
-    <title>Document</title>
+    <title>Signup</title>
 </head>
 <body>
     <header>
