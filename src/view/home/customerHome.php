@@ -24,7 +24,7 @@
         $this->getBestSeller();
         $this->getCategory("Men Fashion");
         $this->getCategory("Girls Fashion");
-
+        // $this->getAllCategory();
 
         ?>
     </main>
