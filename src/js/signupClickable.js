@@ -3,8 +3,8 @@ var n = 0;
 // var buttonModified = "width: 125px; height: 25px; font-size: 10px"
 
 var buttonModified = {
-    zoomIn: "width: 150px; height: 30px; font-size: 12px",
-    zoomOut: "font-size: 16px"
+    zoomIn: "width: 10em; height: 3em; font-size: .6em; margin-top: 10em",
+    zoomOut: "font-size: 0.9em"
 }
 
 var tabModified = {
@@ -18,13 +18,13 @@ var imgModified = {
     zoomOut: "block"
 }
 var ulModified = {
-     zoomIn: "display: block; font-size: 12px",
+     zoomIn: "display: block;",
      zoomOut: "display: none"
 }
 
 var h2Modified = {
-    zoomIn: "18px",
-    zoomOut: "24px"
+    zoomIn: "font-size: 0.9em; padding-top: 0.9em",
+    zoomOut: "font-size: 1em"
 }
 
 var backgroundModified  = {
@@ -41,8 +41,7 @@ function seeMore(tab) {
     
     switch(n) {
         case 0:
-            console.log(tabModified.zoomIn)
-            h2.style.fontSize = h2Modified.zoomIn;
+            h2.style.cssText = h2Modified.zoomIn;
             tab.style.cssText = tabModified.zoomIn;
             ul.style.cssText = ulModified.zoomIn;
             img.style.display = imgModified.zoomIn;
@@ -51,7 +50,7 @@ function seeMore(tab) {
             n += 1;
             break;
         case 1:
-            h2.style.fontSize = h2Modified.zoomOut;
+            h2.style.cssText = h2Modified.zoomOut;
             tab.style.cssText = tabModified.zoomOut;
             ul.style.cssText = ulModified.zoomOut;
             img.style.display = imgModified.zoomOut;

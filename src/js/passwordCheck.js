@@ -56,6 +56,6 @@ function checkPassword (passwordInput) {
     }
 }
 
-password.addEventListener("input", () => {
-    checkPassword(password.value)
-});
+// password.addEventListener("keyup", () => {
+//     checkPassword(password.value)
+// })
