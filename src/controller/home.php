@@ -265,20 +265,5 @@ class Home extends Controller
             </section>
         <?php
     }
-
-    function getAllCategory()
-    {
-        $data = dataHandle::readToJson($this::$productFile);
-        $arr = array();
-        foreach ($data as $value){
-            array_push($arr, $value["category"]);
-        }
-        foreach($arr as $categoryField){
-            if($categoryField == next($arr)){
-                continue;
-            }
-            echo '<a href="#">'.$categoryField.'</a>';
-        }
-    }
 }
 ?>

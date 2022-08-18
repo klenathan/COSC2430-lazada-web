@@ -4,11 +4,11 @@
     include("core/controller.php");
     include("core/model/dataHandle.php");
     include("core/model/authentication.php");
+
     include("model/productModel.php");
 
     // Controller
-    include("controller/home.php");
-
+    include("controller/category.php");
     // Model
     
 
@@ -21,5 +21,6 @@
     "cart", "product", "signupdemo", "login", 
     "signupforcustomer", "signup", "allproduct",
     "search", "api", null);
+
     $route = new Route($reservedUrl, "home");
 ?>

@@ -14,5 +14,7 @@ class Product extends Controller {
         $this::$name = $this::$productData["name"];
         $this::$vendor = $model->getVendorName($this::$productData["vendor"]);
     }
+
+    
 }
 ?>

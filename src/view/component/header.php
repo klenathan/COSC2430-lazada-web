@@ -9,9 +9,8 @@
                 </svg></button>
             <div class="category-content">
                 <?php
-                $this->getAllCategory();
+                Category::getAllCategory();
                 ?>
-
             </div>
         </div>
 
