@@ -10,15 +10,13 @@ class Category extends Controller {
 
 
     static function getAllCategory(){
+        $res = array();
         $data = dataHandle::readToJson(Category::$productFile);
-        $arr = array();
-        foreach ($data as $value){
-            array_push($arr, $value["category"]);
+        foreach ($data as $key => $value) {
+            array_push($res, $value["category"]);
         }
-        foreach($arr as $categoryField){
-            if($categoryField == next($arr)){
-                continue;
-            }
+        $res = array_unique($res);
+        foreach($res as $categoryField){
             echo '<a href="#">'.$categoryField.'</a>';
         }
     }

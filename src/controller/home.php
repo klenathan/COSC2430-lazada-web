@@ -161,7 +161,7 @@ class Home extends Controller
             <section class="product">
                 <div class="product-category">
                     <h2>Best seller</h2>
-                    <a href="#"><em>View all product --></em></a>
+                    <a href="/allproduct"><em>View all product --></em></a>
 
                 </div>
 
@@ -195,7 +195,7 @@ class Home extends Controller
                     <h2><?php
                         echo $category
                         ?></h2>
-                    <a href="#"><em>View all product --></em></a>
+                    <a href="/allproduct"><em>View all product --></em></a>
 
                 </div>
 
@@ -228,7 +228,7 @@ class Home extends Controller
             <section class="product">
                 <div class="product-category">
                     <h2> All products</h2>
-                    <a href="#"><em>View all product --></em></a>
+                    <a href="/allproduct"><em>View all product --></em></a>
 
                 </div>
 
@@ -248,13 +248,9 @@ class Home extends Controller
                                     <div class="product-info">
                                         <p class="product-card-name">' . $value["name"] . '</p>
                                         <p class="product-card-price">' . number_format($value["price"]) . ' VND</p>
-                                        <p class="product-card-rating">'
+                                        <p class="product-card-rating"></p>'
                             ?>
-                            <?php
-                            echo '</p>
-                                            </div>'
-                            ?>
-
+                            </div>
                         </a>
                         <?php
                         ?>
