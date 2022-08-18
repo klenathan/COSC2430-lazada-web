@@ -3,6 +3,7 @@ class Search extends Controller {
     public $keyword;
     private $productFile = "../data/product.db";
     public $res;
+    
     function __construct() {
         if (isset($_GET["search"])) {
             $this->keyword = $_GET["search"];

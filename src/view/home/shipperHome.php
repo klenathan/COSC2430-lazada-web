@@ -22,7 +22,7 @@
 
     <main>
         <!-- <h1>Welcome to shipper's homepage</h1> -->
-        <img class="shipper-welcome-img" src="assets/image/backgroundLogin.jpg" alt="" srcset="">
+        <img class="shipper-welcome-img" src="assets/image/shipper-background.jpg" alt="" srcset="">
         <div class="shipper-order-container">
             <?php
             $shipper->getCurrentShipperOrders();
