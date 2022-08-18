@@ -1,5 +1,9 @@
 * {
 	--card-background: rgb(232, 231, 231);
+	--primary-color: rgb(86, 51, 125);
+	--sub-menu-color: rgb(39, 26, 97);
+	--sub-menu-hover-color: rgb(39, 26, 97);
+	--hover-color: rgb(223, 91, 166);
 }
 
 a {
@@ -7,7 +11,10 @@ a {
 	color: black;
 }
 main {
+	display: flex;
+	flex-direction: column;
 	align-items: center;
+
 	background-color: rgb(245, 245, 245);
 }
 .carousel img {
@@ -18,42 +25,44 @@ main {
 	/* image-rendering: crisp-edges; */
 	image-rendering: pixelated;
   
-	/* Safari seems to support, but seems deprecated and does the same thing as the others. */
-	/* image-rendering: -webkit-optimize-contrast; */
 }
 .product {
     position: relative;
     overflow: hidden;
     padding: 0 0;
-    margin: 2rem 6rem;
+	width: 100%;
+	max-width: 1188px;
+    margin: 2rem 0;
 }
 .product-category {
 	display: flex;
-	padding: 0 10vw;
+	align-items: center;
+	margin: 0 3rem;
 	font-size: 30px;
 	font-weight: 500;
-	margin-bottom: 40px;
 	overflow: hidden;
 	text-transform: capitalize;
 }
   
-  .product-category h2 {
+.product-category h2 {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 400;
 	font-size: 30px;
 	letter-spacing: 3px;
 	margin: 30px auto;
-	padding-left: 40px;
+	/* margin-left: 40px; */
 	flex: 1;
-  }
-  .product-category a{
+}
+
+.product-category a{
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 200;
 	font-size: 1rem;
-	letter-spacing: 3px;
-	margin-top: 4rem;
+	letter-spacing: 2px;
+	/* margin-top: 4rem; */
 	color: rgb(6, 85, 188);
-  }
+}
+
 .product-category a:hover{
 	color: red;
 
@@ -88,7 +97,7 @@ main {
 .product-card:hover .product-image{
 	opacity: 0.7;
 	/* scale: 1.5; */
-	transform:translateY(5%)
+	/* transform:translateY(5%) */
 }
 .product-thumb {
 	width: 100%;
@@ -114,9 +123,6 @@ main {
 	opacity: 0;
 }
 
-.product-card:hover .card-btn {
-	opacity: 1;
-}
 
 .card-btn:hover {
 	background: #ff7d7d;
@@ -129,17 +135,26 @@ main {
 	padding-top: 10px;
 	display: block;
 	transition: transform 0.5s;
-	/* background-color: none; */
+	background-color: rgb(161, 157, 188);
 }
+
+.product-info p {
+	margin: 0 0.5rem;
+}
+
 .product-card:hover .product-info{
 	transform: translateY(-60%);
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .product-card-name {
-    font-size: 1.0666666666rem;
+    font-size: 1rem;
     font-weight: 900;
     margin-bottom: 0.5rem;
+	width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  	overflow: hidden;
 }
 
 .product-short-description {
@@ -154,8 +169,8 @@ main {
 
 .product-card-price {
     font-weight: 600;
-    font-size: 1.04444444rem;
-    color: red;
+    font-size: 1rem;
+    color: var(--primary-color);
 }
 #use svg, #non-use svg{
 	width: 1.5rem;
@@ -174,7 +189,7 @@ main {
 .pre-btn,
 .nxt-btn {
     border: none;
-    width: 4vw;
+    width: 3rem;
     height: 100%;
     position: absolute;
     top: 0;
