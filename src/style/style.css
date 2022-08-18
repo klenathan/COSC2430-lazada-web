@@ -360,3 +360,9 @@ main {
   color: white;
   font-weight: bold;
 }
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}

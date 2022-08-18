@@ -6,15 +6,10 @@ class Search extends Controller {
     function __construct() {
         if (isset($_GET["search"])) {
             $this->keyword = $_GET["search"];
-            // $this->res = $this->searchQuery($this->keyword);
         } else {
             $this->keyword = "";
             echo "not set";
         }
-    }
-
-    function renderProduct(){
-
     }
 
     function searchQuery($keyword) {
@@ -26,6 +21,7 @@ class Search extends Controller {
                 array_push($res, $key);
                 ?>
                 <a href="/product?productid=<?php echo $key;?>" class="product-card">
+                    <div class="card-overlay"> </div>
                     <?php
                     echo '
                     <img src="assets/image/product/'.$key.'.jpg" alt="'.$value["name"].'">
