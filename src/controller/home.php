@@ -43,7 +43,11 @@ class Home extends Controller
 ?>
 
 <section class="product">
-    <h2 class="product-category"> All products</h2>
+    <div class="product-category">
+        <h2 > All products</h2>
+        <a href="#"><em>View all product --></em></a>
+        
+    </div>
 
     <button class="pre-btn"><img src="../assets/arrow.png" alt=""></button>
     <button class="nxt-btn"><img src="../assets/arrow.png" alt=""></button>
