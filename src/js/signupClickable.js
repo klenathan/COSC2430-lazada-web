@@ -1,44 +1,66 @@
-var vendorSection = document.getElementById("vendor");
-var shipperSection = document.getElementById("shipper");
-// var customerSection = document.getElementById("customer")
-var customerSection = document.getElementById("customer");
-var transformSection = "transform: translate(0, -10%)";
-var cssSeeMore = "visibility: hidden;"
 
-function SeeMoreCustomer() {
-    var node = document.createElement("p");
-    var textNode = document.createTextNode("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
-    node.appendChild(textNode);
-    var section = document.getElementById("customer");
-    section.appendChild(node);
-    section.style.cssText = transformSection;
-    var seeMore = document.getElementById("customer-button");
-    seeMore.style.cssText = cssSeeMore;
-}
-// setTimeout(SeeMore, 400)
+var n = 0;
+// var buttonModified = "width: 125px; height: 25px; font-size: 10px"
 
-function SeeMoreVendor() {
-    var node = document.createElement("p");
-    var textNode = document.createTextNode("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
-    node.appendChild(textNode);
-    var section = document.getElementById("vendor");
-    section.appendChild(node);
-    section.style.cssText = transformSection;
-    var seeMore = document.getElementById("vendor-button");
-    seeMore.style.cssText = cssSeeMore;
+var buttonModified = {
+    zoomIn: "width: 150px; height: 30px; font-size: 12px",
+    zoomOut: "font-size: 16px"
 }
 
-function SeeMoreShipper() {
-    var node = document.createElement("p");
-    var textNode = document.createTextNode("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
-    node.appendChild(textNode);
-    var section = document.getElementById("shipper");
-    section.appendChild(node);
-    section.style.cssText = transformSection;
-    var seeMore = document.getElementById("shipper-button");
-    seeMore.style.cssText = cssSeeMore;
+var tabModified = {
+    zoomIn: "transform: scale(1.5); gap: 0; z-index: 2;",
+    zoomOut: "transform: scale(1); z-index: 1"
 }
 
+var imgModified = {
+    // zoomIn: "display: none;",
+    zoomIn: "none",
+    zoomOut: "block"
+}
+var ulModified = {
+     zoomIn: "display: block; font-size: 12px",
+     zoomOut: "display: none"
+}
+
+var h2Modified = {
+    zoomIn: "18px",
+    zoomOut: "24px"
+}
+
+var backgroundModified  = {
+    zoomIn: "z-index: 2; background-color: rgba(0, 0, 0, 0.8)",
+    zoomOut: "z-index: 0; background-color: none"
+}
+    
+function seeMore(tab) {
+    var ul = tab.getElementsByTagName("ul")[0]
+    var h2 = tab.getElementsByTagName("h2")[0]
+    var button = tab.getElementsByTagName("a")[0];
+    var img = tab.getElementsByTagName("img")[0];
+    var background = document.getElementById("option");
+    
+    switch(n) {
+        case 0:
+            console.log(tabModified.zoomIn)
+            h2.style.fontSize = h2Modified.zoomIn;
+            tab.style.cssText = tabModified.zoomIn;
+            ul.style.cssText = ulModified.zoomIn;
+            img.style.display = imgModified.zoomIn;
+            button.style.cssText = buttonModified.zoomIn;
+            background.style.cssText = backgroundModified.zoomIn
+            n += 1;
+            break;
+        case 1:
+            h2.style.fontSize = h2Modified.zoomOut;
+            tab.style.cssText = tabModified.zoomOut;
+            ul.style.cssText = ulModified.zoomOut;
+            img.style.display = imgModified.zoomOut;
+            button.style.cssText = buttonModified.zoomOut;
+            background.style.cssText = backgroundModified.zoomOut;
+            n -= 1
+            break
+    }
+}
 
 function chooseFile() {
   document.getElementById('imgupload').click();
