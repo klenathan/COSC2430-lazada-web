@@ -20,7 +20,8 @@
     <main>
         
         <?php
-        $this->getAllproduct();
+        // $this->getAllproduct();
+        $this->getBestSeller();
         ?>
     </main>
 
