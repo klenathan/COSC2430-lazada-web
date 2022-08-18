@@ -22,6 +22,10 @@
         <?php
         // $this->getAllproduct();
         $this->getBestSeller();
+        $this->getCategory("Men Fashion");
+        $this->getCategory("Girls Fashion");
+
+
         ?>
     </main>
 
@@ -32,5 +36,6 @@
         ?>
     </footer>
 </body>
+<script src="../js/slider.js"></script>
 
 </html>
