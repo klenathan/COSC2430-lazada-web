@@ -1,0 +1,29 @@
+/* FILTER PAGE */
+
+* {
+    --primary-color: rgb(39, 26, 97);
+    --sub-menu-color: rgb(86, 51, 125);
+    --sub-menu-hover-color: rgb(39, 26, 97);
+    --hover-color: rgb(223, 91, 166);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.side-bar {
+    width: 30%;
+    background-color: rgb(1, 38, 117);
+}
+
+.filter-result-wrapper {
+    display: grid;
+    width: 70%;
+    margin-top: 2rem;
+    max-width: 1188px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
