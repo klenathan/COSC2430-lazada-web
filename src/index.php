@@ -18,7 +18,7 @@
     #null for default page
 
     $reservedUrl = array("home", "myaccount", 
-    "cart", "product", "signupdemo", "login",
+    "cart", "product", "signupdemo", "login", "allproduct",
     "signupforcustomer", "signupforvendor", "signupforshipper", "signup", 
     "search", "api", null);
 

@@ -4,10 +4,9 @@ class Home extends Controller
     public static $bestSeller;
 
     // Overwrite view function
-    function view($view)
-    {
+    function view($view) {
         echo '<link rel="shortcut icon" href="assets/image/favicon.png" type="image/png">';
-        if (isset($_SESSION["user_detail"])) {
+        if(isset($_SESSION["user_detail"])) {
             $userDetail = json_decode($_SESSION["user_detail"], true);
             if ($userDetail["accountType"] == "customer") {
                 include("view/home/customerHome.php");
@@ -23,145 +22,56 @@ class Home extends Controller
         } else {
             include("view/home/customerHome.php");
         }
+        
     }
 
     private static $productFile = "../data/product.db";
-
-
-    function productCard($key, $value)
-    {
-        ?>
-                <a class="product-card" href="/product?productid=<?php echo $key; ?>">
-                    <?php
-                    echo '
-                    <div class="product-image">
-                        <img src="assets/image/product/' . $key . '.jpg" class="product-thumb" alt="' . $value["name"] . '">  
-                    </div>
-                    <div class="product-info">
-                        <p class="product-card-name">' . $value["name"] . '</p>
-                        <p class="product-card-price">' . number_format($value["price"]) . ' VND</p>
-                        <p class="product-card-rating"></p>'
-                    ?>
-                    <?php
-                    for ($star = 0; $star < floor($value["rating"]); $star++) {
-                        include("view/component/checkedStar.php");
-                    }
-                    ?>
-                    <?php
-                    for ($star = 0; $star < 5 - ceil($value["rating"]); $star++) {
-                        include("view/component/uncheckedStar.php");
-                    }
-                    ?>
-                    </div>
-                </a>
-            <?php
-    }
-
-
     function getBestSeller()
     {
-            $data = dataHandle::readToJson($this::$productFile);
-        ?>
-            <section class="product">
-                <div class="product-category">
-                    <h2>Best seller</h2>
-                    <a href="/allproduct"><em>View all product --></em></a>
-
-                </div>
-
-                <button class="pre-btn"><img src="../assets/arrow.png" alt=""></button>
-                <button class="nxt-btn"><img src="../assets/arrow.png" alt=""></button>
-
-                <div class="product-container">
-                    <?php
-                    foreach ($data as $key => $value) {
-                        if (!($value["sold"] >= 20000)) {
-                            continue;
-                        }
-                    ?>
-                        <?php
-                        $this->productCard($key, $value);
-                        ?>
-                    <?php
-                    }
-                    ?>
-                </div>
-            </section>
-        <?php
+        $data = dataHandle::readToJson($this::$productFile);
+        foreach ($data as $key => $value) {
+            echo $key;
+            foreach ($value as $k => $v) {
+                echo $k . "->" . $v . "<br>";
+            }
+            echo "<br>";
         }
-
-        function getCategory($category)
-        {
-            $data = dataHandle::readToJson($this::$productFile);
-        ?>
-            <section class="product">
-                <div class="product-category">
-                    <h2><?php
-                        echo $category
-                        ?></h2>
-                    <a href="/allproduct"><em>View all product --></em></a>
-
-                </div>
-
-                <button class="pre-btn"><img src="../assets/arrow.png" alt=""></button>
-                <button class="nxt-btn"><img src="../assets/arrow.png" alt=""></button>
-
-                <div class="product-container">
-                    <?php
-                    foreach ($data as $key => $value) {
-                        if ($value["category"] != $category) {
-                            continue;
-                        }
-                    ?>
-                        <?php
-                        $this->productCard($key, $value);
-                        ?>
-                    <?php
-                    }
-                    ?>
-                </div>
-            </section>
-        <?php
     }
-
     function getAllProduct()
     {
         $data = dataHandle::readToJson($this::$productFile);
-        ?>
+?>
 
-            <section class="product">
-                <div class="product-category">
-                    <h2> All products</h2>
-                    <a href="/allproduct"><em>View all product --></em></a>
+        <section class="product">
+            <h2 class="product-category"> All products</h2>
 
-                </div>
+            <button class="pre-btn"><img src="../assets/arrow.png" alt=""></button>
+            <button class="nxt-btn"><img src="../assets/arrow.png" alt=""></button>
 
-                <button class="pre-btn"><img src="../assets/arrow.png" alt=""></button>
-                <button class="nxt-btn"><img src="../assets/arrow.png" alt=""></button>
-
-                <div class="product-container">
-                    <?php
-                    foreach ($data as $key => $value) {
-                    ?>
-                        <a class="product-card" href="/product?productid=<?php echo $key; ?>">
-                            <?php
-                            echo '
-                                    <div class="product-image">
-                                        <img src="assets/image/product/' . $key . '.jpg" class="product-thumb" alt="' . $value["name"] . '">  
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-card-name">' . $value["name"] . '</p>
-                                        <p class="product-card-price">' . number_format($value["price"]) . ' VND</p>
-                                        <p class="product-card-rating"></p>'
-                            ?>
-                            </div>
-                        </a>
-                    <?php
-                    }
-                    ?>
-                </div>
-            </section>
-        <?php
+            <div class="product-container">
+                <?php
+                foreach ($data as $key => $value) {
+                ?>
+                    <a class="product-card" href="/product?productid=<?php echo $key; ?>">
+                        <?php
+                        echo '
+                        <div class="product-image">
+                            <img src="assets/image/product/' . $key . '.jpg" class="product-thumb" alt="' . $value["name"] . '">  
+                        </div>
+                        <div class="product-info">
+                            <p class="product-card-name">' . $value["name"] . '</p>
+                            <p class="product-card-price">' . number_format($value["price"]) . ' VND</p>
+                            <p class="product-card-rating">Rating: ' . $value["rating"] . '</p>
+                        </div>';
+                        ?>
+                    </a>
+                <?php
+                }
+                ?>
+            </div>
+        </section>
+        <script src="../js/slider.js"></script>
+<?php
     }
 }
 ?>

@@ -1,4 +1,5 @@
 function checkPassword (passwordInput) {
+
     let lowercaseCheck = new RegExp('(?=.*[a-z])');
     let uppercaseCheck = new RegExp('(?=.*[A-Z])');
     let numberCheck = new RegExp('(?=.*[0-9])');
@@ -13,47 +14,47 @@ function checkPassword (passwordInput) {
     let greenColor = "DarkSeaGreen";
     let redColor = "coral";
     
-    
     if (passwordInput){
         // Check & feedback for lowercase
         if (lowercaseCheck.test(passwordInput)){
             lowercasePass.style.color = greenColor
         } else {
-            lowercasePass.style.color = redColor
+            lowercasePass.style.backgroundColor = redColor
         }
         // Check & feedback for uppercase   
         if (uppercaseCheck.test(passwordInput)){
-            uppercasePassed.style.color = greenColor
+            uppercasePassed.style.backgroundColor = greenColor
         } else {
-            uppercasePassed.style.color = redColor
+            uppercasePassed.style.backgroundColor = redColor
         }
         // Check & feedback for number   
         if (numberCheck.test(passwordInput)){
-            numberPassed.style.color = greenColor
+            numberPassed.style.backgroundColor = greenColor
         } else {
-            numberPassed.style.color = redColor
+            numberPassed.style.backgroundColor = redColor
         }
         // Check & feedback for special characters   
         if (specialCharCheck.test(passwordInput)){
-            specialCharPassed.style.color = greenColor
+            specialCharPassed.style.backgroundColor = greenColor
         } else {
-            specialCharPassed.style.color = redColor
+            specialCharPassed.style.backgroundColor = redColor
         }
         // Check & feedback for length check   
         if (lengthCheck.test(passwordInput)){
-            lengthPassed.style.color = greenColor
+            lengthPassed.style.backgroundColor = greenColor
         } else {
-            lengthPassed.style.color = redColor
+            lengthPassed.style.backgroundColor = redColor
         }
     } else {
-        lowercasePass.style.color = "transparent"
-        uppercasePassed.style.color = "transparent"
-        numberPassed.style.color = "transparent"
-        specialCharPassed.style.color = "transparent"
-        lengthPassed.style.color = "transparent"
+        lowercasePass.style.backgroundColor = "transparent"
+        uppercasePassed.style.backgroundColor = "transparent"
+        numberPassed.style.backgroundColor = "transparent"
+        specialCharPassed.style.backgroundColor = "transparent"
+        lengthPassed.style.backgroundColor = "transparent"
     }
 }
 
 document.getElementById("signupPassword").addEventListener("input", () => {
     checkPassword(signupPassword.value);
+    console.log("Trest")
 })
