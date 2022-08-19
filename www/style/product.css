@@ -1,3 +1,4 @@
+@import url(font.css);
 * {
   --primary-color: rgb(39, 26, 97);
   --sub-menu-color: rgb(86, 51, 125);
@@ -42,8 +43,9 @@ img {
 }
 
 .product-page-img {
-  padding: 4rem;
-  background-color: rgb(237, 239, 240);
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   display: flex;
   width: 70%;
   flex-direction: column;
@@ -66,12 +68,12 @@ img {
 }
 
 .sub-img-row {
-  width: 100%;
+  width: 70%;
   height: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin-bottom: 5%;
+  justify-content: center;
 }
 
 .sub-img-row img {
@@ -82,7 +84,7 @@ img {
   border: solid 3px transparent;
   border-style: solid;
   border-color: gray;
-  margin: 2% 2% 0 2%;
+  margin-left: 1.5rem;
   opacity: 0.8;
 }
 .sub-img-row img:hover {
@@ -124,19 +126,43 @@ img {
 }
 
 .product-info-name {
+  font-family: "Noto Sans", sans-serif;
+  text-transform: uppercase;
+  margin-left: 5%;
+  margin-right: 5%;
   font-size: 1.5rem;
   font-weight: bold;
 }
-
+.product-info-vendor {
+  font-weight: bold;
+}
 .product-info-vendor a {
   color: var(--primary-color);
   font-weight: bold;
   cursor: pointer;
+  font-style: none;
+  text-decoration: none;
+}
+.product-info-vendor a:hover {
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+  font-style: none;
+  text-decoration: underline;
 }
 
 .product-info-price {
-  font-size: 2.5rem;
+  font-size: medium;
   font-weight: bold;
+}
+.cate {
+  font-weight: bold;
+  font-family: "Crimson Text", serif;
+  text-transform: uppercase;
+}
+.cate:hover {
+  color: red;
+  cursor: pointer;
 }
 
 /* Button container */
@@ -158,37 +184,46 @@ img {
   font-weight: bold;
   color: white;
   transition: 0.2s ease-in-out;
-  margin-bottom: 5%;
-  height: 80%;
+  margin: 0 0 5% 5%;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 #buy-now-btn {
+  height: 3rem;
   padding-left: 5%;
   padding-right: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(0, 142, 209);
+  background-color: rgb(209, 0, 125);
 }
 
 #add-cart-btn {
+  height: 3rem;
   padding-left: 5%;
   padding-right: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(0, 142, 209);
+  background-color: rgb(209, 0, 125);
 }
 
 #buy-now-btn:hover {
+  background-color: rgb(232, 214, 225);
   color: rgb(50, 49, 49);
 }
 
 #add-cart-btn:hover {
+  background-color: rgb(232, 214, 225);
   color: rgb(50, 49, 49);
 }
 .product-info-sold {
+  font-weight: bold;
+}
+.product-info-stock {
+  font-weight: bold;
+}
+.product-info-rating {
   font-weight: bold;
 }
 
@@ -208,29 +243,55 @@ img {
   font-size: 1.2rem;
   margin: 1rem 2rem;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .product-page {
+    margin-top: 0;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-top: 2rem;
     background: white;
-    width: 80%;
-    padding: 1rem 0;
+    width: 100%;
+    justify-content: center;
   }
   .product-page-img {
+    height: 70%;
+    padding: 1rem 0 0 0;
+    width: 100%;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .main-img {
-    display: flex;
-    justify-content: center;
-  }
-  .sub-img {
+  .sub-img-row {
     display: flex;
     flex-direction: row;
+    width: 50%;
+    margin-bottom: 0.2rem;
+  }
+  .sub-img-row img {
+    --scale-index: 0.25;
+    width: calc(var(--scale-index) * var(--primary-img-size));
+    height: calc(var(--scale-index) * var(--primary-img-size));
+    border: solid 3px transparent;
+    border-style: solid;
+    border-color: gray;
+    margin-left: 0;
+  }
+  .product-page-buy {
     width: 100%;
+    display: flex;
+  }
+  .product-desc {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgb(245, 245, 245);
+  }
+  .product-desc h2 {
+    margin: 1rem 2rem;
+    text-align: center;
+  }
+  .product-desc p {
+    margin: 1rem 2rem;
+    text-align: left;
   }
 }

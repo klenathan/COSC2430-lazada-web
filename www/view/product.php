@@ -24,7 +24,7 @@
             ?>
             <div class="breadcumb">
                 <a href="/">Home</a> /
-                <a href="#"><?php
+                <a href="/category?category=<?php echo $this::$productData["category"]?>"><?php
                 echo $this::$productData["category"]
                 ?>
                 </a> / 
@@ -57,15 +57,15 @@
                 <div class="product-page-buy">
                     <div class="sidebar"> 
                         <div class="product-info-wrapper">
-                        <p><?php echo $this::$productData["category"];?></p>
+                        <p class="cate"><?php echo $this::$productData["category"];?></p>
                         <p class="product-info-name"><?php echo $this::$productData["name"];?></p>
-                        <p class="product-info-vendor">Sold by: 
-                            <a href="/vendor?vendor=<?php echo $this::$productData["vendor"];?>"><?php echo $this::$productData["vendor"];?></a>
-                        </p>
+                        
                         <p class="product-info-price"><?php echo number_format($this::$productData["price"]);?> VND</p>
+                        <p class="product-info-vendor">Sold by:<?php echo $this::$productData["vendor"];?></p>
                         <p class="product-info-sold">Sold: <?php echo $this::$productData["sold"];?></p>
                         <p class="product-info-stock">Stock: <?php echo $this::$productData["stock"];?></p>
-                        <p class="product-info-rating"><?php echo $this::$productData["rating"];?>/5</p>
+                        <p class="product-info-rating">Rating: <?php echo $this::$productData["rating"];?>/5</p>
+                        <label for="quantity">Quantity</label>
                         <input type="text"
                         name="quantity" 
                         id="buy-quantity"
@@ -73,13 +73,14 @@
                         </div>
                     
                         <div class="product-button-cotainer">
-                        <button onclick='buyNow("<?php echo $_GET["productid"];?>")' class="product-page-button" id="buy-now-btn"><p> Buy now </p> <p>➜</p> </button>   
+                        <button onclick='buyNow("<?php echo $_GET["productid"];?>")' class="product-page-button" id="buy-now-btn"><p> BUY NOW</p> <p>➜</p> </button>   
                         <button onclick='addToCart("<?php echo $_GET["productid"];?>", )' class="product-page-button" id="add-cart-btn"><p> Add to cart </p> <p>➜</p></button>
                         <!-- checkCurrentCart() -->
                         </div>
                     </div>
                 </div>
             </div>
+      
             <div class="product-desc">
                 <h2>Product description</h2>
                 <p>
