@@ -39,7 +39,7 @@
                             <input type="file" id="imgupload"
                             onchange="loadFile(event)" style="display:none"/> 
                             <img class="avatar-image" id="customer-img" 
-                            src="assets/image/signupimage/Ellipse 2.png" alt="blank avatar" onclick="chooseFile()">
+                            src="assets/image/signupimage/Ellipse 2.png" alt="blank avatar" onclick="clickUpload()">
                         </div>
                         <div class="form-row">
                             <div class="form-label">

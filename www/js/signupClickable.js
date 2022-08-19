@@ -61,6 +61,6 @@
 //     }
 // }
 
-// function chooseFile() {
-//   document.getElementById('imgupload').click();
-// }
+function chooseFile() {
+  document.getElementById('imgupload').click();
+}

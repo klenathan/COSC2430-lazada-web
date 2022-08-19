@@ -11,13 +11,13 @@ body, html {
 }
 
 #signup-for-vendor .signup-form-wrapper, #signup-for-shipper .signup-form-wrapper {
-    height: 70vh;
+    height: 80vh;
 }
 
 .signup-form-wrapper {
     border-radius: 16px ;
     width: 60vw;
-    height: 80vh;
+    height: 90vh;
     background-color: white;
     display: flex;
     flex-direction: column; 
@@ -40,7 +40,7 @@ body, html {
 
 }
 #signup-for-shipper .signup-form-body, #signup-for-shipper .signup-form-body {
-    height: 38vh;
+    height: 44vh;
 }
 
 .signup-form-body {
@@ -77,19 +77,23 @@ form  {
 }
 
  #message {
-    display: block;
+    border-radius: 8px;
+    display: none;
     padding: 0.5em;
     position: absolute;
     background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
  }
+
 #message h3 {
-    text-decoration: none;
+    /* text-decoration: none; */
     font-size: 0.8em;
 }
 
 #message p {
-    text-decoration: none;
-    font-size: 0.6em;
+    /* text-decoration: none; */
+    color: black;
+    font-size: 0.8em;
 }
 /* #distribution-hub {
     position: relative;
@@ -125,7 +129,7 @@ form  {
         height: fit-content;
     }
     #signup-for-shipper .login-signup-poster {
-        height: 110vh;
+        height: 120vh;
     }
 
     #signup-for-vendor .login-signup-poster {
@@ -141,7 +145,7 @@ form  {
     }
 
     #signup-for-shipper .signup-form-wrapper {
-        min-height: 100vh;
+        min-height: 110vh;
     }
 
     #signup-for-vendor .signup-form-wrapper {
@@ -152,7 +156,7 @@ form  {
       right: 0;
       margin: 0;
       min-width: 90%;
-      min-height: 120vh;
+      min-height: 130vh;
       /* max-height: auto; */
       font-size: medium;
       background: none;
@@ -165,7 +169,7 @@ form  {
     }
 
     #signup-for-vendor .signup-form-body {
-        height: 70vh;
+        height: 75vh;
     }
 
     .signup-form-body {

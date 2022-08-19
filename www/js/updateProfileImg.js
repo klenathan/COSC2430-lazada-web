@@ -2,7 +2,7 @@ console.log("test");
 
 
 var clickUpload = function() {
-    document.getElementById("img-input").click()
+    document.getElementById('imgupload').click();
 }
 
 var loadFile = function(event) {
