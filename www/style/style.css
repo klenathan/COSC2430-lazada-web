@@ -106,7 +106,7 @@ main {
   border-right: 1.5vw solid transparent;
   /* border-top: 0rem solid transparent; */
   border-bottom: 2.5vw solid #f9f9f9;
-  right: 76%;
+  right: calc(100% - 8vw);
   top: -4%;
   z-index: -1;
 }
