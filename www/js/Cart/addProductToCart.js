@@ -21,7 +21,7 @@ function addToCart(itemId) {
   }
 
   const cartLogo = document.getElementById("cart-logo");
-  cartLogo.style.backgroundColor = "rgb(2, 59, 25)";
+  cartLogo.style.backgroundColor = "rgb(223, 91, 166)";
   setTimeout(function () {
     cartLogo.style.backgroundColor = "transparent";
   }, 350);

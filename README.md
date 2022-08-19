@@ -5,9 +5,6 @@
 # GROUP MEMBER
 
 
-todo: change src to www
-
-
 # Data structure
 
 ## Customer

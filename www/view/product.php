@@ -65,6 +65,7 @@
                         <p class="product-info-sold">Sold: <?php echo $this::$productData["sold"];?></p>
                         <p class="product-info-stock">Stock: <?php echo $this::$productData["stock"];?></p>
                         <p class="product-info-rating">Rating: <?php echo $this::$productData["rating"];?>/5</p>
+                        <label for="quantity">Quantity</label>
                         <input type="text"
                         name="quantity" 
                         id="buy-quantity"
