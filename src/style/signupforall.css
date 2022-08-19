@@ -10,7 +10,7 @@ body, html {
     padding: 0;
 }
 
-#signup-for-shipper .signup-form-wrapper {
+#signup-for-vendor .signup-form-wrapper, #signup-for-shipper .signup-form-wrapper {
     height: 70vh;
 }
 
@@ -36,7 +36,10 @@ body, html {
 .signup-form-heading h1 {
     font-size: x-large;
 }
-#signup-for-shipper .signup-form-body {
+.exclude-customer {
+
+}
+#signup-for-shipper .signup-form-body, #signup-for-shipper .signup-form-body {
     height: 38vh;
 }
 
@@ -125,6 +128,10 @@ form  {
         height: 110vh;
     }
 
+    #signup-for-vendor .login-signup-poster {
+        height: 120vh;
+    }
+
     .login-signup-poster{
         height: 140vh;
         display: flex; 
@@ -135,6 +142,10 @@ form  {
 
     #signup-for-shipper .signup-form-wrapper {
         min-height: 100vh;
+    }
+
+    #signup-for-vendor .signup-form-wrapper {
+        min-height: 110vh;
     }
 
     .signup-form-wrapper {
@@ -151,6 +162,10 @@ form  {
     }
     #signup-for-shipper .signup-form-body {
         height: 60vh;
+    }
+
+    #signup-for-vendor .signup-form-body {
+        height: 70vh;
     }
 
     .signup-form-body {
