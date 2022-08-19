@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style/style.css">
-    <!-- <link rel="stylesheet" href="style/home.css"> -->
-    <link rel="stylesheet" href="style/clonehome.css">
-    <link rel="stylesheet" href="style/sliderproduct.css">
+    <link rel="stylesheet" href="style/home.css">
 
     <title>Lazada</title>
 </head>
@@ -22,7 +20,12 @@
     <main>
         
         <?php
-        $this->getAllproduct();
+        // $this->getAllproduct();
+        $this->getBestSeller();
+        $this->getCategory("Men Fashion");
+        $this->getCategory("Girls Fashion");
+        // $this->getAllCategory();
+
         ?>
     </main>
 
@@ -33,5 +36,6 @@
         ?>
     </footer>
 </body>
+<script src="../js/slider.js"></script>
 
 </html>

@@ -38,7 +38,7 @@ todo: change src to www
 }
 
 ```
-## Shipper
+## Vendor
 
 ```json
 {

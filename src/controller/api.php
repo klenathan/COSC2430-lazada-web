@@ -60,9 +60,32 @@ class Api {
         $this->updateProfile($data);
     }
 
+    public function editShipperProfile(){
+        $data = array(
+            "name"=>$_POST["name"],
+            "email"=>$_POST["email"],
+            "hub"=>$_POST["hub"],
+        );
+        $this->updateProfile($data);
+    }
+
+    public function editVendorProfile(){
+        $currentData = json_decode(DataHandle::readData($this::$accountFile), true);
+        foreach ($currentData as $key => $value) {
+            if ($value["address"] == $_POST["address"] && $key != $_COOKIE["user"]) {
+                header("Location: /myaccount");
+            }
+        }
+        $data = array(
+            "name"=>$_POST["name"],
+            "email"=>$_POST["email"],
+            "address"=>$_POST["address"],
+        );
+        $this->updateProfile($data);
+    }
+
     private function updateProfile($data){
         $currentData = json_decode(DataHandle::readData($this::$accountFile), true);
-        // $currentData[$_COOKIE["user"]] = $data;
         foreach ($data as $key => $value) {
             $currentData[$_COOKIE["user"]][$key] = $value;
         }

@@ -8,9 +8,9 @@
                         transform="translate(2 2)" />
                 </svg></button>
             <div class="category-content">
-                <a href="">Link 1</a>
-                <a href="">Link 2</a>
-                <a href="">Link 3</a>
+                <?php
+                Category::getAllCategory();
+                ?>
             </div>
         </div>
 
