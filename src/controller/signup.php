@@ -10,6 +10,7 @@ class Signup extends Controller {
     }
 
     function view($view) {
+        echo '<link rel="shortcut icon" href="assets/image/favicon.png" type="image/png">';
         include_once("view/signupdemo.php");
 
     }

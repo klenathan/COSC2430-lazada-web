@@ -1,9 +1,9 @@
 * {
 	--card-background: rgb(232, 231, 231);
-	--primary-color: rgb(86, 51, 125);
-	--sub-menu-color: rgb(39, 26, 97);
-	--sub-menu-hover-color: rgb(39, 26, 97);
-	--hover-color: rgb(223, 91, 166);
+	--primary-color: rgb(39, 26, 97);
+  --sub-menu-color: rgb(86, 51, 125);
+  --sub-menu-hover-color: rgb(39, 26, 97);
+  --hover-color: rgb(223, 91, 166);
 }
 
 a {
