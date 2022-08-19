@@ -19,29 +19,6 @@ header {
 main {
   min-height: calc(95vh - 3rem);
 }
-/* 
-/* Upper header */
-/* .upper-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    background-color: var(--sub-menu-color);
-    height: 2rem;
-}
-
-.upper-header a{
-    text-decoration: none;
-    color: white;
-    margin-right: 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.upper-header a:hover {
-    color: white
-} */
 
 /* Header */
 .header {
