@@ -1,9 +1,9 @@
 * {
-	--card-background: rgb(232, 231, 231);
+	--card-background: rgb(255, 255, 255);
 	--primary-color: rgb(39, 26, 97);
   --sub-menu-color: rgb(86, 51, 125);
   --sub-menu-hover-color: rgb(39, 26, 97);
-  --hover-color: rgb(223, 91, 166);
+  --hover-color:  #8c55cb;
 }
 
 a {
@@ -15,24 +15,23 @@ main {
 	flex-direction: column;
 	align-items: center;
 
-	background-color: rgb(245, 245, 245);
+	background-color: rgb(242, 242, 242);
 }
 .carousel img {
 	width: 100%;
 	height: 70vh;
 	object-fit: cover;
 	image-rendering: auto;
-	/* image-rendering: crisp-edges; */
-	image-rendering: pixelated;
-  
+	box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 .product {
     position: relative;
     overflow: hidden;
     padding: 0 0;
-	width: 100%;
-	max-width: 1188px;
-    margin: 2rem 0;
+	width: 90%;
+	/* max-width: 1188px; */
+    margin: 2rem 6rem;
+	background-color: white;
 }
 .product-category {
 	display: flex;
