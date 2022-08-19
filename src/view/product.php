@@ -24,7 +24,7 @@
             ?>
             <div class="breadcumb">
                 <a href="/">Home</a> /
-                <a href="#"><?php
+                <a href="/category?category=<?php echo $this::$productData["category"]?>"><?php
                 echo $this::$productData["category"]
                 ?>
                 </a> / 
@@ -61,9 +61,7 @@
                         <p class="product-info-name"><?php echo $this::$productData["name"];?></p>
                         
                         <p class="product-info-price"><?php echo number_format($this::$productData["price"]);?> VND</p>
-                        <p class="product-info-vendor">Sold by: 
-                            <a href="/vendor?vendor=<?php echo $this::$productData["vendor"];?>"><?php echo $this::$productData["vendor"];?></a>
-                        </p>
+                        <p class="product-info-vendor">Sold by:<?php echo $this::$productData["vendor"];?></p>
                         <p class="product-info-sold">Sold: <?php echo $this::$productData["sold"];?></p>
                         <p class="product-info-stock">Stock: <?php echo $this::$productData["stock"];?></p>
                         <p class="product-info-rating">Rating: <?php echo $this::$productData["rating"];?>/5</p>

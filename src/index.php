@@ -8,7 +8,7 @@
     include("model/productModel.php");
 
     // Controller
-    // include("controller/category.php");
+    include("controller/category.php");
     // Model
     
 
