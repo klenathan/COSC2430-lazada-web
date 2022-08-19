@@ -3,9 +3,9 @@
         public function __construct () {
             $this->view("signupforcustomer");
         }
-        function handleSignup() {
+        // function handleSignup() {
             // $signupType =
-        }
+        // }
         // function handleSignup(){
         //     $loginStatus = Auth::login($_POST["username"], $_POST["password"]);
         //     $passwordLength = 

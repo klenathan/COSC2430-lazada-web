@@ -1,125 +1,190 @@
 @import "login.css";
-@import "signupforall";
+/* @import "signupforall"; */
+/* @import "signupDemo"; */
 
 body, html {
     margin: 0;
     padding: 0;
 }
 
-#signup {
-    /* position: relative; */
-    width: 100vw;
+.login-signup-poster {
     display: flex;
+    align-items: center;
+    background-position: center;
+    justify-content: center;
 }
 
-.background-image {
-    position: relative;
+.signup {
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #option {
     padding: 0 8%;
     position: absolute;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 4%;
-    /* padding: 0 4%; */
+    gap: 2vw;
 }
 
 .tab {
-    width: 40%;
-    height: 24em;
-    border-radius: 16px;
+    width: 100vw;
+    height: 60vh;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
     align-items: center;
-    gap: 10%;
     transition: 0.4s;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
     background-color: white;
 }
+#vendor-tab .tab-heading {
+    background-color: rgb(86, 45, 139);
+}
 
-.main-content {
-    position: relative;
-    padding: 1rem 0;
-    width: 80%;
-    height: fit-content;
+#customer-tab .tab-heading {
+    background-color: rgb(166, 78, 139);
+}
+
+#shipper-tab .tab-heading {
+    background-color: rgb(40, 29, 95);
+}
+
+.tab-heading {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    width: 100%;
+    height: 8vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
+    box-shadow: 0 1px 8px rgb(0 0 0 / 0.8);
 }
-
-.tab-img {
-    margin: 2em 0;
-    display: block;
-    width: 100px;
-    height: 100px;
-    box-sizing: border-box;
-    object-fit: cover;
-}
-
 .tab-title {
-    position: absolute;
-    top: 0;
-    margin-bottom: 4%;
+    font-size: large;
 }
 
-.tab-body {
-    display: none;
+.main-content {
     width: 100%;
-    height: 60%;
-   
+    height: 36vh;
     list-style: none;
 }
+
 
 .tab-body li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 4% 0;
+    padding: 0.8em 2em;
+    /* border-top: 1px solid gray; */
+    border-bottom: 1px solid rgb(222, 225, 227);
 }
 
 .tab-body li p {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 12px;
+    font-size: medium;
 }
 
 .tick {
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 0.9em;
+    height: 0.9em;
     object-fit: cover;
+}
+.button-wrapper {
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .signup-button {
     border-radius: 25px;
     box-shadow: 0 1px 8px rgb(0 0 0 / 0.8);
-    width: 10em;
-    height: 3em;
+    width: 20vw;
+    height: 6vh;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
+    font-size: 0.9em;
     font-weight: 600;   
     transition: 0.4s;
-    margin-top: 10%;
     background-color: white;
 }
 
 .signup-button:hover {
     transform: scale(1.1);
+}
+
+.tab:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 500px){
+    .login-signup-poster {
+        height: 200vh;
+    }
+    #signup {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4vh
+    }
+    .tab {
+        width: 92vw;
+        height: 200vh;
+    }
+
+    .signup-button {
+        width: 50vw;
+    }
+   
+}
+
+@media screen and (max-height: 677px){
+    .login-signup-poster {
+        height: 200vh;
+    }
+    #signup {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4vh
+    }
+    .tab {
+        width: 92vw;
+        height: 200vh;
+    }
+
+    .signup-button {
+        width: 50vw;
+    }
+   
 }
