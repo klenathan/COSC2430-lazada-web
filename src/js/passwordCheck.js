@@ -1,4 +1,4 @@
-let password = document.getElementById("signupPassword");
+let signupPassword = document.getElementById("signupPassword");
 
 let lowercaseCheck = new RegExp('(?=.*[a-z])');
 let uppercaseCheck = new RegExp('(?=.*[A-Z])');
@@ -19,7 +19,7 @@ function checkPassword (passwordInput) {
     if (passwordInput){
         // Check & feedback for lowercase
         if (lowercaseCheck.test(passwordInput)){
-            lowercasePass.style.backgroundColor = greenColor
+            lowercasePass.style.color = greenColor
         } else {
             lowercasePass.style.backgroundColor = redColor
         }
@@ -56,6 +56,7 @@ function checkPassword (passwordInput) {
     }
 }
 
-password.addEventListener("input", () => {
-    checkPassword(password.value)
-});
+signupPassword.addEventListener("input", () => {
+    checkPassword(signupPassword.value);
+    console.log("Trest")
+})

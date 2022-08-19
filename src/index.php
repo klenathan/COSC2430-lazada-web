@@ -18,8 +18,8 @@
     #null for default page
 
     $reservedUrl = array("home", "myaccount", 
-    "cart", "product", "signupdemo", "login", 
-    "signupforcustomer", "signup", "allproduct",
+    "cart", "product", "signupdemo", "login",
+    "signupforcustomer", "signupforvendor", "signupforshipper", "signup", 
     "search", "api", null);
 
     $route = new Route($reservedUrl, "home");

@@ -1,85 +1,191 @@
 @import "login.css";
 @import "signupDemo.css";
 
+body, html {
+    padding: 0;
+}
 
-#signup-for-customer {
-    position: relative;
+* {
+    /* font-size: medium; */
+    padding: 0;
+}
+
+#signup-for-shipper .signup-form-wrapper {
+    height: 70vh;
+}
+
+.signup-form-wrapper {
+    border-radius: 16px ;
+    width: 60vw;
+    height: 80vh;
     background-color: white;
     display: flex;
-}
-
-.background-image {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-}
-
-.form-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60vw;
-    display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
+    align-items: center;
 }
 
-.form-wrapper form {
-    height: auto;
-    margin-top: 0;
+.signup-form-heading {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form-heading h1 {
+    font-size: x-large;
+}
+#signup-for-shipper .signup-form-body {
+    height: 38vh;
+}
+
+.signup-form-body {
+    padding: 4%;
+    width: 100%;
+    height: 60vh;
+} 
+
+form  {
     display: grid;
-    flex-direction: column;
     grid-template-columns: auto auto;
     gap: 4%;
-    padding: 0 4% 0 4%;
 }
-
-.avatar {
-    display: flex;
-    justify-content: center;
-    
-}
-
 .avatar-image {
-    width: 6rem;
-    height: 6rem;
+    width: 6em;
+    height: 6em;
     border-radius: 50%;
     object-fit: cover;
     transition: 0.4s;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
+/* .form-wrapper form {
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: auto auto;
+    gap: 4%;
+    /* padding: 0 2% 0 2%; */
+
+.avatar {
+    margin: auto
+}
+
+ #message {
+    display: block;
+    padding: 0.5em;
+    position: absolute;
+    background-color: white;
+ }
+#message h3 {
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+#message p {
+    text-decoration: none;
+    font-size: 0.6em;
+}
+/* #distribution-hub {
+    position: relative;
+}
+ #distribution-hub select::after {
+    position: absolute;
+    top: 10%;
+ }  */
+
+
+.form-button-wrapper {
+    width: 100%;
+    height: 20vh;
+}
 
 .signup-button {
-    margin-top: 3%;
-    align-self: center;
-    width: 40%;
-    display: flex;
-    justify-content: center;
+    width: 30vw;
 }
 
 .avatar-image:hover {
     transform: scale(1.2);
 }
 
-@media screen and (max-width: 500px){
-    .form-wrapper {
+.signup-login-link{
+    display:flex;
+    justify-content: center;
+    /* margin-top: 3rem; */
+  }
+
+  @media screen and (max-width: 1023px){
+    .signup {
+        /* height: 140vh; */
         height: fit-content;
     }
+    #signup-for-shipper .login-signup-poster {
+        height: 110vh;
+    }
 
-    .form-wrapper form  {
+    .login-signup-poster{
+        height: 140vh;
+        display: flex; 
+        align-items: center; 
+        background-position: center;
+        justify-content: center;
+    }
+
+    #signup-for-shipper .signup-form-wrapper {
+        min-height: 100vh;
+    }
+
+    .signup-form-wrapper {
+      right: 0;
+      margin: 0;
+      min-width: 90%;
+      min-height: 120vh;
+      /* max-height: auto; */
+      font-size: medium;
+      background: none;
+      background: rgba(255,250,250,0.5);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+    #signup-for-shipper .signup-form-body {
+        height: 60vh;
+    }
+
+    .signup-form-body {
+        height: 100vh;
+    }
+    form {
+        padding: 2%;
         display: flex;
         flex-direction: column;
     }
-}
-
-@media screen and (max-height: 677px){
-    .form-wrapper {
-        height: fit-content;
+    /* .login-form-wrapper h1{
+      margin-bottom: 20px;
+      font-size: x-large;
+    } */
+    .signup-form-wrapper h1{
+      /* margin-bottom: 20px; */
+      font-size: x-large;
     }
-    .form-wrapper form  {
-        display: flex;
-        flex-direction: column;
+    .input-field{
+      width: 100%;
+      height: 4vh;
+      padding: 2%;
+      /* margin: 5px 0 16px 0; */
+      border: none;
+      /* border-radius: 10px; */
+      background: #f1f1f1;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
     }
-}
+    .signup-link{
+      padding-top: 2rem;
+      margin-top: 4rem;
+    }
+    .signup-button {
+        width: 50vw;
+    }
+    
+  }
+  
