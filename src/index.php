@@ -8,7 +8,7 @@
     include("model/productModel.php");
 
     // Controller
-    include("controller/category.php");
+    // include("controller/category.php");
     // Model
     
 
@@ -18,7 +18,7 @@
     #null for default page
 
     $reservedUrl = array("home", "myaccount", 
-    "cart", "product", "signupdemo", "login", "allproduct",
+    "cart", "product", "signupdemo", "login", "allproduct", "category",
     "signupforcustomer", "signupforvendor", "signupforshipper", "signup", 
     "search", "api", null);
 
