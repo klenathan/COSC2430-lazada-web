@@ -95,21 +95,17 @@ main {
 .category-content {
   display: none;
   position: absolute;
+  /* right: 0; */
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  width: 26vw;
-  text-align: left;
 }
 .category-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: start;
-  border-bottom-style:groove;
-  border-bottom-width: thin;
 }
 
 .category-content a:hover {
@@ -174,6 +170,7 @@ main {
   justify-content: space-around;
   color: white;
 
+  margin: 0 5rem 0 4rem;
 }
 .login-signup-wrapper a {
   margin: 1rem;
@@ -355,21 +352,6 @@ main {
   color: white;
   font-weight: bold;
 }
-@media screen and (max-width: 1023px) {
-  .header-left {
-    flex: 0.75;
-  }
-  .category{
-    margin: 0 4vw 0 1vw;
-  }
-  .header-right {
-    flex: 0.655555555555555555555;
-    justify-content: flex-end;
-  }
-  .login-signup-wrapper a {
-   margin: 0;
-}
-
 @media screen and (max-width: 500px) {
 }
 
