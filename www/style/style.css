@@ -97,17 +97,18 @@ main {
   margin-top: 1.5rem;
   border-radius: 0.5rem;
 }
-.category-content::before{
+.category-content::after{
   content: "";
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 1.5rem solid transparent;
-  border-right: 1.5rem solid transparent;
+  border-left: 1.5vw solid transparent;
+  border-right: 1.5vw solid transparent;
   /* border-top: 0rem solid transparent; */
-  border-bottom: 1.5rem solid #f9f9f9;
+  border-bottom: 2.5vw solid #f9f9f9;
   right: 76%;
-  top: -20px;
+  top: -4%;
+  z-index: -1;
 }
 
 .category-content a {
