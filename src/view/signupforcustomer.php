@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/signupforall.css">
     <title>Sign up for customer</title>
-    <script src="js/signupClickable.js"></script>
+    <!-- <script src="js/signupClickable.js"></script> -->
     <script src="js/updateProfileImg.js"></script>
     <script src="js/passwordCheck.js"></script>
 </head>
