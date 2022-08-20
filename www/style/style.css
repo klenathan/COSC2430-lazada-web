@@ -69,15 +69,18 @@ main {
 }
 .category::before{
   content: "";
-  position:absolute;
+  position: absolute;
   display: block;
   width: 300%;
   height: 3rem;
   left: -2rem;
+  top: 1rem;
 }
 .category-logo {
   background-color: var(--sub-menu-color);
   border: none;
+  transition: 0.3s ease-in-out;
+  font-size: 1.2rem;
 }
 .category-logo svg{
   width: 1.555555vw;
@@ -126,9 +129,10 @@ main {
 .category:hover .category-content {
   display: block;
 }
-.category:hover .category-logo {
+.category-logo:hover{
   background-color: #8c55cb;
   border-radius: 50%;
+  border-radius: 0.5rem;
 }
 .category-logo svg {
   fill: white;
@@ -309,7 +313,7 @@ main {
 }
 
 #search {
-  height: 4vh;
+  height: 2rem;
   width: 100%;
   padding: 0 2rem;
   border-radius: 0.5rem;

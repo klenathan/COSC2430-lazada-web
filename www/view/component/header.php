@@ -8,6 +8,7 @@
                         transform="translate(2 2)" />
                 </svg>
             </button>
+            <div id="emp-div"></div>
             <div class="category-content">
                 <a href="#">Arts & Crafts</a> 
                 <a href="">Automotive</a>  
@@ -21,7 +22,6 @@
                 <a href="">Girls' Fashion</a>
                 <a href="">Boys' Fashion</a>
                 <a href="">Health & Household</a>
-	
             </div>
         </div>
 

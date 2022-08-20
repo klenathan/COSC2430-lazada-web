@@ -163,5 +163,33 @@ class Home extends Controller
             </section>
         <?php
     }
+    function getAllCategory(){
+        $categories = array("Arts & Crafts", "Automotive", "Baby", "Beauty & Personal Care", "Books", "Computers", "Electronics", "Women's Fashion", "Men's Fashion", "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
+        ?>
+        <div class="category-contain">
+                
+        
+            <div class="title">
+                <h2>All category</h2>
+            </div>
+            <div class="all-category">
+            <?php
+            foreach($categories as $category){
+                echo '
+                <div class="each-category">
+                    <div class="category-img">
+                        <img src="assets/image/category/'.$category.'.jpg" alt="'.$category.'">
+                    </div>
+                    <div class="category-name">
+                        <h3 class="name">'.$category.'</h2>
+                    </div>
+                </div>';
+            }
+            ?>
+            </div>
+        </div>
+        <?php
+    
+    }
 }
 ?>
