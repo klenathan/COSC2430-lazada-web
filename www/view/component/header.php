@@ -9,20 +9,9 @@
                 </svg>
             </button>
             <div id="emp-div"></div>
-            <div class="category-content">
-                <a href="#">Arts & Crafts</a> 
-                <a href="">Automotive</a>  
-                <a href="">Baby</a>
-                <a href="">Beauty & Personal Care</a>
-                <a href="">Books</a>
-                <a href="">Computers</a>
-                <a href="">Electronics</a>
-                <a href="">Women's Fashion</a>
-                <a href="">Men's Fashion</a>
-                <a href="">Girls' Fashion</a>
-                <a href="">Boys' Fashion</a>
-                <a href="">Health & Household</a>
-            </div>
+                <?php
+                Category::getAllCategory();
+                ?>
         </div>
 
         <a class="header-component" href="/">

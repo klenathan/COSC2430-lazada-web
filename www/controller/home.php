@@ -53,6 +53,7 @@ class Home extends Controller
                     }
                     ?>
                     </div>
+                    <button class="add-to-cart-btn">Add to cart</button>
                 </a>
             <?php
     }
@@ -177,14 +178,14 @@ class Home extends Controller
             <?php
             foreach($categories as $category){
                 echo '
-                <div class="each-category">
+                <a href="#" class="each-category">
                     <div class="category-img">
                         <img src="assets/image/category/'.$category.'.jpg" alt="'.$category.'">
                     </div>
                     <div class="category-name">
                         <h3 class="name">'.$category.'</h2>
                     </div>
-                </div>';
+                </a>';
             }
             ?>
             </div>
