@@ -60,21 +60,21 @@
                         <p class="cate"><?php echo $this::$productData["category"];?></p>
                         <p class="product-info-name"><?php echo $this::$productData["name"];?></p>
                         
-                        <p class="product-info-price"><?php echo number_format($this::$productData["price"]);?> VND</p>
+                        <p class="product-info-price"><?php echo number_format($this::$productData["price"]);?> ₫</p>
                         <p class="product-info-vendor">Sold by:<?php echo $this::$productData["vendor"];?></p>
                         <p class="product-info-sold">Sold: <?php echo $this::$productData["sold"];?></p>
                         <p class="product-info-stock">Stock: <?php echo $this::$productData["stock"];?></p>
                         <p class="product-info-rating">Rating: <?php echo $this::$productData["rating"];?>/5</p>
-                        <label for="quantity">Quantity</label>
-                        <input type="text"
+                        <label class="product-info-quantity" for="quantity">Quantity</label>
+                        <input class="quantity-input" type="number" min="0"
                         name="quantity" 
                         id="buy-quantity"
                         value=1>
                         </div>
                     
                         <div class="product-button-cotainer">
-                        <button onclick='buyNow("<?php echo $_GET["productid"];?>")' class="product-page-button" id="buy-now-btn"><p> BUY NOW</p> <p>➜</p> </button>   
-                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", )' class="product-page-button" id="add-cart-btn"><p> Add to cart </p> <p>➜</p></button>
+                        <button onclick='buyNow("<?php echo $_GET["productid"];?>")' class="product-page-button" id="buy-now-btn"><p class="buy"> Buy now</p> <p>➜</p> </button>   
+                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", )' class="product-page-button" id="add-cart-btn"><p class="add"> Add to cart </p> <p>➜</p></button>
                         <!-- checkCurrentCart() -->
                         </div>
                     </div>
@@ -82,7 +82,7 @@
             </div>
       
             <div class="product-desc">
-                <h2>Product description</h2>
+                <h2>Product escription</h2>
                 <p>
                 <?php echo $this::$productData["desc"];?>
                 </p>
