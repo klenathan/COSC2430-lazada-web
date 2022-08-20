@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/signupforall.css">
     <title>Sign up for Vendor</title>
+    <script src="js/changeImageHover.js" defer></script>
     <script src="js/signupClickable.js"></script>
     <script src="js/updateProfileImg.js"></script>
     <script src="js/passwordCheck.js" defer></script>
@@ -36,8 +37,11 @@
                         <div class="form-row avatar">
                             <input type="file" id="imgupload"
                             onchange="loadFile(event)" style="display:none"/> 
-                            <img class="avatar-image" id="vendor-img" 
-                            src="assets/image/signupimage/Ellipse 2.png" alt="blank avatar" onclick="chooseFile()">
+                            <img class="avatar-image" id="avatar" 
+                            src="assets/image/signupimage/avatar.png" alt="blank avatar" >
+                            <div id="image-hover"  onclick="clickUpload()" >
+                                <img src="assets/image/avatar/icons8-compact-camera-ios/icons8-compact-camera-50.png" alt="edit-image icon">
+                            </div>
                         </div>
                         <div class="form-row">
                             <div class="form-label">
