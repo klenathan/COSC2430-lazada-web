@@ -75,13 +75,17 @@ class Home extends Controller
                 <div class="product-container">
                     <?php
                     foreach ($data as $key => $value) {
-                        if (!($value["sold"] >= 20000)) {
-                            continue;
-                        }
-                    ?>
-                        <?php
-                        $this->productCard($key, $value);
+        
+                            if (!($value["sold"] >= 20000)) {
+                                continue;
+                            }
                         ?>
+                            <?php
+                        echo '<div class="product-card-slider">';
+                            $this->productCard($key, $value);
+                        echo '</div>';
+                            ?>
+                    
                     <?php
                     }
                     ?>
@@ -103,10 +107,7 @@ class Home extends Controller
 
                 </div>
 
-                <button class="pre-btn"><img src="../assets/arrow.png" alt=""></button>
-                <button class="nxt-btn"><img src="../assets/arrow.png" alt=""></button>
-
-                <div class="product-container">
+                <div class="productContainer">
                     <?php
                     foreach ($data as $key => $value) {
                         if ($value["category"] != $category) {

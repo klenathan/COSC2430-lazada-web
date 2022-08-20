@@ -78,7 +78,7 @@ main {
 	display: none;
 }
 
-.product-card {
+.product-card-slider {
 	flex: 0 0 auto;
 	width: 14vw;
 	height: auto;
@@ -92,6 +92,7 @@ main {
 	height: 21vw;
 	overflow: hidden;
 	transition: transform 0.5s;
+	text-align: center;
 }
 .product-card:hover .product-image{
 	opacity: 0.7;
@@ -103,6 +104,7 @@ main {
 	height: 100%;
 	object-fit: contain;
 	background-color: white;
+	max-width: 550px;
 }
 
 .card-btn {
@@ -264,4 +266,10 @@ main {
 .category-name{
 	font-size: 1vw;
 	text-align: center;
+}
+.productContainer{
+	display: grid;
+	gap: 2vw;
+	grid-template-columns: calc((100% / 3) - 2vw) calc((100% / 3) - 2vw) calc((100% / 3) - 2vw);
+	justify-content: center;
 }
