@@ -178,7 +178,7 @@ class Home extends Controller
             <?php
             foreach($categories as $category){
                 echo '
-                <a href="#" class="each-category">
+                <a href="/category?category=" class="each-category">
                     <div class="category-img">
                         <img src="assets/image/category/'.$category.'.jpg" alt="'.$category.'">
                     </div>
