@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/signupforall.css">
     <title>Sign up for Vendor</title>
+    <script src="js/changeImageHover.js" defer></script>
     <script src="js/signupClickable.js"></script>
     <script src="js/updateProfileImg.js"></script>
-    <script src="js/passwordCheck.js"></script>
+    <script src="js/passwordCheck.js" defer></script>
 </head>
 <body>
     <header>
@@ -36,8 +37,11 @@
                         <div class="form-row avatar">
                             <input type="file" id="imgupload"
                             onchange="loadFile(event)" style="display:none"/> 
-                            <img class="avatar-image" id="vendor-img" 
-                            src="assets/image/signupimage/Ellipse 2.png" alt="blank avatar" onclick="chooseFile()">
+                            <img class="avatar-image" id="avatar" 
+                            src="assets/image/signupimage/avatar.png" alt="blank avatar" >
+                            <div id="image-hover"  onclick="clickUpload()" >
+                                <img src="assets/image/avatar/icons8-compact-camera-ios/icons8-compact-camera-50.png" alt="edit-image icon">
+                            </div>
                         </div>
                         <div class="form-row">
                             <div class="form-label">
@@ -53,12 +57,12 @@
                                 <label for="signupPassword"><b>Password:</b></label>
                             </div>
                             <div class="form-field" >
-                                <input type="signupPassword" name="password" id="signupPassword" onkeyup="checkPassword(this.value)" placeholder="Password" class="input-field" 
-                                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}"required>
+                                <input type="password" name="password" id="signupPassword" placeholder="Password" class="input-field" 
+                                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" required>
                                 <div id="message">
                                     <h3>Password must contain the following:</h3>
                                     <p id="lowercasePassed">At least 1 lower case</p>
-                                    <p id=uppercasePassed">At least 1 upper case</p>
+                                    <p id="uppercasePassed">At least 1 upper case</p>
                                     <p id="specialCharPassed">At least 1 special character</p>
                                     <p id="numberPassed">At least 1 number</p>
                                     <p id="lengthPassed">At least 8 characters</p>

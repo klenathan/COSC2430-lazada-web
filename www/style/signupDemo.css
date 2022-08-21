@@ -17,14 +17,10 @@ body, html {
 .signup {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #option {
     padding: 0 8%;
-    position: absolute;
     width: 100vw;
     height: 80vh;
     display: flex;
@@ -131,11 +127,11 @@ body, html {
 
 @media screen and (max-width: 500px){
     .login-signup-poster {
-        height: 200vh;
+        height: 190vh;
     }
-    #signup {
+    .signup {
         width: 100vw;
-        height: auto;
+        height: fit-content;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -161,11 +157,11 @@ body, html {
 
 @media screen and (max-height: 677px){
     .login-signup-poster {
-        height: 200vh;
+        height: 180vh;
     }
-    #signup {
+    .signup {
         width: 100vw;
-        height: auto;
+        height: fit-content;
         display: flex;
         justify-content: center;
         align-items: center;

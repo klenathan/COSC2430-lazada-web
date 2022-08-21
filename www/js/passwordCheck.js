@@ -46,14 +46,29 @@ function checkPassword (passwordInput) {
             lengthPassed.style.color = redColor
         }
     } else {
-        lowercasePass.style.color = "transparent"
-        uppercasePassed.style.color = "transparent"
-        numberPassed.style.color = "transparent"
-        specialCharPassed.style.color = "transparent"
-        lengthPassed.style.color = "transparent"
+        textColor = "black";
+        lowercasePass.style.color = textColor
+        uppercasePassed.style.color = textColor
+        numberPassed.style.color = textColor
+        specialCharPassed.style.color = textColor
+        lengthPassed.style.color = textColor
     }
 }
 
+
 document.getElementById("signupPassword").addEventListener("input", () => {
     checkPassword(signupPassword.value);
+    // document.getElementById("message").style.display = "block";
 })
+
+document.getElementById("signupPassword").addEventListener("focus", () => {
+    document.getElementById("message").style.display = "block"
+})
+
+document.getElementById("signupPassword").addEventListener("blur", () => {
+    document.getElementById("message").style.display = "none"
+})
+
+// document.getElementById("message").addEventListener("blur", () => {
+//     document.getElementById("message").style.display = "none";
+// })

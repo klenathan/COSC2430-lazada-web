@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/myAccount.css">
-
+    <script src="js/updateProfileImg.js"></script>
     <script src="js/editProfile.js"></script>
+    <script src="js/changeImageHover.js" defer></script>
 
     <title>My Account</title>
 </head>
@@ -18,15 +19,10 @@
         ?>
     </header>
 
-    <main>
-        <div class="profile-wrapper">
+    <main class="myAccount">
+        <div class="myAccount-background">
             <?php
             $this->renderPage();
-            ?>
-        </div>
-        <div class="profile-order">
-            <?php
-            $this->getUserOrder();
             ?>
         </div>
     </main>
