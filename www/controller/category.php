@@ -43,7 +43,7 @@ class Category extends Controller {
             <?php
             foreach($categories as $category){
                 echo '
-                <a href="/category?category=" class="each-category">
+                <a href="/category?category=" class="each-header-category">
                     <div class="category-icon">
                         <img src="assets/image/category/icon/'.$category.'.jpg" alt="'.$category.'">
                     </div>
