@@ -21,7 +21,8 @@
 
     <div class="header-mid">
         <form action="search" method="get">
-            <input name="search" type="text" id="search" placeholder="Search product... ">
+            <input name="search" type="text" id="search" 
+            autocomplete="off" placeholder="Search product... ">
             <input id="submit-btn" type="submit" value="">
         </form>
     </div>
