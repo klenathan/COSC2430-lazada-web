@@ -8,10 +8,9 @@
                         transform="translate(2 2)" />
                 </svg>
             </button>
-            <div id="emp-div"></div>
-                <?php
-                Category::getAllCategory();
-                ?>
+            <?php
+            Category::getAllCategory();
+            ?>
         </div>
 
         <a class="header-component" href="/">
