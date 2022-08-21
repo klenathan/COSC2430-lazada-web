@@ -18,13 +18,13 @@
         ?>
     </header>
     <main>
-        
+     
         <?php
-        // $this->getAllproduct();
+        $this->getAllCategory();
         $this->getBestSeller();
         $this->getCategory("Men Fashion");
         $this->getCategory("Girls Fashion");
-        // $this->getAllCategory();
+    
 
         ?>
     </main>
