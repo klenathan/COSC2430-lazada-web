@@ -233,10 +233,6 @@ main {
   background-color: var(--hover-color);
 }
 
-.cart-logo:hover {
-  /* box-shadow: inset 100vh 0 0 0 var(--hover-color); */
-}
-
 .user-info-wrapper-header {
   display: flex;
   flex-direction: row;
@@ -424,6 +420,13 @@ main {
 }
 
 @media only screen and (max-width: 767px) {
+  .carousel img {
+    height: 20vh !important;
+  }
+
+  #search {
+    padding: 10px ;
+  }
   .category {
     margin: 0 0.5rem;
   }
