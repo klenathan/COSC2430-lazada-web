@@ -66,10 +66,10 @@
                         <p class="product-info-stock">Stock: <?php echo $this::$productData["stock"];?></p>
                         <p class="product-info-rating">Rating: <?php echo $this::$productData["rating"];?>/5</p>
                         <label class="product-info-quantity" for="quantity">Quantity</label>
-                        <input class="quantity-input" type="number" min="0"
+                        <input class="quantity-input" type="number" min="1"
                         name="quantity" 
                         id="buy-quantity"
-                        value=1>
+                        value="1">
                         </div>
                     
                         <div class="product-button-cotainer">
