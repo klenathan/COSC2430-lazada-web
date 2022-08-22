@@ -1,6 +1,6 @@
 body, html {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw; */
+  /* height: 90vh; */
 }
 
 * {
@@ -9,9 +9,13 @@ body, html {
   /* font-size: large; */
 }
 
+main {
+    min-height: calc(95vh - 4rem);
+}
+
 .myAccount {
-    width: 100vw;
-    height: 100vh;
+    /* width: 100%; */
+    height: calc(95vh - 4rem);
     font-size: large;
     display: flex;
     flex-direction: row; 
@@ -20,7 +24,7 @@ body, html {
 
 .myAccount-background {
     position: relative;
-    height: 100vh;
+    height: 100%;
     width: 100%;   
     content: "";
     background-image: url('../assets/image/backgroundLogin.jpg');
