@@ -1,0 +1,90 @@
+
+#login-warn {
+    color: red;
+    display: none
+}
+
+#empty-warn {
+    margin: 0 auto;
+    width: max-content;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+main {
+    background-image: url('../assets/image/backgroundLogin.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-container {
+    background: white;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    max-width: 1188px;
+    width: 100%;
+}
+
+.cart-product {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    border-bottom: 2px gray solid
+}
+
+.product-image {
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+    background: white
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    
+}
+
+.product-info p {
+    line-height: 1.5rem;
+}
+
+.cart-product-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.cart-btn {
+    border: none;
+    height: 50px;
+    width: 150px;
+    background-color: var(--primary-color);
+    transition: ease-in-out 0.3s;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white
+}
+
+.cart-btn:first-child {
+    background-color: var(--sub-menu-color);
+}
+
+.cart-btn:hover {
+    background-color: var(--hover-color);
+}

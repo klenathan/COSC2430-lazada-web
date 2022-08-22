@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style/signupforall.css">
     <title>Sign up for Shipper</title>
     <!-- <script src="js/signupClickable.js"></script> -->
+    <script src="js/changeImageHover.js" defer></script>
     <script src="js/updateProfileImg.js"></script>
-    <script src="js/passwordCheck.js"></script>
+    <script src="js/passwordCheck.js" defer></script>
 </head>
 <body>
     <header>
@@ -37,8 +38,11 @@
                         <div class="form-row avatar">
                             <input type="file" id="imgupload"
                             onchange="loadFile(event)" style="display:none"/> 
-                            <img class="avatar-image" id="shipper-img" 
-                            src="assets/image/signupimage/Ellipse 2.png" alt="blank avatar" onclick="chooseFile()">
+                            <img class="avatar-image" id="avatar" 
+                            src="assets/image/signupimage/avatar.png" alt="blank avatar" >
+                            <div id="image-hover"  onclick="clickUpload()" >
+                                <img src="assets/image/avatar/icons8-compact-camera-ios/icons8-compact-camera-50.png" alt="edit-image icon">
+                            </div>
                         </div>
                         <div class="form-row">
                             <div class="form-label">
@@ -54,13 +58,12 @@
                                 <label for="password"><b>Password:</b></label>
                             </div>
                             <div class="form-field" >
-                                <input type="password" name="password" id="signupPassword" onkeyup="checkPassword()" placeholder="Password" class="input-field" 
-                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                <input type="password" name="password" id="signupPassword" placeholder="Password" class="input-field" 
+                                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" required>
                                 <div id="message">
                                     <h3>Password must contain the following:</h3>
                                     <p id="lowercasePassed">At least 1 lower case</p>
-                                    <p id=uppercasePassed">At least 1 upper case</p>
+                                    <p id="uppercasePassed">At least 1 upper case</p>
                                     <p id="specialCharPassed">At least 1 special character</p>
                                     <p id="numberPassed">At least 1 number</p>
                                     <p id="lengthPassed">At least 8 characters</p>

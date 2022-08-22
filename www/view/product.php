@@ -37,18 +37,16 @@
                 <div class="product-page-img">
                     <div class="sub-img-row">
                         <div class="column"> 
-                            <img class="sub-images" src="assets/image/product/P7.jpg" alt="" srcset="" onload="tabbedImage(this);" onclick="tabbedImage(this);">
+                            <img class="sub-images" src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="<?php $this::$name?>" onload="tabbedImage(this);" onclick="tabbedImage(this);">
                         </div>
                         <div class="column"> 
-                            <img  class="sub-images" src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="" srcset="" onclick="tabbedImage(this);"> 
+                            <img  class="sub-images" src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="<?php $this::$name?>" onclick="tabbedImage(this);"> 
                         </div>
                         <div class="column"> 
-                            <img class="sub-images" src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="" srcset=""onclick="tabbedImage(this);">
+                            <img class="sub-images" src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="<?php $this::$name?>" onclick="tabbedImage(this);">
                         </div>
                     </div>
                     <div class="container">
-                        <!-- the under line is for close button if needed -->
-                        <!-- <span onclick="this.parentElement.style.display='none'" class="closeButton">&times; </span> --> 
                         <img id="expanded" style="width:100%">
                         <div id="text">
                     </div>
@@ -60,21 +58,21 @@
                         <p class="cate"><?php echo $this::$productData["category"];?></p>
                         <p class="product-info-name"><?php echo $this::$productData["name"];?></p>
                         
-                        <p class="product-info-price"><?php echo number_format($this::$productData["price"]);?> VND</p>
+                        <p class="product-info-price"><?php echo number_format($this::$productData["price"]);?> ₫</p>
                         <p class="product-info-vendor">Sold by:<?php echo $this::$productData["vendor"];?></p>
                         <p class="product-info-sold">Sold: <?php echo $this::$productData["sold"];?></p>
                         <p class="product-info-stock">Stock: <?php echo $this::$productData["stock"];?></p>
                         <p class="product-info-rating">Rating: <?php echo $this::$productData["rating"];?>/5</p>
-                        <label for="quantity">Quantity</label>
-                        <input type="text"
+                        <label class="product-info-quantity" for="quantity">Quantity</label>
+                        <input class="quantity-input" type="number" min="1"
                         name="quantity" 
                         id="buy-quantity"
-                        value=1>
+                        value="1">
                         </div>
                     
-                        <div class="product-button-cotainer">
-                        <button onclick='buyNow("<?php echo $_GET["productid"];?>")' class="product-page-button" id="buy-now-btn"><p> BUY NOW</p> <p>➜</p> </button>   
-                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", )' class="product-page-button" id="add-cart-btn"><p> Add to cart </p> <p>➜</p></button>
+                        <div class="product-button-container">
+                        <button onclick='buyNow("<?php echo $_GET["productid"];?>")' class="product-page-button" id="buy-now-btn"><img src="assets/image/buyicon.png" class="buyicon"/> <p class="buy"> Buy now</p></button>   
+                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", )' class="product-page-button" id="add-cart-btn"><img src="assets/image/addicon.png" class="addicon"/><p class="add"> Add to cart </p></button>
                         <!-- checkCurrentCart() -->
                         </div>
                     </div>
@@ -82,7 +80,7 @@
             </div>
       
             <div class="product-desc">
-                <h2>Product description</h2>
+                <h2>Product escription</h2>
                 <p>
                 <?php echo $this::$productData["desc"];?>
                 </p>

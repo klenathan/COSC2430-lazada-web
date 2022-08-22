@@ -278,10 +278,6 @@ main {
 	/* z-index: -1; */
 }
 
-.category-name {
-	font-size: 1vw;
-	text-align: center;
-}
 .productContainer {
 	display: grid;
 	gap: 2vw;
