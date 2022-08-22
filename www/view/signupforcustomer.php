@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="style/signupforall.css">
     <title>Sign up for customer</title>
 
-    <script src="js/signupClickable.js"></script>
-    <script src="js/updateProfileImg.js"></script>
+    <!-- <script src="js/signupClickable.js"></script> -->
+    <script src="js/updateProfileImg.js" defer></script>
     <script src="js/passwordCheck.js" defer></script>
+    <script src="js/changeImageHover.js" defer></script>
 
 </head>
 <body>
@@ -38,8 +39,11 @@
                         <div class="form-row avatar">
                             <input type="file" id="imgupload"
                             onchange="loadFile(event)" style="display:none"/> 
-                            <img class="avatar-image" id="customer-img" 
-                            src="assets/image/signupimage/Ellipse 2.png" alt="blank avatar" onclick="chooseFile()">
+                            <img class="avatar-image" id="avatar" 
+                            src="assets/image/signupimage/avatar.png" alt="blank avatar" >
+                            <div id="image-hover"  onclick="clickUpload()" >
+                                <img src="assets/image/avatar/icons8-compact-camera-ios/icons8-compact-camera-50.png" alt="edit-image icon">
+                            </div>
                         </div>
                         <div class="form-row">
                             <div class="form-label">
@@ -97,14 +101,6 @@
                             </div>
                             <div class="form-field">
                                 <input type="text" name="address" id="customer-signup-address" placeholder="Address" class="input-field">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-label">
-                                <label for="Phone"><b>Phone:</b></label>
-                            </div>
-                            <div class="form-field">
-                                <input type="phone" name="phone" id="customer-signup-phone" placeholder="Phone" class="input-field">
                             </div>
                         </div>
                     </form>

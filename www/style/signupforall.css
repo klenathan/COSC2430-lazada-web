@@ -11,13 +11,13 @@ body, html {
 }
 
 #signup-for-vendor .signup-form-wrapper, #signup-for-shipper .signup-form-wrapper {
-    height: 70vh;
+    height: 80vh;
 }
 
 .signup-form-wrapper {
     border-radius: 16px ;
     width: 60vw;
-    height: 80vh;
+    height: 90vh;
     background-color: white;
     display: flex;
     flex-direction: column; 
@@ -36,11 +36,9 @@ body, html {
 .signup-form-heading h1 {
     font-size: x-large;
 }
-.exclude-customer {
 
-}
 #signup-for-shipper .signup-form-body, #signup-for-shipper .signup-form-body {
-    height: 38vh;
+    height: 44vh;
 }
 
 .signup-form-body {
@@ -49,73 +47,93 @@ body, html {
     height: 60vh;
 } 
 
-form  {
+form {
     display: grid;
     grid-template-columns: auto auto;
     gap: 4%;
 }
+
 .avatar-image {
-    width: 6em;
-    height: 6em;
+    width: 100px;
+    height: 100px;
+    position: absolute;
     border-radius: 50%;
     object-fit: cover;
-    transition: 0.4s;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
-/* .form-wrapper form {
-    width: 100%;
-    height: 60vh;
-    display: grid;
-    flex-direction: column;
-    grid-template-columns: auto auto;
-    gap: 4%;
-    /* padding: 0 2% 0 2%; */
-
 .avatar {
-    margin: auto
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#image-hover {
+    position: absolute;
+    display: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+#image-hover img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+#signupPassword {
+    position: relative;
 }
 
  #message {
-    display: block;
+    border-radius: 8px;
+    display: none;
     padding: 0.5em;
     position: absolute;
     background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
  }
+
 #message h3 {
-    text-decoration: none;
+    /* text-decoration: none; */
     font-size: 0.8em;
 }
 
 #message p {
-    text-decoration: none;
-    font-size: 0.6em;
+    /* text-decoration: none; */
+    color: red;
+    font-size: 0.8em;
 }
-/* #distribution-hub {
-    position: relative;
-}
- #distribution-hub select::after {
-    position: absolute;
-    top: 10%;
- }  */
 
 
 .form-button-wrapper {
     width: 100%;
-    height: 20vh;
+    height: 24vh;
+    padding-bottom: 8vh;
 }
 
 .signup-button {
     width: 30vw;
 }
 
-.avatar-image:hover {
+/* .avatar-image:hover {
     transform: scale(1.2);
-}
+} */
 
 .signup-login-link{
     display:flex;
     justify-content: center;
+    padding-top: 1vh;
     /* margin-top: 3rem; */
   }
 
@@ -125,7 +143,7 @@ form  {
         height: fit-content;
     }
     #signup-for-shipper .login-signup-poster {
-        height: 110vh;
+        height: 120vh;
     }
 
     #signup-for-vendor .login-signup-poster {
@@ -141,7 +159,7 @@ form  {
     }
 
     #signup-for-shipper .signup-form-wrapper {
-        min-height: 100vh;
+        min-height: 110vh;
     }
 
     #signup-for-vendor .signup-form-wrapper {
@@ -152,7 +170,7 @@ form  {
       right: 0;
       margin: 0;
       min-width: 90%;
-      min-height: 120vh;
+      min-height: 130vh;
       /* max-height: auto; */
       font-size: medium;
       background: none;
@@ -165,7 +183,7 @@ form  {
     }
 
     #signup-for-vendor .signup-form-body {
-        height: 70vh;
+        height: 75vh;
     }
 
     .signup-form-body {

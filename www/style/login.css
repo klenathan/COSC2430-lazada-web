@@ -106,7 +106,7 @@ html {
 } */
 
 .form-row {
-  margin: 2% 0 2% 0;
+  margin: 4% 0 4% 0;
 }
 .input-field {
   width: 100%;
@@ -185,7 +185,7 @@ html {
   .form-wrapper {
     right: 0;
     margin: 0;
-    min-width: 70%;
+    min-width: 80%;
     max-height: auto;
     padding: 2%;
     font-size: medium;
@@ -205,7 +205,8 @@ html {
   }
   .input-field {
     width: 100%;
-    padding: 0%;
+    height: 4vh;
+    padding: 0% 2%;
     margin: 5px 0 16px 0;
     border: none;
     border-radius: 10px;
