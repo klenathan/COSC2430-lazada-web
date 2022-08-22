@@ -61,11 +61,11 @@ main {
     align-items: center;
     height: fit-content;
     justify-content: space-evenly;
+
 }
 .category {
   display: flex;
   position: relative;
-  width: -5rem;
 }
 .category::before{
   content: "";
@@ -134,7 +134,9 @@ main {
 .category-content a:hover {
   background-color: #f1f1f1;
 }
-.category:hover .category-content {
+
+.category:active .category-content,
+.category:hover  .category-content {
   display: block;
 }
 .category-logo:hover{
@@ -171,12 +173,6 @@ main {
 }
 
 .header-right {
-  /* flex: 1;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 3rem;
-  margin: 0 5% 0 1rem; */
   flex: 1;
   display: flex;
   justify-content: space-evenly;
@@ -185,13 +181,10 @@ main {
 }
 
 .cart-logo {
-  /* flex: 1; */
-  padding: 0.6rem;
+  padding: 0.6vw;
   height: 2vw;
   fill: white;
   cursor: pointer;
-  /* background-color: red; */
-  /* transition: 0.3s ease-in-out; */
   border-radius: 0.5rem;
 }
 
@@ -235,7 +228,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem 1rem;
+  padding: 1vw 1vw;
   border-radius: 1rem;
   font-size: 1.5vw;
 }
@@ -332,7 +325,6 @@ main {
   padding: 0 2vw;
   border-radius: 0.5rem;
   border: none;
-  outline: none;
   font-size: 1vw;
   max-height: 53px;
 }
@@ -389,12 +381,6 @@ main {
   color: white;
   font-weight: bold;
 }
-@media screen and (max-width: 1023px) {
-
-}
-
-@media screen and (max-width: 500px) {
-}
 
 .footer a {
   text-decoration: none;
@@ -406,4 +392,39 @@ main {
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+
+
+@media screen and (max-width: 767px) {
+  * {
+    --header-avatar-size: 5vw;
+  }
+  .header{
+    height: fit-content;
+  }
+  .header-left{
+    flex: 0.25;
+  }
+  .category-logo svg{
+    width: 4vw;
+  }
+  .header-logo{
+    display: none;
+  }
+  #search {
+    height: 3.33333vw;
+  }
+  .header-right {
+    flex: 0.6;
+  }
+  .cart-logo {
+    height: 3vw;
+  }
+  .my-account-btn {
+    font-size: 2vw;
+  }
+  .category-content{
+    left: -44%;
+    top: 0;
+  }
 }

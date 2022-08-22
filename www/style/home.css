@@ -32,7 +32,8 @@ main {
 	width: 90%;
 	margin: 2rem 6rem;
 	background-color: white;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .product-category {
 	display: flex;
@@ -41,16 +42,16 @@ main {
 	font-weight: 500;
 	overflow: hidden;
 	text-transform: capitalize;
-}	
+}
 
 .product-category h2 {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 400;
-    font-size: 2vw;
-    letter-spacing: 1vw;
-    margin: 2rem auto;
-    margin-left: 2rem;
-    flex: 1;
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: 400;
+	font-size: 2vw;
+	letter-spacing: 1vw;
+	margin: 2rem auto;
+	margin-left: 2rem;
+	flex: 1;
 }
 
 .product-category a {
@@ -301,7 +302,6 @@ main {
 	object-fit: contain;
 	margin: 2rem;
 	box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
-
 }
 .banner img {
 	width: 100%;
@@ -388,13 +388,11 @@ main {
 	width: 100%;
 }
 
-
-
 @media screen and (max-width: 1023px) {
-	.each-category{
+	.each-category {
 		width: 20vw;
-	  }
-	  .product-card-slider{
+	}
+	.product-card-slider {
 		width: 15vw;
-	  }
+	}
 }
