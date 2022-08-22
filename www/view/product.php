@@ -72,9 +72,9 @@
                         value="1">
                         </div>
                     
-                        <div class="product-button-cotainer">
-                        <button onclick='buyNow("<?php echo $_GET["productid"];?>")' class="product-page-button" id="buy-now-btn"><p class="buy"> Buy now</p> <p>➜</p> </button>   
-                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", )' class="product-page-button" id="add-cart-btn"><p class="add"> Add to cart </p> <p>➜</p></button>
+                        <div class="product-button-container">
+                        <button onclick='buyNow("<?php echo $_GET["productid"];?>")' class="product-page-button" id="buy-now-btn"><img src="assets/image/buyicon.png" class="buyicon"/> <p class="buy"> Buy now</p></button>   
+                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", )' class="product-page-button" id="add-cart-btn"><img src="assets/image/addicon.png" class="addicon"/><p class="add"> Add to cart </p></button>
                         <!-- checkCurrentCart() -->
                         </div>
                     </div>
