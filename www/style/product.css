@@ -94,7 +94,6 @@ img {
 }
 .sub-img-row img:hover {
   opacity: 1;
-  border: 3.5px;
   border-style: solid;
   border-image: linear-gradient(45deg, #f9c5d1, #9795ef) 1;
   cursor: pointer;
@@ -168,8 +167,8 @@ img {
   font-weight: bold;
 }
 .quantity-input {
-  width: 0%;
-  padding: 12px 20px;
+  width: 15%;
+  padding: 12px;
   margin: 8px 0;
   border: 2px solid rgb(111, 110, 110);
   border-radius: 4px;
@@ -238,12 +237,28 @@ img {
 #buy-now-btn:hover {
   background-color: rgb(232, 214, 225);
   color: rgb(50, 49, 49);
+  font-size: 0;
+  justify-content: center;
+}
+
+#buy-now-btn .buyicon {
+  height: 90%;
+  width: 30%;
+  padding-left: 0;
+}
+#add-cart-btn .addicon {
+  height: 100%;
+  width: 30%;
+  padding-left: 0;
 }
 
 #add-cart-btn:hover {
   background-color: rgb(232, 214, 225);
   color: rgb(50, 49, 49);
+  font-size: 0;
+  justify-content: center;
 }
+
 .product-info-sold {
   font-weight: bold;
 }
@@ -281,6 +296,18 @@ img {
   body {
     width: 100vw;
     overflow-x: hidden;
+  }
+  .product-button-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    justify-content: center;
+  }
+  #buy-now-btn {
+    margin-left: 0%;
+  }
+  #add-cart-btn {
+    margin-left: 1%;
   }
   #buy-now-btn,
   #add-cart-btn {
@@ -399,5 +426,17 @@ img {
   .product-desc p {
     margin: 1rem 2rem;
     text-align: left;
+  }
+  .product-button-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    justify-content: center;
+  }
+  #buy-now-btn {
+    margin-left: 0%;
+  }
+  #add-cart-btn {
+    margin-left: 1%;
   }
 }
