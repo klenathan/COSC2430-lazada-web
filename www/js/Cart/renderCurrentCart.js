@@ -10,7 +10,7 @@ fetchData().then(res => {
         formatted = res.toLocaleString('en-US');
     }
     
-    document.getElementById("total-price").innerText = formatted + " VND"
+    document.getElementById("total-price").innerText = "Total bill: " + formatted + " VND"
     document.getElementById("total-price-int").innerText = res
 })
 
@@ -40,6 +40,7 @@ async function fetchData() {
     } else {
         const wrapper = document.getElementById("cart-wrapper")
         var newP = document.createElement("p")
+        newP.setAttribute("id", "empty-warn")
         newP.innerText = "Cart is empty"
         wrapper.appendChild(newP)
     }
@@ -48,10 +49,36 @@ async function fetchData() {
 
 function appendToCart(item){
     const wrapper = document.getElementById("cart-wrapper")
-    var newP = document.createElement("p")
-    newP.innerText = item["productId"] + " | " 
-    + item["name"] + " | " 
-    + item["price"] + "VND" + " | "
-    + cartData[item["productId"]]
+    var newP = document.createElement("div")
+    newP.setAttribute("class", "cart-product")
+    
+
+    //Image
+    var image = document.createElement("img")
+    image.setAttribute("src", "assets/image/product/" + item["productId"] + ".jpg")
+    image.setAttribute("class", "product-image")
+
+    // Texts
+    var productInfo = document.createElement("div")
+    productInfo.setAttribute("class", "product-info")
+
+    var name = document.createElement("p")
+    name.setAttribute("class", "cart-product-name")
+    name.innerText = item["name"];
+
+    var quantity = document.createElement("p")
+    quantity.innerText = "Quantity: " + cartData[item["productId"]]
+
+    var price = document.createElement("p")
+    price.innerText = "Price: " + item["price"].toLocaleString('en-US') + "VND"
+
+    productInfo.appendChild(name);
+    productInfo.appendChild(price);
+    productInfo.appendChild(quantity);
+    
+    newP.appendChild(image);
+    newP.appendChild(productInfo);
+    
     wrapper.appendChild(newP)
+    
 }

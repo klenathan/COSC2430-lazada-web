@@ -53,6 +53,7 @@ class Home extends Controller
                     }
                     ?>
                     </div>
+                    <button class="add-to-cart-btn">Add to cart</button>
                 </a>
             <?php
     }
@@ -75,13 +76,17 @@ class Home extends Controller
                 <div class="product-container">
                     <?php
                     foreach ($data as $key => $value) {
-                        if (!($value["sold"] >= 20000)) {
-                            continue;
-                        }
-                    ?>
-                        <?php
-                        $this->productCard($key, $value);
+        
+                            if (!($value["sold"] >= 20000)) {
+                                continue;
+                            }
                         ?>
+                            <?php
+                        echo '<div class="product-card-slider">';
+                            $this->productCard($key, $value);
+                        echo '</div>';
+                            ?>
+                    
                     <?php
                     }
                     ?>
@@ -103,10 +108,7 @@ class Home extends Controller
 
                 </div>
 
-                <button class="pre-btn"><img src="../assets/arrow.png" alt=""></button>
-                <button class="nxt-btn"><img src="../assets/arrow.png" alt=""></button>
-
-                <div class="product-container">
+                <div class="productContainer">
                     <?php
                     foreach ($data as $key => $value) {
                         if ($value["category"] != $category) {
@@ -162,6 +164,34 @@ class Home extends Controller
                 </div>
             </section>
         <?php
+    }
+    function getAllCategory(){
+        $categories = array("Arts & Crafts", "Automotive", "Baby", "Beauty & Personal Care", "Books", "Computers", "Electronics", "Women's Fashion", "Men's Fashion", "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
+        ?>
+        <div class="category-contain">
+                
+        
+            <div class="title">
+                <h2>All category</h2>
+            </div>
+            <div class="all-category">
+            <?php
+            foreach($categories as $category){
+                echo '
+                <a href="/category?category=" class="each-category">
+                    <div class="category-img">
+                        <img src="assets/image/category/'.$category.'.jpg" alt="'.$category.'">
+                    </div>
+                    <div class="category-name">
+                        <h3 class="name">'.$category.'</h2>
+                    </div>
+                </a>';
+            }
+            ?>
+            </div>
+        </div>
+        <?php
+    
     }
 }
 ?>

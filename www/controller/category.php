@@ -37,15 +37,25 @@ class Category extends Controller {
 
 // FOR HEADER ONLY
     public static function getAllCategory(){
-        $res = array();
-        $data = dataHandle::readToJson(Category::$productFile);
-        foreach ($data as $key => $value) {
-            array_push($res, $value["category"]);
-        }
-        $res = array_unique($res);
-        foreach($res as $categoryField){
-            echo '<a href="/category?category='.$categoryField.'">'.$categoryField.'</a>';
-        }
-    }
+        $categories = array("Arts & Crafts", "Automotive", "Baby", "Beauty & Personal Care", "Books", "Computers", "Electronics", "Women's Fashion", "Men's Fashion", "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
+        ?>
+        <div class="category-content">
+            <?php
+            foreach($categories as $category){
+                echo '
+                <a href="/category?category=" class="each-header-category">
+                    <div class="category-icon">
+                        <img src="assets/image/category/icon/'.$category.'.jpg" alt="'.$category.'">
+                    </div>
+                    <div class="category-name">
+                        <h3 class="name">'.$category.'</h2>
+                    </div>
+                </a>';
+            }
+            ?>
+        </div>
+        <?php
+
+}
 }
 ?>

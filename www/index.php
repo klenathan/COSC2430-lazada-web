@@ -19,7 +19,7 @@
 
     $reservedUrl = array("home", "myaccount", 
     "cart", "product", "signupdemo", "login", "allproduct", "category",
-    "signupforcustomer", "signupforvendor", "signupforshipper", "signup", 
+    "signupforcustomer", "signupforvendor", "signupforshipper", "signup",
     "search", "api", null);
 
     $route = new Route($reservedUrl, "home");
