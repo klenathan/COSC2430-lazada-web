@@ -19,6 +19,20 @@ a {
     gap: 1rem;
 }
 
+@media only screen and (max-width: 1023px) {
+    .product-result-grid {
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .product-result-grid {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+}
+
 .product-card{
     width: 100%;
     position: relative;
@@ -32,7 +46,7 @@ a {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.2);
+    /* background-color: rgba(0, 0, 0, 0.2); */
     border-radius: 29px;
 }
 
