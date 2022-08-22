@@ -52,6 +52,7 @@ class Api {
     }
 
     public function editCustomerProfile(){
+        print_r($_FILES);
         $data = array(
             "name"=>$_POST["name"],
             "email"=>$_POST["email"],
@@ -84,11 +85,16 @@ class Api {
         $this->updateProfile($data);
     }
 
+    public function editImage() {
+        
+    }
+
     private function updateProfile($data){
         $currentData = json_decode(DataHandle::readData($this::$accountFile), true);
         foreach ($data as $key => $value) {
             $currentData[$_COOKIE["user"]][$key] = $value;
         }
+        $this->changeAvatar($_COOKIE["user"]);
         DataHandle::writeData($this::$accountFile, json_encode($currentData));
         header("Location: /myaccount");
     }
@@ -115,6 +121,32 @@ class Api {
         $currentData[$newId] = $newData;
         DataHandle::writeData($file, json_encode($currentData));
         return $newId;
+    }
+
+    private function changeAvatar($userid) {
+        $target_dir = "assets/image/avatar/";
+        $target_file = $target_dir . $userid . ".jpg";
+        $imageFile = "assets/image/avatar/";
+        $check = False;
+
+        print_r($_FILES);
+        print_r($_POST);
+
+        // if (!$_FILES["avatar"]["name"] == "") {
+        //     $check = True;
+        // } else {
+        //     $check = False;
+        // }
+        echo $imageFile = $_FILES["avatar"]["tmp_name"];
+        // if ($check !== false) {
+            $imageFile = $_FILES["avatar"]["tmp_name"];
+            
+            move_uploaded_file($imageFile, $target_file);
+            return $target_file;
+        // } else {
+
+            // echo "err";
+        // }
     }
 
     private static function uploadProductImg($name){

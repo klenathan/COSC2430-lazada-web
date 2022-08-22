@@ -53,7 +53,7 @@
         if (isset($_COOKIE["user"])){
             ?>
             <div class="user-info-wrapper-header header-component">
-                <a class="hover-btn my-account-btn" href="/myaccount">My Account</a>
+                <a class="hover-btn my-account-btn" href="/myaccount"><?php echo $_COOKIE["user"]?></a>
                 <img src="assets/image/avatar/<?php echo $_COOKIE["user"]?>.jpg" class="header-avatar"
                     alt="User Avatar">
                 <div id="emp-div"></div>

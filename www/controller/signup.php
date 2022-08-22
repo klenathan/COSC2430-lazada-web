@@ -41,23 +41,23 @@ class Signup extends Controller {
         $data = array(
             "password"=>$_POST["password"],
             "name"=>$_POST["name"],
-            "email"=>$_POST["email"],
+            // "email"=>$_POST["email"],
             "hub"=>$_POST["hub"],
             "accountType"=>"shipper"
         );
         $this->handleSignup($data);
     }    
 
-    private function handleSignup($data) {
+    function handleSignup($data) {
         $inputUsername = $_POST["username"];
         if ($_POST["password"] != $_POST["password"]){
             Signup::setValueOnErr();
             $_SESSION["signup_err"] = "Password does not match";
-            header("Location: /test.php");
+            header("Location: /");
         } else if ($this::checkUserExist($inputUsername)) {
             Signup::setValueOnErr();
             $_SESSION["signup_err"] = "Username existed";
-            header("Location: /test.php");
+            header("Location: /");
         } else if (!$this::checkUserExist($inputUsername)){
             $currentData = json_decode(DataHandle::readData($this::$accountFile), true);
             $currentData[$_POST["username"]] = $data;
@@ -65,18 +65,20 @@ class Signup extends Controller {
             setcookie("user", $_POST["username"], time() + (3600*24*30), "/");
             unset($_SESSION["signup_err"]);
             // Write to database
-            uploadProfileImg($_POST["username"]);
+            Signup::uploadProfileAvatar($_POST["username"]);
+            // uploadProfileImg($_POST["username"]);
             DataHandle::writeData($this::$accountFile, json_encode($currentData));
             header("Location: /");
         } else {
             Signup::setValueOnErr();
             $_SESSION["signup_err"] = "undefined error";
-            header("Location: /test.php");
+            header("Location: /");
         }
     }
 
     private static function setValueOnErr(){
         $_SESSION["signupUsername"] = $_POST["username"];
+        $_SESSION["signupName"] = $_POST["name"];
         $_SESSION["signupEmail"] = $_POST["email"];
         $_SESSION["signupPassword"] = $_POST["password"];
     }
@@ -86,14 +88,14 @@ class Signup extends Controller {
         return array_key_exists($username, $userData) ? True : False;
     }
 
-    private static function uploadProfileImg($userid){
-
+    private static function uploadProfileAvatar($userid) {
         $target_dir = "assets/image/avatar/";
         $target_file = $target_dir . $userid . ".jpg";
+        // $target_file = $userid . ".jpg";
         $imageFile = "assets/image/avatar/";
         $check = False;
 
-        if (!$_FILES["pImg"]["name"] == ""){
+        if (!$_FILES["avatar"]["name"] == ""){
             $check = True;
         } else {
             $check = False;
@@ -102,11 +104,12 @@ class Signup extends Controller {
 
         if($check !== false) {
             $imageFile = $_FILES["avatar"]["tmp_name"];
-
+            // echo $
             move_uploaded_file($imageFile, $target_file);
             return $target_file;
-        } else {
-            $imageFile = "assets/image/avatar/default.jpg";
+        } 
+        else {
+            $imageFile = "assets/image/avatar/default.jpeg";
             copy($imageFile, $target_file);
             return $target_file;
         }
