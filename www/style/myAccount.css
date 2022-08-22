@@ -217,3 +217,10 @@ main {
         width: 70vw;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .myAccount {
+        height: 100vh;
+    }
+
+}
