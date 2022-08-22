@@ -169,10 +169,7 @@ main {
 	width: 100%;
 }
 
-.name {
-	text-align: start;
-	font-size: 1rem;
-}
+
 
 #product-search button {
 	visibility: hidden;
@@ -374,6 +371,7 @@ main {
 	background-color: rgb(121, 121, 121);
 	height: 5vh;
 	width: 100%;
+  margin-top: 1rem;
 }
 
 .footer a {
@@ -422,7 +420,7 @@ main {
 	}
 
 	.header-right {
-		flex: 0.25;
+		flex: 0.5;
 	}
 
 	.my-account-btn {
