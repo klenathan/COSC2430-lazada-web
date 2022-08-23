@@ -138,13 +138,13 @@ class Home extends Controller
                         <a class="product-card" href="/product?productid=<?php echo $key; ?>">
                             <?php
                             echo '
-                                    <div class="product-image">
-                                        <img src="assets/image/product/' . $key . '.jpg" class="product-thumb" alt="' . $value["name"] . '">  
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-card-name">' . $value["name"] . '</p>
-                                        <p class="product-card-price">' . number_format($value["price"]) . ' VND</p>
-                                        <p class="product-card-rating"></p>'
+                                <div class="product-image">
+                                    <img src="assets/image/product/' . $key . '.jpg" class="product-thumb" alt="' . $value["name"] . '">  
+                                </div>
+                                <div class="product-info">
+                                    <p class="product-card-name">' . $value["name"] . '</p>
+                                    <p class="product-card-price">' . number_format($value["price"]) . ' VND</p>
+                                    <p class="product-card-rating"></p>'
                             ?>
                             </div>
                         </a>
@@ -156,7 +156,7 @@ class Home extends Controller
         <?php
     }
     function getAllCategory(){
-        $categories = array("Arts & Crafts", "Automotive", "Baby", "Beauty & Personal Care", "Books", "Computers", "Electronics", "Women's Fashion", "Men's Fashion", "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
+        $categories = array("Arts & Crafts", "Automotive", "Baby", "Beauty & Personal Care", "Books", "Computers", "Electronics", "Women Fashion", "Men Fashion", "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
         ?>
         <div class="category-contain">
                 
@@ -168,7 +168,7 @@ class Home extends Controller
             <?php
             foreach($categories as $category){
                 echo '
-                <a href="/category?category=" class="each-category">
+                <a href="/category?category='.$category.'" class="each-category">
                     <div class="category-img">
                         <img src="assets/image/category/'.$category.'.jpg" alt="'.$category.'">
                     </div>

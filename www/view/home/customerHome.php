@@ -18,7 +18,6 @@
         ?>
     </header>
     <main>
-
         <?php
         $this->getAllCategory();
         $this->getBestSeller();
@@ -26,8 +25,6 @@
         $this->getCategory("Men Fashion");
         echo '<div class="banner"><img src="../../assets/image/banner/womenfashion.jpg" alt="girlfashion banner"></div>';
         $this->getCategory("Girls Fashion");
-    
-
         ?>
     </main>
 
