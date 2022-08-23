@@ -1,16 +1,7 @@
-body, html {
-  /* width: 100vw; */
-  /* height: 90vh; */
-}
-
 * {
   /* box-sizing: border-box; */
   font-family: "Secular One", sans-serif;
   /* font-size: large; */
-}
-
-main {
-    min-height: calc(95vh - 4rem);
 }
 
 .myAccount {
@@ -165,9 +156,13 @@ main {
     border: solid 2px gray;
 }
 
+.footer {
+    margin: 0
+}
+
 @media screen and (max-width: 1023px) {
     .myAccount {
-        height: 200vh;
+        height: 110vh;
     }
 
     .info-section {

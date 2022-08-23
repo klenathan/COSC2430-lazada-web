@@ -23,7 +23,10 @@ class Category extends Controller {
 
 // FOR HEADER ONLY
     public static function getAllCategory(){
-        $categories = array("Arts & Crafts", "Automotive", "Baby", "Beauty & Personal Care", "Books", "Computers", "Electronics", "Women's Fashion", "Men's Fashion", "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
+        $categories = array("Arts & Crafts", "Automotive", "Baby", 
+        "Beauty & Personal Care", "Books", "Computers", 
+        "Electronics", "Women's Fashion", "Men's Fashion", 
+        "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
         ?>
         <div class="category-content">
             <?php

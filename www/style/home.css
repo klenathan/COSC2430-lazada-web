@@ -23,7 +23,7 @@ main {
 }
 .carousel img {
 	width: 100%;
-	height: auto;
+	height: 20vh;
 	object-fit: cover;
 	image-rendering: auto;
 	box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
@@ -243,11 +243,11 @@ main {
 }
 
 .all-category {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	/* justify-content: space-between;
 	align-items: center;
-	align-items: flex-start;
+	align-items: flex-start; */
 }
 
 .all-category::-webkit-scrollbar {
@@ -256,7 +256,7 @@ main {
 .each-category {
 	display: flex;
 	flex-direction: column;
-	width: 9rem;
+	width: 100%;
 	margin: 1rem 0;
 }
 .each-category:hover {
