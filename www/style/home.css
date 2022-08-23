@@ -186,6 +186,12 @@ main {
 	font-size: 0.75rem;
 	color: red;
 }
+
+.product-card-sold {
+	font-weight: 600;
+	color: black;
+}
+
 #use svg,
 #non-use svg {
 	width: 1.2rem;

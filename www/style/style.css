@@ -10,10 +10,11 @@
 	--sub-menu-hover-color: rgb(39, 26, 97);
 	--hover-color: #8c55cb;
 }
-/* 
-html {
-	font-size: calc(1rem + 1vw);
-} */
+
+a {
+	text-decoration: none;
+	color: var(--sub-menu-color);
+}
 
 header {
 	display: flex;

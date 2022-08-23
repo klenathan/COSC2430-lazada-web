@@ -28,7 +28,7 @@ class Home extends Controller
     private static $productFile = "../data/product.db";
 
 
-    function productCard($key, $value)
+    function productCard($key, $value, $sold = null)
     {
         ?>
                 <a class="product-card" href="/product?productid=<?php echo $key; ?>">
@@ -40,7 +40,12 @@ class Home extends Controller
                     <div class="product-info">
                         <p class="product-card-name">' . $value["name"] . '</p>
                         <p class="product-card-price">' . number_format($value["price"]) . ' VND</p>
-                        <p class="product-card-rating"></p>'
+                        ';
+                        if($sold != null) {
+                            ?>
+                            <p class="product-card-sold">Sold: <?php echo $sold;?></p>
+                            <?php
+                        }
                     ?>
                     </div>
                     <button class="add-to-cart-btn">Add to cart</button>
@@ -65,19 +70,17 @@ class Home extends Controller
 
                 <div class="product-container">
                     <?php
-                    foreach ($data as $key => $value) {
-        
-                            if (!($value["sold"] >= 20000)) {
-                                continue;
-                            }
-                        ?>
-                            <?php
-                        echo '<div class="product-card-slider">';
-                            $this->productCard($key, $value);
-                        echo '</div>';
-                            ?>
+                    uasort($data, function($a, $b) {
+                        return $b["sold"] <=> $a["sold"];
+                    });
                     
-                    <?php
+                    foreach ($data as $key => $value) {
+                        if (($value["sold"] >= 20000)) {
+                            $sold = $value["sold"];
+                            echo '<div class="product-card-slider">';
+                                $this->productCard($key, $value, $sold);
+                            echo '</div>';
+                        }
                     }
                     ?>
                 </div>

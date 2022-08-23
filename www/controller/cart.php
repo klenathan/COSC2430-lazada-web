@@ -66,11 +66,24 @@ class Cart extends Controller {
         } else {
             $newId = "O" . ($lastestId + 1);
         }
-        
-        echo $lastestId + 1;
-        echo "<br>";
+
+        foreach ($orderDetail["cart"] as $key => $value) {
+            $this->addSoldValue($key, $value);
+        }
         $currentData[$newId] = $orderDetail;
+        
         DataHandle::writeData($this::$orderFile, json_encode($currentData));
+    }
+
+    private function addSoldValue($pid, $quantity) {
+        $data = DataHandle::readToJson($this::$productFile);
+        foreach ($data as $key => &$value) {
+            if ($key == $pid) {
+                $value["sold"] += (int) $quantity;
+                break;
+            }
+        }
+        DataHandle::writeData($this::$productFile, json_encode($data));
     }
 }
 ?>
