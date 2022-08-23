@@ -46,7 +46,7 @@ function checkPassword (passwordInput) {
             lengthPassed.style.color = redColor
         }
     } else {
-        textColor = "black";
+        textColor = "red";
         lowercasePass.style.color = textColor
         uppercasePassed.style.color = textColor
         numberPassed.style.color = textColor

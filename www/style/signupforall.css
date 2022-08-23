@@ -11,20 +11,17 @@ body, html {
     box-sizing: none;
 }
 
-#signup-for-vendor .signup-form-wrapper, #signup-for-shipper .signup-form-wrapper {
+/* #signup-for-vendor .signup-form-wrapper, #signup-for-shipper .signup-form-wrapper {
     height: 80vh;
-}
+} */
 
 .signup-form-wrapper {
     position: relative;
     border-radius: 16px ;
     width: 60vw;
-    height: 90vh;
+    /* height: 90vh; */
+    height: fit-content;
     background-color: white;
-    display: flex;
-    flex-direction: column; 
-    /* justify-content: center; */
-    align-items: center;
 }
 
 .signup-form-heading {
@@ -39,15 +36,16 @@ body, html {
     font-size: x-large;
 }
 
-#signup-for-shipper .signup-form-body, #signup-for-shipper .signup-form-body {
+/* #signup-for-shipper .signup-form-body, #signup-for-shipper .signup-form-body {
     height: 44vh;
-}
+} */
 
 .signup-form-body {
     /* background-color: black; */
     padding: 4%;
     width: 100%;
-    height: 60vh;
+    /* height: 60vh; */
+    height: fit-content;
 } 
 
 form {
@@ -89,8 +87,6 @@ form {
     background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
     justify-content: center;
     align-items: center;
-    color: white;
-    
 }
 
 #image-hover img {
@@ -126,9 +122,9 @@ form {
 
 .form-button-wrapper {
     width: 100%;
-    height: 24vh;
-    margin-top: 6vh;
-    margin-bottom: 4vh;
+    height: 12vh;
+    margin-top: 3em;
+    margin-bottom: 1em;
 }
 
 .signup-button {
@@ -152,35 +148,24 @@ form {
         /* height: 140vh; */
         height: fit-content;
     }
-    #signup-for-shipper .login-signup-poster {
-        height: 120vh;
-    }
 
-    #signup-for-vendor .login-signup-poster {
-        height: 120vh;
-    }
+    #signup-for-vendor .login-signup-poster, #signup-for-shipper .login-signup-poster {
+        height: 130vh;
+    } 
 
     .login-signup-poster{
         height: 140vh;
-        display: flex; 
-        align-items: center; 
+        /* display: flex;  */
+        /* align-items: center;  */
         background-position: center;
-        justify-content: center;
-    }
-
-    #signup-for-shipper .signup-form-wrapper {
-        min-height: 110vh;
-    }
-
-    #signup-for-vendor .signup-form-wrapper {
-        min-height: 110vh;
+        /* justify-content: center; */
     }
 
     .signup-form-wrapper {
       right: 0;
-      margin: 0;
+      margin-top: -8em;
       min-width: 90%;
-      min-height: 140vh;
+      min-height: fit-content;
       /* max-height: auto; */
       font-size: medium;
       background: none;
@@ -188,16 +173,9 @@ form {
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
     }
-    #signup-for-shipper .signup-form-body {
-        height: 60vh;
-    }
-
-    #signup-for-vendor .signup-form-body {
-        height: 75vh;
-    }
 
     .signup-form-body {
-        height: 100vh;
+        height: fit-content;
     }
 
     .avatar {
@@ -211,15 +189,12 @@ form {
         /* height: 120vh; */
     }
     .form-body {
-        margin-top: 8%;
+        /* margin-top: 8%; */
         display: flex;
         flex-direction: column;
         /* height: 100vh; */
     }
-    /* .login-form-wrapper h1{
-      margin-bottom: 20px;
-      font-size: x-large;
-    } */
+   
     .signup-form-wrapper h1{
       /* margin-bottom: 20px; */
       font-size: x-large;
@@ -234,6 +209,10 @@ form {
       background: #f1f1f1;
       box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
     }
+    .form-button-wrapper {
+        margin: 0
+    }
+
     .signup-link{
       padding-top: 2rem;
       margin-top: 4rem;
