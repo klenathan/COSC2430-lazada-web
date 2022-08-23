@@ -33,77 +33,81 @@
                     <h1>Sign up for Vendor</h1>
                 </div>
                 <div class="signup-form-body">
-                    <form action="signup/handleSignup" name="signup" method="get">
-                        <div class="form-row avatar">
-                            <input type="file" id="imgupload"
-                            onchange="loadFile(event)" style="display:none"/> 
-                            <img class="avatar-image" id="avatar" 
-                            src="assets/image/signupimage/avatar.png" alt="blank avatar" >
-                            <div id="image-hover"  onclick="clickUpload()" >
-                                <img src="assets/image/avatar/icons8-compact-camera-ios/icons8-compact-camera-50.png" alt="edit-image icon">
+                    <form action="signup/handleSignup" name="signup" method="post"  enctype="multipart/form-data">
+                        <div class="form-body">
+                            <div class="form-row avatar">
+                                <input type="file" id="avtImg"
+                                name="avatar"
+                                onchange="loadFile(event)" style="display:none"/> 
+                                <img class="avatar-image" id="avatar" 
+                                src="assets/image/avatar/default.jpeg" alt="blank avatar" >
+                                <div id="image-hover"  onclick="clickUpload()" >
+                                    <img src="assets/image/avatar/icons8-compact-camera-ios/icons8-compact-camera-50.png" alt="edit-image icon">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-label">
-                                <label for="username"><b>Username:</b></label>
+                            <div class="form-row">
+                                <div class="form-label">
+                                    <label for="username"><b>Username:</b></label>
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" name="username" id="vendor-signup-username" placeholder="Username" class="input-field">
+                                </div>
                             </div>
-                            <div class="form-field">
-                                <input type="text" name="username" id="vendor-signup-username" placeholder="Username" class="input-field">
+                            
+                            <div class="form-row">
+                                <div class="form-label">
+                                    <label for="signupPassword"><b>Password:</b></label>
+                                </div>
+                                <div class="form-field" >
+                                    <input type="password" name="password" id="signupPassword" placeholder="Password" class="input-field" 
+                                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" required>
+                                    <div id="message">
+                                        <h3>Password must contain the following:</h3>
+                                        <p id="lowercasePassed">At least 1 lower case</p>
+                                        <p id="uppercasePassed">At least 1 upper case</p>
+                                        <p id="specialCharPassed">At least 1 special character</p>
+                                        <p id="numberPassed">At least 1 number</p>
+                                        <p id="lengthPassed">At least 8 characters</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-label">
-                                <label for="signupPassword"><b>Password:</b></label>
+                            <div class="form-row">
+                                <div class="form-label">
+                                    <label for="re-password"><b>Retype:</b></label>
+                                </div>
+                                <div class="form-field">
+                                    <input type="password" name="re-password" id="signup-re-password" placeholder="Retype password" class="input-field">
+                                </div>
                             </div>
-                            <div class="form-field" >
-                                <input type="password" name="password" id="signupPassword" placeholder="Password" class="input-field" 
-                                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" required>
-                                <div id="message">
-                                    <h3>Password must contain the following:</h3>
-                                    <p id="lowercasePassed">At least 1 lower case</p>
-                                    <p id="uppercasePassed">At least 1 upper case</p>
-                                    <p id="specialCharPassed">At least 1 special character</p>
-                                    <p id="numberPassed">At least 1 number</p>
-                                    <p id="lengthPassed">At least 8 characters</p>
+                            <div class="form-row">
+                                <div class="form-label">
+                                    <label for="name"><b>Name:</b></label>
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" name="name" id="vendor-signup-name" placeholder="Name" class="input-field">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-label">
+                                    <label for="address"><b>Addess:</b></label>
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" name="address" id="vendor-signup-address" placeholder="Address" class="input-field">
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-label">
-                                <label for="re-password"><b>Retype:</b></label>
+                        
+                        <div class="form-button-wrapper">
+                            <div class="login-signup-wrap">
+                                    <input type="submit" name="signupBtn" id="vendor-signup-btn" value="Signup" class="signup-button">
                             </div>
-                            <div class="form-field">
-                                <input type="password" name="re-password" id="signup-re-password" placeholder="Retype password" class="input-field">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-label">
-                                <label for="name"><b>Name:</b></label>
-                            </div>
-                            <div class="form-field">
-                                <input type="text" name="name" id="vendor-signup-name" placeholder="Name" class="input-field">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-label">
-                                <label for="address"><b>Addess:</b></label>
-                            </div>
-                            <div class="form-field">
-                                <input type="text" name="address" id="vendor-signup-address" placeholder="Address" class="input-field">
+                            <div class="signup-login-link">
+                                <a href="/login">
+                                    <p>Already have an account ? Login now!</p>
+                                </a>
                             </div>
                         </div>
                     </form>
-                </div>
-                <div class="form-button-wrapper">
-                    <div class="login-signup-wrap">
-                            <input type="submit" name="signupBtn" id="vendor-signup-btn" value="Signup" class="signup-button">
-                    </div>
-                    <div class="signup-login-link">
-                        <a href="/login">
-                            <p>Already have an account ? Login now!</p>
-                        </a>
-                    </div>
                 </div>
             </div>
             <script src="js/passwordCheck.js"></script>

@@ -36,24 +36,20 @@ main {
     justify-content: center;
 }
 
-.profile-img {grid-area: image;}
-.info-wrapper {grid-area: form;}
-.button-wrapper {grid-area: button;}
 
 .info-section {
     width: fit-content;
     height: fit-content;
     background-color: white;
     border-radius: 8px;
-    display: grid;
-    grid-template-areas: "image form"
-                         "image button";
+    /* display: flex;
+    flex-direction: row; */
 }                    
 
 /* Profile image */
 
 .profile-img {
-    width: 16vw;
+    width: 100%;
     height: 24vh;
     display: flex;
     justify-content: center;
@@ -95,7 +91,7 @@ main {
 .info-wrapper {
     border-radius: 16px;
     width: fit-content;
-    height: 20vh;
+    height: fit-content;
     /* background-color: white; */
     display: flex;
     flex-direction: column; 
@@ -104,7 +100,9 @@ main {
 }
 
 .info-wrapper form {
-    padding-right: 2vw;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
 }
 
 .info-row {

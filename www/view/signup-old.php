@@ -14,7 +14,7 @@
 
     <div class="signup-form-wrapper">
         
-        <form action="signup/signupCustomer" name="login" method="post"
+        <form action="signu p/signupCustomer" name="login" method="post"
         enctype="multipart/form-data">
             
             <h1>SIGN UP</h1> 
