@@ -13,8 +13,12 @@
             ?>
         </div>
 
-        <a class="header-component" href="/">
+        <a class="header-component non-mobile" href="/">
             <img class="header-logo" src="assets/image/logo.png" alt="logo">
+        </a>
+
+        <a class="header-component mobile" href="/">
+            <img class="header-logo-mobile" src="assets/image/logo-short.png" alt="logo">
         </a>
     </div>
 

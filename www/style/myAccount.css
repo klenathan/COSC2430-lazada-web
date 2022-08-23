@@ -1,8 +1,3 @@
-body, html {
-  width: 100vw;
-  height: 100vh;
-}
-
 * {
   /* box-sizing: border-box; */
   font-family: "Secular One", sans-serif;
@@ -10,8 +5,8 @@ body, html {
 }
 
 .myAccount {
-    width: 100vw;
-    height: 100vh;
+    /* width: 100%; */
+    height: calc(95vh - 4rem);
     font-size: large;
     display: flex;
     flex-direction: row; 
@@ -20,7 +15,7 @@ body, html {
 
 .myAccount-background {
     position: relative;
-    height: 100vh;
+    height: 100%;
     width: 100%;   
     content: "";
     background-image: url('../assets/image/backgroundLogin.jpg');
@@ -161,9 +156,13 @@ body, html {
     border: solid 2px gray;
 }
 
+.footer {
+    margin: 0
+}
+
 @media screen and (max-width: 1023px) {
     .myAccount {
-        height: 200vh;
+        height: 110vh;
     }
 
     .info-section {
@@ -210,4 +209,11 @@ body, html {
     .edit-profile-button {
         width: 70vw;
     }
+}
+
+@media screen and (max-width: 767px) {
+    .myAccount {
+        height: 100vh;
+    }
+
 }

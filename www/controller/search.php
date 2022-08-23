@@ -20,20 +20,7 @@ class Search extends Controller {
             $contain = str_contains(strtolower($value["name"]), strtolower($keyword));
             if ($contain) {
                 array_push($res, $key);
-                ?>
-                <a href="/product?productid=<?php echo $key;?>" class="product-card">
-                    <div class="card-overlay"> </div>
-                    <?php
-                    echo '
-                    <img src="assets/image/product/'.$key.'.jpg" alt="'.$value["name"].'">
-                    <div class="product-card-info">
-                        <p class="product-card-name">'.$value["name"].'</p>
-                        <p class="product-card-price">'.number_format($value["price"]).' VND</p>
-                        <p class="product-card-rating">Rating: '.$value["rating"].'</p>
-                    </div>';
-                    ?>
-                </a>
-                <?php
+                include("view/component/productCard.php");
             }
         }
         return $res;

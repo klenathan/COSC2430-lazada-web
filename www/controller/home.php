@@ -42,16 +42,6 @@ class Home extends Controller
                         <p class="product-card-price">' . number_format($value["price"]) . ' VND</p>
                         <p class="product-card-rating"></p>'
                     ?>
-                    <?php
-                    for ($star = 0; $star < floor($value["rating"]); $star++) {
-                        include("view/component/checkedStar.php");
-                    }
-                    ?>
-                    <?php
-                    for ($star = 0; $star < 5 - ceil($value["rating"]); $star++) {
-                        include("view/component/uncheckedStar.php");
-                    }
-                    ?>
                     </div>
                     <button class="add-to-cart-btn">Add to cart</button>
                 </a>
