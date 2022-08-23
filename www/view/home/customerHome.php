@@ -24,7 +24,7 @@
         echo '<div class="banner"><img src="../../assets/image/banner/men fashion.jpg" alt="men fashion banner"></div>';
         $this->getCategory("Men Fashion");
         echo '<div class="banner"><img src="../../assets/image/banner/womenfashion.jpg" alt="girlfashion banner"></div>';
-        $this->getCategory("Girls Fashion");
+        $this->getCategory("Women Fashion");
         ?>
     </main>
 

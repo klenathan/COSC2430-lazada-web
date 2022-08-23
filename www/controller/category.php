@@ -25,14 +25,14 @@ class Category extends Controller {
     public static function getAllCategory(){
         $categories = array("Arts & Crafts", "Automotive", "Baby", 
         "Beauty & Personal Care", "Books", "Computers", 
-        "Electronics", "Women's Fashion", "Men's Fashion", 
+        "Electronics", "Women Fashion", "Men Fashion", 
         "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
         ?>
         <div class="category-content">
             <?php
             foreach($categories as $category){
                 echo '
-                <a href="/category?category=" class="each-header-category">
+                <a href="/category?category='.$category.'" class="each-header-category">
                     <div class="category-icon">
                         <img src="assets/image/category/icon/'.$category.'.jpg" alt="'.$category.'">
                     </div>
