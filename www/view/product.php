@@ -80,7 +80,7 @@
             </div>
       
             <div class="product-desc">
-                <h2>Product escription</h2>
+                <h2>Product description</h2>
                 <p>
                 <?php echo $this::$productData["desc"];?>
                 </p>

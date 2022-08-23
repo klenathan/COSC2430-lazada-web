@@ -16,6 +16,7 @@
         ?>
     </header>
     <main>
+        <h1><?php echo $this->category?></h1>
         <div class="category-wrapper">
             <?php
             $this->renderCategory();
