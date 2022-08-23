@@ -392,6 +392,34 @@ main {
 	width: 100%;
 }
 
+@media  screen and (min-width: 1441px) {
+	.title h2{
+		font-size: 3rem;
+	}
+	.product-category h2{
+		font-size: 3rem;
+	}
+	.product-category a{
+		font-size: 1.5rem;
+	}
+	.product-card-slider{
+		width: 20rem;
+	}
+	.product-image{
+		height: 25rem;
+	}
+	.product-card-name{
+		font-size: 1.75rem;
+	}
+	.product-card-price{
+		font-size: 1.5rem;
+	}
+
+
+}
+
+
+
 @media screen and (max-width: 767px) {
 	.title h2 {
 		font-size: 1.25rem;

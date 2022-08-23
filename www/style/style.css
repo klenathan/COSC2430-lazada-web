@@ -391,7 +391,29 @@ main {
 	font-weight: bold;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (min-width: 1441px) {
+	.header{
+		height: 6rem;
+	}
+	.category-logo svg{
+		width: 3rem;
+	}
+	.header-logo{
+		height: 4rem;
+	}
+	#search{
+		height: 2rem;
+	}
+	.cart-logo{
+		height: 2rem;
+	}
+	.my-account-btn{
+		font-size: 2rem;
+	}
+	
+}
+
+@media screen and (max-width: 767px) {
 	.carousel img {
 		height: 20vh !important;
 	}
