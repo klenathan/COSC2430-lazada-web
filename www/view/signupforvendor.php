@@ -50,7 +50,14 @@
                                     <label for="username"><b>Username:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" name="username" id="vendor-signup-username" placeholder="Username" class="input-field">
+                                    <input type="text" name="signupUsername" id="signupUsername" 
+                                    placeholder="Username" class="input-field" required>
+                                </div>
+                                <div id="respond-message">
+                                    <?php
+                                    echo isset($_SESSION["signup_err"]) ? $_SESSION["signup_err"]: "";
+                                    unset($_SESSION["signup_err"])
+                                    ?>
                                 </div>
                             </div>
                             
@@ -71,14 +78,20 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-label">
                                     <label for="re-password"><b>Retype:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="password" name="re-password" id="signup-re-password" placeholder="Retype password" class="input-field">
+                                    <input type="password" name="confirmPassword" id="confirmPassword" 
+                                    placeholder="Retype password" class="input-field">
+                                </div>
+                                <div id="confirm-message">
+                                    <p>Password does not match</p>
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-label">
                                     <label for="name"><b>Name:</b></label>
@@ -99,7 +112,7 @@
                         
                         <div class="form-button-wrapper">
                             <div class="login-signup-wrap">
-                                    <input type="submit" name="signupBtn" id="vendor-signup-btn" value="Signup" class="signup-button">
+                                    <input type="submit" name="signupBtn" id="signup-btn" value="Signup" class="signup-button">
                             </div>
                             <div class="signup-login-link">
                                 <a href="/login">
@@ -110,9 +123,7 @@
                     </form>
                 </div>
             </div>
-            <script src="js/passwordCheck.js"></script>
         </div>
     </main>
-    <script src="js/passwordCheck.js"></script>
 </body>
 </html>

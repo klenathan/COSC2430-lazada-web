@@ -35,10 +35,10 @@
                     <h1>Sign up for Customer</h1>
                 </div>
                 <div class="signup-form-body">
-                    <form action="signup/signupCustomer" 
-                    name="signupforcustomer" 
+                    <form action="signup/signupCustomer" name="signupforcustomer" 
                     method="post" enctype="multipart/form-data">
                         <div class="form-body">
+                            
                             <div class="form-row avatar">
                                 <input type="file" id="avtImg"
                                 name="avatar"
@@ -49,15 +49,21 @@
                                     <img src="assets/image/avatar/icons8-compact-camera-ios/icons8-compact-camera-50.png" alt="edit-image icon">
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-label">
                                     <label for="username"><b>Username:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" name="username" id="customer-signup-username"
-                                    placeholder="Username" 
-                                    value="<?php echo isset($_SESSION["signupUsername"]) ? $_SESSION["signupUsername"]: ""; ?>" 
+                                    <input type="text" name="username" id="signupUsername"
+                                    placeholder="Username"  
                                     class="input-field" required>
+                                </div>
+                                <div id="respond-message">
+                                    <?php
+                                    echo isset($_SESSION["signup_err"]) ? $_SESSION["signup_err"]: "";
+                                    unset($_SESSION["signup_err"])
+                                    ?>
                                 </div>
                             </div>
                             
@@ -70,6 +76,7 @@
                                     placeholder="Email" class="input-field" required>
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-label">
                                     <label for="signupPassword"><b>Password:</b></label>
@@ -87,6 +94,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-label">
                                     <label for="re-password"><b>Retype:</b></label>
@@ -95,28 +103,34 @@
                                     <input type="password" name="confirmPassword" id="confirmPassword" 
                                     placeholder="Retype password" class="input-field">
                                 </div>
+                                <div id="confirm-message">
+                                    <p>Password does not match</p>
+                                </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-label">
                                     <label for="name"><b>Name:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" name="name" id="customer-signup-name" placeholder="Name" class="input-field">
+                                    <input type="text" name="name" id="signupName" placeholder="Name" class="input-field">
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-label">
                                     <label for="address"><b>Addess:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" name="address" id="customer-signup-address" placeholder="Address" class="input-field">
+                                    <input type="text" name="address" id="signupAddress" placeholder="Address" class="input-field">
                                 </div>
                             </div>
+
                         </div>
 
                         <div class="form-button-wrapper"> 
                             <div class="login-signup-wrap">
-                                <input type="submit" name="signupBtn" id="customer-signup-btn" value="Signup" class="signup-button">
+                                <input type="submit" name="signupBtn" id="signup-btn" value="Signup" class="signup-button">
                             </div>  
                             <div class="signup-login-link">
                                 <a href="/login">
@@ -124,20 +138,12 @@
                                 </a>
                             </div>
                         </div>
-                        
+
                     </form>
                 </div>
-                
-                <div id="respond-message">
-                    <?php
-                    echo isset($_SESSION["signup_err"]) ? $_SESSION["signup_err"]: "";
-                    unset($_SESSION["signup_err"])
-                    ?>
-                </div>
             </div>
-            <script src="js/passwordCheck.js"></script>
+            
         </div>
     </main>
-    <script src="js/passwordCheck.js"></script>
 </body>
 </html>

@@ -21,7 +21,8 @@ class Signup extends Controller {
             "name"=>$_POST["name"],
             "email"=>$_POST["email"],
             "address"=>$_POST["address"],
-            "accountType"=>"customer"
+            "accountType"=>"customer",
+            "page" => "signupforcustomer"
         );
         $this->handleSignup($data);
     }
@@ -32,7 +33,8 @@ class Signup extends Controller {
             "name"=>$_POST["name"],
             "email"=>$_POST["email"],
             "address"=>$_POST["address"],
-            "accountType"=>"vendor"
+            "accountType"=>"vendor",
+            "page" => "signupforvendor"
         );
         $this->handleSignup($data);
     }
@@ -43,21 +45,22 @@ class Signup extends Controller {
             "name"=>$_POST["name"],
             // "email"=>$_POST["email"],
             "hub"=>$_POST["hub"],
-            "accountType"=>"shipper"
+            "accountType"=>"shipper",
+            "page" => "signupforshipper"
         );
         $this->handleSignup($data);
     }    
 
     function handleSignup($data) {
         $inputUsername = $_POST["username"];
-        if ($_POST["password"] != $_POST["password"]){
+        if ($_POST["confirmPassword"] != $_POST["password"]){
             Signup::setValueOnErr();
             $_SESSION["signup_err"] = "Password does not match";
-            header("Location: /");
+            header("Location: /". $data["page"]);
         } else if ($this::checkUserExist($inputUsername)) {
             Signup::setValueOnErr();
             $_SESSION["signup_err"] = "Username existed";
-            header("Location: /");
+            header("Location: /". $data["page"]);
         } else if (!$this::checkUserExist($inputUsername)){
             $currentData = json_decode(DataHandle::readData($this::$accountFile), true);
             $currentData[$_POST["username"]] = $data;
@@ -68,11 +71,11 @@ class Signup extends Controller {
             Signup::uploadProfileAvatar($_POST["username"]);
             // uploadProfileImg($_POST["username"]);
             DataHandle::writeData($this::$accountFile, json_encode($currentData));
-            header("Location: /");
+            header("Location: /". $data["page"]);
         } else {
             Signup::setValueOnErr();
             $_SESSION["signup_err"] = "undefined error";
-            header("Location: /");
+            header("Location: /". $data["page"]);
         }
     }
 
@@ -81,6 +84,7 @@ class Signup extends Controller {
         $_SESSION["signupName"] = $_POST["name"];
         $_SESSION["signupEmail"] = $_POST["email"];
         $_SESSION["signupPassword"] = $_POST["password"];
+        $_SESSION["signupConfirmPassword"] = $_POST["confirmPassword"];
     }
 
     private static function checkUserExist($username){

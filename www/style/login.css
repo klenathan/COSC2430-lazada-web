@@ -112,7 +112,7 @@ html {
   width: 100%;
   padding: 2%;
   /* margin: 4px 0 20px 0; */
-  border: none;
+  font: message-box;
   border-radius: 10px;
   border: solid 2px transparent;
   background: #f1f1f1;
