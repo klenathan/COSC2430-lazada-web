@@ -21,13 +21,113 @@
     </header>
 
     <main>
-        
         <h2>Welcome to Seller's page</h2>
         <button onclick="showAddField()">Add New Product</button>
+        <div id="blurred-background"></div>
         <form id="new-product-form" class="new-product-form" action="api/newProduct"
             method="post" enctype="multipart/form-data">
-            <label for="name">Name: </label>
-            <input type="text" name="name" id="name" required>
+            <div class="x-button">
+                <img src="assets/icons8-xbox-x-50.png" alt="" class="x-button" id="x-button" 
+                onclick="hideAddField()">
+            </div>
+            <div class="form-detail">
+                <div class="form-row">
+                    <div class="form-label">
+                        <label for="product name">Product name: </label>
+                    </div>
+                    <div class="form-field">
+                        <input type="text"
+                        name="name"
+                        id="name"
+                        class="input-field"
+                        placeholder="Product name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-label">
+                        <label for="Product price">Product price: </label>
+                    </div>
+                    <div class="form-field">
+                        <input type="numeber"
+                        class="input-field"
+                        id="price" placeholder="Product price" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-label">
+                        <label for="category">Category: </label>
+                    </div>
+                    <select name="category" id="category">
+                        <?php
+                        // Lazy code :(
+                        $category = array("Arts & Crafts", "Automotive", "Baby", 
+                        "Beauty & Personal Care", "Books", "Computers", 
+                        "Electronics", "Women's Fashion", "Men's Fashion", 
+                        "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
+
+                        foreach ($category as $value) {
+                            ?>
+                            <option value="<?php echo $value?>"><?php echo $value?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-desc">
+                <div class="form-label">
+                    <label for="desc">Description: </label>
+                </div>
+                <textarea name="desc" id="desc" cols="25" rows="5" class="input-field"></textarea>
+            </div>
+            
+            <div class="form-image">
+            
+                <div class="product-img-wrapper">
+                    <input type="file" name="pImg" id="pImg" 
+                    accept="image/jpg, image/jpeg" required
+                    onchange="loadFile(event)" style="display:none"/> 
+                    <img class="product-img-blank"
+                    src="assets/image/avatar/default.jpeg" alt="blank avatar" >
+                    <div id="image-hover"  onclick="clickUpload()" >
+                        <img src="">
+                    </div>
+                </div>
+                
+                <div class="product-img-wrapper">
+                    <input type="file" name="pImg" id="pImg" 
+                    accept="image/jpg, image/jpeg" required
+                    onchange="loadFile(event)" style="display:none"/> 
+                    <img class="product-img-blank"
+                    src="assets/image/avatar/default.jpeg" alt="blank avatar" >
+                    <div id="image-hover"  onclick="clickUpload()" >
+                        <img src="">
+                    </div>
+                </div>
+
+                <div class="product-img-wrapper">
+                    <input type="file" name="pImg" id="pImg" 
+                    accept="image/jpg, image/jpeg" required
+                    onchange="loadFile(event)" style="display:none"/> 
+                    <img class="product-img-blank"
+                    src="assets/image/avatar/default.jpeg" alt="blank avatar" >
+                    <div id="image-hover"  onclick="clickUpload()" >
+                        <img src="">
+                    </div>
+                </div>
+
+            </div>
+
+            
+
+            <div class="button-wrapper">
+                <button id="add-product-btn" type="submit">Submit</button>
+            </div>
+                        
+            <!-- <input type="text" name="name" id="name" required>
             <label for="price">Price: </label>
             <input type="number" name="price" id="price" required>
 
@@ -46,14 +146,14 @@
                     <?php
                 }
                 ?>
-            </select>
+            </select> -->
 
-            <label for="desc">Description: </label>
+            <!-- <label for="desc">Description: </label>
             <textarea name="desc" id="desc" cols="25" rows="5" required></textarea>
             <input type="file" name="pImg" id="pImg" 
-            accept="image/jpg, image/jpeg" required>
+            accept="image/jpg, image/jpeg" required> -->
 
-            <button id="add-product-btn" type="submit">Submit</button>
+            
         </form>
 
         <div class="vendor-product">
@@ -61,6 +161,7 @@
             $vendor->renderAllProduct();
             ?>
         </div>
+        
     </main>
     <footer>
         <?php
