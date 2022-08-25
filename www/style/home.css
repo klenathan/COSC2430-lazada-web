@@ -18,7 +18,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
+	padding-bottom: 2rem;
 	background-color: rgb(242, 242, 242);
 }
 .carousel img {
@@ -186,6 +186,12 @@ main {
 	font-size: 0.75rem;
 	color: red;
 }
+
+.product-card-sold {
+	font-weight: 600;
+	color: black;
+}
+
 #use svg,
 #non-use svg {
 	width: 1.2rem;
@@ -259,6 +265,12 @@ main {
 	width: 100%;
 	margin: 1rem 0;
 }
+
+.each-category img {
+	/* object-fit: cover; */
+	background-color: white;
+}
+
 .each-category:hover {
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
 		rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;

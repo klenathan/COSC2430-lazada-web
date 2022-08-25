@@ -25,7 +25,6 @@ function checkout() {
             form.submit();
         }
     })
-    
 }
 
 const checkoutBtn = document.getElementById("checkout-btn")

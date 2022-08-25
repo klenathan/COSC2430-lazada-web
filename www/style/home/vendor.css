@@ -60,6 +60,7 @@ h2 {
 }
 
 .x-button {
+    position: absolute;
     width: 100%;
     height: fit-content;
     padding: 0 2%;

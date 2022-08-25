@@ -23,7 +23,7 @@ main {
 
 .cart-container {
     background: white;
-    margin-top: 2rem;
+    margin: 2rem 0;
     padding: 1rem;
     border-radius: 0.5rem;
     max-width: 1188px;
@@ -87,4 +87,28 @@ main {
 
 .cart-btn:hover {
     background-color: var(--hover-color);
+}
+
+.footer {
+    margin: 0
+}
+
+@media screen and (max-width: 767px) {
+    .cart-product {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
+    .product-image {
+        margin-left: 1rem
+    }
+
+    .product-info {
+        margin-left: 1rem
+    }
+
+    .final-price {
+        margin: 1rem 1rem
+    }
 }

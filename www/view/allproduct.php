@@ -24,10 +24,12 @@
                 <h2>FILTER</h2>
                 <form action="/allproduct" method="get">
                     <input type="text" name="min" id="min-input" 
-                    autocomplete="off" placeholder="min">
+                    autocomplete="off" placeholder="min"
+                    value="<?php if (isset($_GET["min"])) {echo $_GET["min"];}?>">
                     
                     <input type="text" name="max" id="max-input" 
-                    autocomplete="off" placeholder="max">
+                    autocomplete="off" placeholder="max"
+                    value="<?php if (isset($_GET["max"])) {echo $_GET["max"];}?>">
                     
                     <button type="submit">Search</button>
                 </form>
