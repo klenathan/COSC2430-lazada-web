@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style/home.css">
     <link rel="stylesheet" href="style/home/vendor.css">
 
-    <script src="js/homepage/showAddProduct.js"></script>
+    <script src="js/homepage/vendor.js"></script>
 
     <title>Lazada's Vendor Portal</title>
 </head>
