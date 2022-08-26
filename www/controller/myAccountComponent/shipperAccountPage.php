@@ -5,7 +5,6 @@ class ShipperAccount {
     private $hub;
 
     function __construct($hub) {
-        // $this->getCurrentShipperOrders($hub);
         $this->hub = $hub;
     }
     

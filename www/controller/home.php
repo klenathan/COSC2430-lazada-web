@@ -13,7 +13,8 @@ class Home extends Controller
                 include("view/home/customerHome.php");
             } else if ($userDetail["accountType"] == "shipper") {
                 include("controller/myAccountComponent/shipperAccountPage.php");
-                $shipper = new ShipperAccount("name3");
+
+                $shipper = new ShipperAccount($userDetail["hub"]);
                 include("view/home/shipperHome.php");
             } else if ($userDetail["accountType"] == "vendor") {
                 include("controller/myAccountComponent/vendorAccountPage.php");
