@@ -40,10 +40,12 @@ class Api {
 
     function updateOrderStatus(){
         $orderid = $_POST["order_id"];
+        echo $orderid;
         $status = $_POST["status"];
         $orderData = DataHandle::readToJson($this::$orderFile);
         foreach ($orderData as $key => $value) {
-            if ($key == $orderid) {
+            echo $key;
+            if ("Order ID: ".$key == $orderid) {
                 $orderData[$key]["order_status"] = $status;
             }
         }
