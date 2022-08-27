@@ -119,7 +119,7 @@
 
                             <div class="form-row">
                                 <div class="form-label">
-                                    <label for="address"><b>Addess:</b></label>
+                                    <label for="address"><b>Address:</b></label>
                                 </div>
                                 <div class="form-field">
                                     <input type="text" name="address" id="signupAddress" placeholder="Address" class="input-field">

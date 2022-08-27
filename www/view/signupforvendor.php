@@ -33,7 +33,7 @@
                     <h1>Sign up for Vendor</h1>
                 </div>
                 <div class="signup-form-body">
-                    <form action="signup/handleSignup" name="signup" method="post"  enctype="multipart/form-data">
+                    <form action="signup/handleSignUpVendor" name="signup" method="post"  enctype="multipart/form-data">
                         <div class="form-body">
                             <div class="form-row avatar">
                                 <input type="file" id="avtImg"
@@ -45,13 +45,15 @@
                                     <img src="assets/image/avatar/icons8-compact-camera-ios/icons8-compact-camera-50.png" alt="edit-image icon">
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-label">
                                     <label for="username"><b>Username:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" name="signupUsername" id="signupUsername" 
-                                    placeholder="Username" class="input-field" required>
+                                    <input type="text" name="username" id="signupUsername"
+                                    placeholder="Username"  
+                                    class="input-field" required>
                                 </div>
                                 <div id="respond-message">
                                     <?php
@@ -79,6 +81,7 @@
                                 </div>
                             </div>
 
+
                             <div class="form-row">
                                 <div class="form-label">
                                     <label for="re-password"><b>Retype:</b></label>
@@ -97,17 +100,19 @@
                                     <label for="name"><b>Name:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" name="name" id="vendor-signup-name" placeholder="Name" class="input-field">
+                                    <input type="text" name="name" id="signupName" placeholder="Name" class="input-field">
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-label">
-                                    <label for="address"><b>Addess:</b></label>
+                                    <label for="address"><b>Address:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" name="address" id="vendor-signup-address" placeholder="Address" class="input-field">
+                                    <input type="text" name="address" id="signupAddress" placeholder="Address" class="input-field">
                                 </div>
                             </div>
+
                         </div>
                         
                         <div class="form-button-wrapper">

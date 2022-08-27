@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style/home.css">
     <link rel="stylesheet" href="style/home/vendor.css">
 
-    <script src="js/homepage/vendor.js"></script>
+    <script src="js/homepage/vendor.js" defer></script>
 
     <title>Lazada's Vendor Portal</title>
 </head>
@@ -84,41 +84,18 @@
                 <textarea name="desc" id="desc" cols="25" rows="5" class="input-field"></textarea>
             </div>
             
-            <div class="form-image">
+            <!-- IN progress -->
+            <div class="form-image" id= "test">
             
-                <div class="product-img-wrapper">
-                    <input type="file" name="pImg" id="pImg" 
-                    accept="image/jpg, image/jpeg" required
-                    onchange="loadFile(event)" style="display:none"/> 
-                    <img class="product-img-blank"
-                    src="assets/image/avatar/default.jpeg" alt="blank avatar" >
-                    <div id="image-hover"  onclick="clickUpload()" >
-                        <img src="">
-                    </div>
+                <input type="file" name="pImg" id="pImg" 
+                accept="image/jpg, image/jpeg" required
+                onchange="loadFile(event)" style="display:none"/>
+                <img class="product-img-blank" id="upload-product-img"
+                src="assets/icons8-product-100.png" alt="blank avatar">
+                <div id="image-hover" >
+                    <img src="assets/image/signupimage/camera.png" alt="blank image">
                 </div>
                 
-                <div class="product-img-wrapper">
-                    <input type="file" name="pImg" id="pImg" 
-                    accept="image/jpg, image/jpeg" required
-                    onchange="loadFile(event)" style="display:none"/> 
-                    <img class="product-img-blank"
-                    src="assets/image/avatar/default.jpeg" alt="blank avatar" >
-                    <div id="image-hover"  onclick="clickUpload()" >
-                        <img src="">
-                    </div>
-                </div>
-
-                <div class="product-img-wrapper">
-                    <input type="file" name="pImg" id="pImg" 
-                    accept="image/jpg, image/jpeg" required
-                    onchange="loadFile(event)" style="display:none"/> 
-                    <img class="product-img-blank"
-                    src="assets/image/avatar/default.jpeg" alt="blank avatar" >
-                    <div id="image-hover"  onclick="clickUpload()" >
-                        <img src="">
-                    </div>
-                </div>
-
             </div>
 
             
@@ -127,32 +104,6 @@
                 <button id="add-product-btn" type="submit">Submit</button>
             </div>
                         
-            <!-- <input type="text" name="name" id="name" required>
-            <label for="price">Price: </label>
-            <input type="number" name="price" id="price" required>
-
-            <label for="price">Category: </label>
-            <select name="category" id="category">
-                <?php
-                // Lazy code :(
-                $category = array("Arts & Crafts", "Automotive", "Baby", 
-                "Beauty & Personal Care", "Books", "Computers", 
-                "Electronics", "Women's Fashion", "Men's Fashion", 
-                "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
-
-                foreach ($category as $value) {
-                    ?>
-                    <option value="<?php echo $value?>"><?php echo $value?></option>
-                    <?php
-                }
-                ?>
-            </select> -->
-
-            <!-- <label for="desc">Description: </label>
-            <textarea name="desc" id="desc" cols="25" rows="5" required></textarea>
-            <input type="file" name="pImg" id="pImg" 
-            accept="image/jpg, image/jpeg" required> -->
-
             
         </form>
 
