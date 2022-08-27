@@ -14,6 +14,7 @@ class Cart extends Controller {
             $order["cart"] = json_decode($cart);
             $order["total_bill"] = (int) $_POST["bill"];
             $order["customer"] = $_COOKIE["user"];
+            $order["address"] = $_COOKIE["address"];
             $order["hub"] = $this->getHub();
             $order["order_status"] = "hub";
             echo '<p>'.$_POST["bill"].'</p>';

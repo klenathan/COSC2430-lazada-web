@@ -330,74 +330,31 @@ main {
 	line-height: 2rem;
 	border: 0;
 	width: 80%;
-	opacity: 1;
+	opacity: 0;
 	position: relative;
 	transition: transform 0.5s;
-	font-size: 0.7rem;
+	font-size: 0.9rem;
 	color: white;
 	max-width: 400px;
+
 }
-.add-to-cart-btn span {
-	position: relative;
-	display: block;
-	width: 100%;
-	height: 100%;
-}
-.add-to-cart-btn:before,
-.add-to-cart-btn:after {
-	position: absolute;
-	content: "";
-	right: 0;
-	bottom: 0;
+.add-to-cart-btn:hover{
 	background: rgb(145,28,184);
-	box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
-		-4px -4px 5px 0px rgba(255, 255, 255, 0.9),
-		7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
-	transition: all 0.3s ease;
+	background: linear-gradient(265deg, rgba(145,28,184,1) 50%, rgba(255,0,215,1) 100%);
+	background-size: 200% 200%;
+	animation: gradient 2s ease infinite;
+	cursor: pointer;
 }
-.add-to-cart-btn:before {
-	height: 0%;
-	width: 0.2vw;
-}
-.add-to-cart-btn:after {
-	width: 0%;
-	height: 0.2vw;
-}
-.add-to-cart-btn:hover {
-	color: rgb(145,28,184);
-	background: transparent;
-}
-.add-to-cart-btn:hover:before {
-	height: 100%;
-}
-.add-to-cart-btn:hover:after {
-	width: 100%;
-}
-.add-to-cart-btn span:before,
-.add-to-cart-btn span:after {
-	position: absolute;
-	content: "";
-	left: 0;
-	top: 0;
-	background: rgb(145,28,184);
-	box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
-		-4px -4px 5px 0px rgba(255, 255, 255, 0.9),
-		7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
-	transition: all 0.3s ease;
-}
-.add-to-cart-btn span:before {
-	width: 0.2vw;
-	height: 0%;
-}
-.add-to-cart-btn span:after {
-	height: 0.2vw;
-	width: 0%;
-}
-.add-to-cart-btn span:hover:before {
-	height: 100%;
-}
-.add-to-cart-btn span:hover:after {
-	width: 100%;
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @media  screen and (min-width: 1441px) {

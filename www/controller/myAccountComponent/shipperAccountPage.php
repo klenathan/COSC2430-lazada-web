@@ -10,12 +10,16 @@ class ShipperAccount {
     
     public function getCurrentShipperOrders() {
         $orderData = DataHandle::readToJson($this::$orderFile);
-        
-
-        foreach ($orderData as $key => $value) {
-            if ($value["hub"] == $this->hub && $value["order_status"] == "hub") {
+                foreach ($orderData as $key => $value) {
+            if ($value["hub"] == $this->hub && $value["order_status"] == "active") {
                 ?>
-                <div class="shipper-order-wrapper">
+                <button onclick='displayOrder("<?php echo $key;?>")' id="order <?php echo $key?>">
+                    <h2><b>Order ID:</b> <?php echo $key;?></h2>
+                    <p><b>Customer:</b> <?php echo $value["customer"];?></p>
+                    <p><b>Total bill</b> <?php echo number_format($value["total_bill"]);?> VND</p>
+                    <p><b>Order Status:</b> <?php echo $value["order_status"];?></p>
+                </button>
+                <div class="shipper-order-wrapper" id="<?php echo $key;?>">
                     <h2 class="order-id" id="order_<?php echo $key;?>">Order ID: <?php echo $key;?></h2>
                     <p class="order-total-bill">Total Price: <?php echo number_format($value["total_bill"]);?> VND</p>
                     
