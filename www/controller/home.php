@@ -13,7 +13,6 @@ class Home extends Controller
                 include("view/home/customerHome.php");
             } else if ($userDetail["accountType"] == "shipper") {
                 include("controller/myAccountComponent/shipperAccountPage.php");
-
                 $shipper = new ShipperAccount($userDetail["hub"]);
                 include("view/home/shipperHome.php");
             } else if ($userDetail["accountType"] == "vendor") {
@@ -49,7 +48,8 @@ class Home extends Controller
                         }
                     ?>
                     </div>
-                    <button class="add-to-cart-btn">Add to cart</button>
+                    <button onclick='disableLink(), addToCart("<?php echo $key?>");' class="add-to-cart-btn" id="buy-quantity" value="1">Add to cart</button>
+
                 </a>
             <?php
     }
@@ -148,7 +148,7 @@ class Home extends Controller
                                 <div class="product-info">
                                     <p class="product-card-name">' . $value["name"] . '</p>
                                     <p class="product-card-price">' . number_format($value["price"]) . ' VND</p>
-                                    <p class="product-card-rating"></p>'
+                                    <p id="product-card-rating"></p>'
                             ?>
                             </div>
                         </a>

@@ -1,11 +1,1 @@
-{
-  "O0": {
-    "cart": {
-      "P5": 1
-    },
-    "total_bill": 1667719,
-    "customer": "one",
-    "hub": "hub_q7",
-    "order_status": "hub"
-  }
-}
+{"O0":{"cart":{"P5":1},"total_bill":1667719,"customer":"one","hub":"hub_q7","order_status":"delivered"}}
