@@ -8,7 +8,7 @@
     <title>Sign up for Shipper</title>
     <!-- <script src="js/signupClickable.js"></script> -->
     <script src="js/changeImageHover.js" defer></script>
-    <script src="js/updateProfileImg.js"></script>
+    <script src="js/updateProfileImg.js" defer></script>
     <script src="js/passwordCheck.js" defer></script>
 </head>
 <body>
@@ -34,7 +34,8 @@
                 </div>
                 <div class="signup-form-body">
                     
-                    <form action="signup/handleSignupShipper" name="signup" method="post" enctype="multipart/form-data">
+                    <form action="signup/handleSignUpShipper"
+                     name="signupforshipper" method="post" enctype="multipart/form-data">
                         <div class="form-body">
                             <div class="form-row avatar">
                                 <input type="file" id="avtImg"
@@ -46,13 +47,15 @@
                                     <img src="assets/image/avatar/icons8-compact-camera-ios/icons8-compact-camera-50.png" alt="edit-image icon">
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-label">
                                     <label for="username"><b>Username:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" name="signupUsername" 
-                                    id="signupUsername" placeholder="Username" class="input-field" required>
+                                    <input type="text" name="username" id="signupUsername"
+                                    placeholder="Username"  
+                                    class="input-field" required>
                                 </div>
                                 <div id="respond-message">
                                     <?php
@@ -95,14 +98,14 @@
 
                             <div class="form-row">
                                 <div class="form-label">
-                                    <label for="re-password"><b>Distribution hub:</b></label>
+                                    <label for="distribution-hub"><b>Distribution hub:</b></label>
                                 </div>
                                 <div class="form-field" id="distribution-hub">
                                     <!-- <input type="password" name="re-password" id="shipper-signup-re-password" placeholder="Retype password" class="input-field"> -->
                                     <select name="hub" class="input-field">
-                                        <option value="hub_1">Hub 1</option>
-                                        <option value="hub_2">Hub 2</option>
-                                        <option value="hub_3">Hub 3</option>
+                                        <option value="hub 1">Hub 1</option>
+                                        <option value="hub 2">Hub 2</option>
+                                        <option value="hub 3">Hub 3</option>
                                     </select>
                                 </div>
                             </div>
