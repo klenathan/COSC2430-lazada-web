@@ -13,7 +13,7 @@ class ShipperAccount {
                 foreach ($orderData as $key => $value) {
             if ($value["hub"] == $this->hub && $value["order_status"] == "active") {
                 ?>
-                <button onclick='displayOrder("<?php echo $key;?>")' id="order <?php echo $key?>">
+                <button onclick='displayOrder("<?php echo $key;?>")' class="order">
                     <h2><b>Order ID:</b> <?php echo $key;?></h2>
                     <p><b>Customer:</b> <?php echo $value["customer"];?></p>
                     <p><b>Total bill</b> <?php echo number_format($value["total_bill"]);?> VND</p>
