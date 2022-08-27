@@ -13,7 +13,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -221,7 +221,8 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(209, 0, 125);
+  background-color: #ffde91;
+  color: black;
 }
 
 #add-cart-btn {
@@ -231,7 +232,8 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(209, 0, 125);
+  background-color: #f0b95a;
+  color: black;
 }
 .buy {
   font-family: "Josefin Sans", sans-serif;
@@ -241,10 +243,18 @@ img {
 }
 
 #buy-now-btn:hover {
-  background-color: rgb(232, 214, 225);
-  color: rgb(50, 49, 49);
+  background-color: #654e71;
+  color: white;
   font-size: 0;
   justify-content: center;
+}
+#buy-now-btn:hover .buyicon {
+  display: none;
+}
+#buy-now-btn:hover .whitebuyicon {
+  display: inline;
+  height: 90%;
+  width: 30%;
 }
 
 #buy-now-btn .buyicon {
@@ -252,17 +262,34 @@ img {
   width: 30%;
   padding-left: 0;
 }
+
+#buy-now-btn .whitebuyicon {
+  display: none;
+}
+
+#add-cart-btn:hover {
+  background-color: #6d5878;
+  color: white;
+  font-size: 0;
+  justify-content: center;
+}
+#add-cart-btn:hover .addicon {
+  display: none;
+}
+#add-cart-btn:hover .whiteaddicon {
+  display: inline;
+  height: 90%;
+  width: 30%;
+}
+
 #add-cart-btn .addicon {
-  height: 100%;
+  height: 90%;
   width: 30%;
   padding-left: 0;
 }
 
-#add-cart-btn:hover {
-  background-color: rgb(232, 214, 225);
-  color: rgb(50, 49, 49);
-  font-size: 0;
-  justify-content: center;
+#add-cart-btn .whiteaddicon {
+  display: none;
 }
 
 .product-info-sold {
@@ -324,7 +351,6 @@ img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(209, 0, 125);
   }
 
   .product-page {
