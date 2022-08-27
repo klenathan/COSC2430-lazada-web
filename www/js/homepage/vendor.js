@@ -16,10 +16,7 @@ function loadFile(event) {
 	var image = document.getElementById('upload-product-img');
 	image.src = URL.createObjectURL(event.target.files[0]);
 };
-// document.getElementById("upload-product-img").addEventListener("click", () => {
-//     clickUpload();
-//     console.log("test")
-// } )
+
 
 document.getElementById("upload-product-img").addEventListener("mouseover", () => {
     document.getElementById("image-hover").style.display = "flex";

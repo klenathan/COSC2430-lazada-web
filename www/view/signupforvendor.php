@@ -33,7 +33,7 @@
                     <h1>Sign up for Vendor</h1>
                 </div>
                 <div class="signup-form-body">
-                    <form action="signup/handleSignup" name="signup" method="post"  enctype="multipart/form-data">
+                    <form action="signup/handleSignUpVendor" name="signup" method="post"  enctype="multipart/form-data">
                         <div class="form-body">
                             <div class="form-row avatar">
                                 <input type="file" id="avtImg"

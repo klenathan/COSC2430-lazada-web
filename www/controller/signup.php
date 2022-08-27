@@ -71,7 +71,7 @@ class Signup extends Controller {
             Signup::uploadProfileAvatar($_POST["username"]);
             // uploadProfileImg($_POST["username"]);
             DataHandle::writeData($this::$accountFile, json_encode($currentData));
-            header("Location: /". $data["page"]);
+            header("Location: /");
         } else {
             Signup::setValueOnErr();
             $_SESSION["signup_err"] = "undefined error";
