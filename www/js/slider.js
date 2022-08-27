@@ -17,3 +17,14 @@ productContainers.forEach((item, i) => {
 
     })
 })
+
+
+//Disable link
+function disableLink() {
+    var link = document.getElementById('buy-quantity');
+    document.addEventListener('click', function (e) {
+        if (e.target.id === link.id) {
+            e.preventDefault();
+        }
+    })
+}

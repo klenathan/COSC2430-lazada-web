@@ -325,16 +325,12 @@ main {
 
 /* 7 */
 .add-to-cart-btn {
-	background: rgb(244, 225, 157);
-	background: linear-gradient(
-		230deg,
-		rgba(244, 225, 157, 0.9951330874146533) 28%,
-		rgba(195, 62, 5, 1) 78%
-	);
+	background: rgb(145,28,184);
+	background: linear-gradient(265deg, rgba(145,28,184,1) 50%, rgba(255,0,215,1) 100%);
 	line-height: 2rem;
 	border: 0;
 	width: 80%;
-	opacity: 0;
+	opacity: 1;
 	position: relative;
 	transition: transform 0.5s;
 	font-size: 0.7rem;
@@ -353,7 +349,7 @@ main {
 	content: "";
 	right: 0;
 	bottom: 0;
-	background: rgba(251, 75, 2, 1);
+	background: rgb(145,28,184);
 	box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
 		-4px -4px 5px 0px rgba(255, 255, 255, 0.9),
 		7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
@@ -368,7 +364,7 @@ main {
 	height: 0.2vw;
 }
 .add-to-cart-btn:hover {
-	color: rgba(251, 75, 2, 1);
+	color: rgb(145,28,184);
 	background: transparent;
 }
 .add-to-cart-btn:hover:before {
@@ -383,7 +379,7 @@ main {
 	content: "";
 	left: 0;
 	top: 0;
-	background: rgba(251, 75, 2, 1);
+	background: rgb(145,28,184);
 	box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
 		-4px -4px 5px 0px rgba(255, 255, 255, 0.9),
 		7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);

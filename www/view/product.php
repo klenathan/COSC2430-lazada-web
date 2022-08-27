@@ -70,8 +70,8 @@
                         </div>
                     
                         <div class="product-button-container">
-                        <button onclick='buyNow("<?php echo $_GET["productid"];?>")' class="product-page-button" id="buy-now-btn"><img src="assets/image/buyicon.png" class="buyicon"/> <p class="buy"> Buy now</p></button>   
-                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", )' class="product-page-button" id="add-cart-btn"><img src="assets/image/addicon.png" class="addicon"/><p class="add"> Add to cart </p></button>
+                        <button onclick='buyNow("<?php echo $_GET["productid"];?>")' class="product-page-button" id="buy-now-btn"><img src="assets/image/icons8-basket-60.png" class="buyicon"/><img src="assets/image/white-basket.png" class="whitebuyicon"/> <p class="buy"> Buy now</p></button>   
+                        <button onclick='addToCart("<?php echo $_GET["productid"];?>", )' class="product-page-button" id="add-cart-btn"><img src="assets/image/icons8-shopping-cart-64.png" class="addicon"/><img src="assets/image/white-cart.png" class="whiteaddicon"/><p class="add"> Add to cart </p></button>
                         <!-- checkCurrentCart() -->
                         </div>
                     </div>
