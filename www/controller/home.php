@@ -48,7 +48,9 @@ class Home extends Controller
                         }
                     ?>
                     </div>
-                    <button onclick='disableLink(), addToCart("<?php echo $key?>");' class="add-to-cart-btn" id="buy-quantity" value="1">Add to cart</button>
+                    <button onclick='disableLink(), addToCart("<?php echo $key?>");' class="add-to-cart-btn" id="buy-quantity" value="1">
+                    Add to cart
+                </button>
 
                 </a>
             <?php
