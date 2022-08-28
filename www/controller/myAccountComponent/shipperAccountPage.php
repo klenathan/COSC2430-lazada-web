@@ -24,7 +24,8 @@ class ShipperAccount
                     <p><b>Order Status:</b> <?php echo $value["order_status"]; ?></p>
                 </a>
         
-                <div class="shipper-order-wrapper" id="<?php echo $key; ?>">
+                <div  class="shipper-order-wrapper" id="<?php echo $key; ?>">
+ 
                     <div class="order-info">
                         <h2 class="order-id" id="order_<?php echo $key; ?>">Order ID: <?php echo $key; ?></h2>
                         <p><b>Customer:</b> <?php echo $value["customer"]; ?></p>
@@ -50,7 +51,13 @@ class ShipperAccount
                     <?php
                     }
                     ?>
+
                     </div>
+                    <div id="exit">
+                        <img onclick='exit("<?php echo $key;?>")'   src="../../assets/exit.jpg" alt="exit">
+                    </div>
+                   
+
 
                 </div>
 <?php

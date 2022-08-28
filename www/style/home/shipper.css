@@ -1,3 +1,6 @@
+h1{
+    font-size: 2.5rem;
+}
 .shipper-welcome-img {
     height: 20rem;
     width: 100%;
@@ -28,6 +31,25 @@
     z-index: 1;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+#exit{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-align: end;
+    /* right: 1; */
+    top: -1;
+}
+#exit:hover{
+    cursor: pointer;
+}
+#exit img{
+	position: sticky;
+	top: 0;
+	width: 3rem;
+	height: auto;
+	right: -1;
 }
 .order-info{
     flex: 0.5;
@@ -75,12 +97,12 @@
     align-self: center;
     padding: 0.5rem 0;
     margin: 0.5rem 0;
-    height: 200px;
+    height: fit-content;
     border-bottom: 1px gray solid;
 }
 
 .shipper-product-img {
-    width: 200px;
+    width: 10rem;
     object-fit: contain;
     background-color: white;
 }
@@ -104,6 +126,7 @@
     align-self: center;
     display: flex;
     justify-content: space-around;
+    margin-top: 2rem;
 }
 
 .shipper-button-wrapper button {
@@ -134,4 +157,44 @@
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+@media screen and (max-width: 1023px) {
+    .shipper-order-container{
+        grid-template-columns: repeat(2, 0.5fr);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .shipper-welcome-img{
+        display: none;
+    }
+    .shipper-order-container{
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+    .order{
+        line-height: 2rem;
+        font-size: 1rem;
+    }
+    .shipper-order-wrapper{
+    flex-direction: column-reverse;
+    }
+    .shipper-product-info p{
+        font-size: 1rem;
+    }
+    .shipper-product-img{
+        width: 8rem;
+    }
+    .order-info{
+        font-size: 1rem;
+        position: relative;
+    }
+    #exit{
+        position: relative;
+    }
 }
