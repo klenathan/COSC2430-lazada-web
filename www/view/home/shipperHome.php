@@ -11,6 +11,7 @@
 
     <script src="js/homepage/updateOrderStatus.js"></script>
 
+
     <title>Lazada's Shipper Port</title>
 </head>
 <body>
@@ -18,22 +19,21 @@
         <?php
         include_once("view/component/header.php");
         ?>
-    </header>
-
-    <main>
-        <!-- <h1>Welcome to shipper's homepage</h1> -->
         <img class="shipper-welcome-img" src="assets/image/shipper-background.jpg" alt="" srcset="">
+    </header>
+    <main>
+        <h1>Welcome to shipper's homepage</h1>
         <div class="shipper-order-container">
             <?php
             $shipper->getCurrentShipperOrders();
             ?>
         </div>
     </main>
-
     <footer>
         <?php
         include_once("view/component/footer.php");
         ?>
     </footer>
+    <script src="js/shipperOrder.js"></script>
 </body>
 </html>
