@@ -59,7 +59,7 @@
                         <p class="product-info-name"><?php echo $this::$productData["name"];?></p>
                         
                         <p class="product-info-price"><?php echo number_format($this::$productData["price"]);?> ₫</p>
-                        <p class="product-info-vendor">Sold by:<?php echo $this::$productData["vendor"];?></p>
+                        <p class="product-info-vendor">Sold by: <?php echo $this::$productData["vendor"];?></p>
                         <p class="product-info-sold">Sold: <?php echo $this::$productData["sold"];?></p>
                         
                         <label class="product-info-quantity" for="quantity">Quantity</label>

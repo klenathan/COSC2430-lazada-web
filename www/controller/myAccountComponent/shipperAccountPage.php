@@ -56,11 +56,8 @@ class ShipperAccount
                     <div id="exit">
                         <img onclick='exit("<?php echo $key;?>")'   src="../../assets/exit.jpg" alt="exit">
                     </div>
-                   
-
-
                 </div>
-<?php
+                    <?php
             }
         }
     }

@@ -6,6 +6,7 @@
 		"total_bill": 1667719,
 		"customer": "one",
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O1": {
@@ -15,6 +16,7 @@
 		"total_bill": 1667719,
 		"customer": "one",
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O2": {
@@ -24,6 +26,7 @@
 		"total_bill": 1667719,
 		"customer": "one",
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O3": {
@@ -36,8 +39,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O4": {
@@ -50,8 +53,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O5": {
@@ -64,8 +67,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O6": {
@@ -78,8 +81,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O7": {
@@ -92,8 +95,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "delivered"
 	},
 	"O8": {
@@ -106,8 +109,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O9": {
@@ -120,8 +123,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"10": {
@@ -134,8 +137,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"11": {
@@ -148,8 +151,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"12": {
@@ -162,8 +165,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"13": {
@@ -176,8 +179,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"14": {
@@ -190,8 +193,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"15": {
@@ -204,8 +207,8 @@
 		},
 		"total_bill": 8212450,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O16": {
@@ -215,8 +218,8 @@
 		},
 		"total_bill": 7312638,
 		"customer": "one",
-		"address": null,
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O17": {
@@ -225,8 +228,8 @@
 		},
 		"total_bill": 4269036,
 		"customer": "one",
-		"address": "",
 		"hub": "hub2",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O18": {
@@ -235,8 +238,8 @@
 		},
 		"total_bill": 608000,
 		"customer": "one",
-		"address": "",
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O19": {
@@ -245,8 +248,8 @@
 		},
 		"total_bill": 3043602,
 		"customer": "one",
-		"address": "ádasdas",
 		"hub": "hub2",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	},
 	"O20": {
@@ -255,8 +258,8 @@
 		},
 		"total_bill": 7867242,
 		"customer": "one",
-		"address": "qwsdqwdasd",
 		"hub": "hub1",
+        "address": "Q7, HCM",
 		"order_status": "active"
 	}
 }
