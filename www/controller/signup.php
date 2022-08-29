@@ -6,7 +6,6 @@ class Signup extends Controller {
         if (isset($_COOKIE["user"])) {
             header("Location: /");
         }
-        // $this->view("signup");
     }
 
     function view($view) {
@@ -17,7 +16,7 @@ class Signup extends Controller {
 
     function signupCustomer() {
         $data = array(
-            "password"=>$_POST["password"],
+            "password"=>hash("sha256", $_POST["password"]),
             "name"=>$_POST["name"],
             "email"=>$_POST["email"],
             "address"=>$_POST["address"],
@@ -29,19 +28,26 @@ class Signup extends Controller {
 
     function handleSignUpVendor() {
         $data = array(
-            "password"=>$_POST["password"],
+            "password"=>hash("sha256", $_POST["password"]),
             "name"=>$_POST["name"],
             "email"=>$_POST["email"],
             "address"=>$_POST["address"],
             "accountType"=>"vendor",
             "page" => "signupforvendor"
         );
-        $this->handleSignup($data);
+        if ($this::validVendorInfo($_POST["name"], $_POST["address"])) {
+            Signup::setValueOnErr();
+            $_SESSION["signup_err"] = "Vendor name or address existed";
+            header("Location: /". $data["page"]);
+        } else {
+            $this->handleSignup($data);
+        }
+        
     }
 
     function handleSignUpShipper() {
         $data = array(
-            "password"=>$_POST["password"],
+            "password"=>hash("sha256", $_POST["password"]),
             "name"=>$_POST["name"],
             // "email"=>$_POST["email"],
             "hub"=>$_POST["hub"],
@@ -53,6 +59,7 @@ class Signup extends Controller {
 
     function handleSignup($data) {
         $inputUsername = $_POST["username"];
+
         if ($_POST["confirmPassword"] != $_POST["password"]){
             Signup::setValueOnErr();
             $_SESSION["signup_err"] = "Password does not match";
@@ -90,6 +97,16 @@ class Signup extends Controller {
     private static function checkUserExist($username){
         $userData = DataHandle::readToJson(Signup::$accountFile);
         return array_key_exists($username, $userData) ? True : False;
+    }
+
+    private static function validVendorInfo($name, $address){
+        $userData = DataHandle::readToJson(Signup::$accountFile);
+        foreach ($userData as $key => $value) {
+            if ($value["name"] == $name || $value["address"] == $address) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static function uploadProfileAvatar($userid) {

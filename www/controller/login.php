@@ -7,7 +7,6 @@ class Login extends Controller {
     }
     function handleLogin(){
         $loginStatus = Auth::login($_POST["username"], $_POST["password"]);
-
         if ($loginStatus == "successful") {
             setcookie("user", $_POST["username"], time() + (3600*24*30), "/");
             unset($_SESSION["err_name"]);
@@ -15,7 +14,7 @@ class Login extends Controller {
             header("location: /");
         } elseif ($loginStatus == "wrong_password"){
             $_SESSION["loginUsername"] = $_POST["username"];
-            $_SESSION["err_name"] = "Wrong password";
+            $_SESSION["err_name"] = "Wrong password". $_POST["password"];
             header("location: /login");
         } elseif ($loginStatus == "wrong_username"){
             $_SESSION["loginUsername"] = $_POST["username"];

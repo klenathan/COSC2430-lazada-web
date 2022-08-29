@@ -1,0 +1,16 @@
+@import url(font.css);
+.content {
+  width: 80%;
+}
+.content h1 {
+  text-align: center;
+
+  color: rgb(0, 0, 0);
+}
+.content p {
+  margin-bottom: 5%;
+}
+.content h4 {
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(118, 31, 118);
+}
