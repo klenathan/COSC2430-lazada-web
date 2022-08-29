@@ -478,4 +478,7 @@ main {
 	.footer a {
 		padding: 0.5rem 0;
 	}
+	.singupbtn{
+		display: none;
+	}
 }
