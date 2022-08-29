@@ -162,7 +162,7 @@ class Home extends Controller
         <?php
     }
     function getAllCategory(){
-        $categories = array("Arts & Crafts", "Automotive", "Baby", "Beauty & Personal Care", "Books", "Computers", "Electronics", "Women Fashion", "Men Fashion", "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
+        $categories = array("Arts and Crafts", "Automotive", "Baby", "Beauty and Personal Care", "Books", "Computers", "Electronics", "Women Fashion", "Men Fashion", "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
         ?>
         <div class="category-contain">
                 
