@@ -14,11 +14,6 @@
     "address": "Q7, HCM",
     "accountType": "vendor"
   },
-  "donga": {
-    "password": "9494a7ed3f783fb8c68e619c05448f2ec2e0b634f3972e7e596e2c60736348dc",
-    "email": "s381968@rmit.edu.vn",
-    "accountType": "customer"
-  },
   "shipper": {
     "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
     "name": "Shipper 1",
