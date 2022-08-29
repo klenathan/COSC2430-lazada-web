@@ -17,7 +17,7 @@ class Signup extends Controller {
 
     function signupCustomer() {
         $data = array(
-            "password"=>$_POST["password"],
+            "password"=>hash("sha256", $_POST["password"]),
             "name"=>$_POST["name"],
             "email"=>$_POST["email"],
             "address"=>$_POST["address"],
@@ -29,7 +29,7 @@ class Signup extends Controller {
 
     function handleSignUpVendor() {
         $data = array(
-            "password"=>$_POST["password"],
+            "password"=>hash("sha256", $_POST["password"]),
             "name"=>$_POST["name"],
             "email"=>$_POST["email"],
             "address"=>$_POST["address"],
@@ -41,7 +41,7 @@ class Signup extends Controller {
 
     function handleSignUpShipper() {
         $data = array(
-            "password"=>$_POST["password"],
+            "password"=>hash("sha256", $_POST["password"]),
             "name"=>$_POST["name"],
             // "email"=>$_POST["email"],
             "hub"=>$_POST["hub"],
