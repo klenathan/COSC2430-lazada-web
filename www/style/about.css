@@ -1,0 +1,109 @@
+@import url(font.css);
+* {
+  --primary-color: rgb(39, 26, 97);
+  --sub-menu-color: rgb(86, 51, 125);
+  --sub-menu-hover-color: rgb(39, 26, 97);
+  --hover-color: rgb(223, 91, 166);
+  --primary-img-size: 500px;
+  text-align: center;
+}
+main {
+  background: white;
+}
+h4 {
+  font-size: x-large;
+}
+.background {
+  height: 500px;
+  width: 100%;
+}
+.introduction {
+  line-height: 32px;
+  margin-bottom: 5%;
+}
+
+.introduction button {
+  background: rgb(86, 51, 125);
+  margin-top: 48px;
+  height: 48px;
+  text-transform: capitalize;
+  border-radius: 24px;
+  padding: 10px 30px;
+
+  border: none;
+}
+.introduction button a {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+}
+.introduction button:hover {
+  cursor: pointer;
+}
+.content-box {
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 5%;
+}
+.top-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3%;
+}
+.left-box {
+  margin: 0 15px 0;
+  text-align: center;
+  background: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+  border-radius: 8px;
+  padding: 25px;
+}
+.right-box {
+  margin: 0 0 0;
+  text-align: center;
+  background: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 8px;
+  padding: 25px;
+}
+.bottom-box {
+  margin: 0 15px 0;
+  text-align: center;
+  background: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+  border-radius: 8px;
+  padding: 25px;
+}
+.core-value {
+  margin-bottom: 5%;
+}
+.first-image {
+  margin-top: 5%;
+  height: 400px;
+  width: 100%;
+  object-fit: contain;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.offices h4 {
+  margin-bottom: 3%;
+}
+.specific {
+  margin-right: 10%;
+  text-transform: uppercase;
+}
+.specific img {
+  margin-bottom: 7%;
+}
+.specific img:hover {
+  cursor: pointer;
+}
