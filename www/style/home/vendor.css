@@ -108,7 +108,8 @@ h2 {
 /* In progress */
 #image-hover {
     position: absolute;
-    display: none;
+    display: flex;
+    opacity: 0;
     width: 100px;
     height: 100px;
     border-radius: 8px;
@@ -138,6 +139,15 @@ h2 {
     border: transparent;
     border-radius: 25px;
     color: white;
+}
+
+#image-hover:hover{
+    opacity: 1;
+}
+
+#file-upload-warn {
+    display: none;
+    color: red;
 }
 
 /* PRODUCT DISPLAY */
