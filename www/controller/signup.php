@@ -102,7 +102,7 @@ class Signup extends Controller {
     private static function validVendorInfo($name, $address){
         $userData = DataHandle::readToJson(Signup::$accountFile);
         foreach ($userData as $key => $value) {
-            if ($value["name"] == $name || $value["address"] == $address) {
+            if (($value["name"] == $name || $value["address"] == $address) && ($value["accountType"] == "vendor")) {
                 return true;
             }
         }

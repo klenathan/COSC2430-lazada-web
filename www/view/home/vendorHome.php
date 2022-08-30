@@ -22,7 +22,7 @@
 
     <main>
         <h2>Welcome to Seller's page</h2>
-        <button onclick="showAddField()">Add New Product</button>
+        <button class="new-product-btn" onclick="showAddField()">Add New Product</button>
         <div id="blurred-background"></div>
         <form id="new-product-form" class="new-product-form" action="api/newProduct"
             method="post" enctype="multipart/form-data">
@@ -39,8 +39,10 @@
                         <input type="text"
                         name="name"
                         id="name"
+                        pattern=".{10,20}"
                         class="input-field"
-                        placeholder="Product name">
+                        placeholder="Product name"
+                        required>
                     </div>
                 </div>
 
@@ -84,24 +86,22 @@
                 <textarea name="desc" id="desc" cols="25" rows="5" class="input-field"></textarea>
             </div>
             
-            <!-- IN progress -->
             <div class="form-image" id= "test">
             
                 <input type="file" name="pImg" id="pImg" 
                 accept="image/jpg, image/jpeg" required
                 onchange="loadFile(event)" style="display:none"/>
-                <img class="product-img-blank" id="upload-product-img"
+                <img class="product-img-blank" 
+                id="upload-product-img"
                 src="assets/icons8-product-100.png" alt="blank avatar">
-                <div id="image-hover" >
+                <div id="image-hover" onclick="clickUpload()">
                     <img src="assets/image/signupimage/camera.png" alt="blank image">
                 </div>
-                
             </div>
-
+                <p id="file-upload-warn">Please upload a product photo</p>
             
-
             <div class="button-wrapper">
-                <button id="add-product-btn" type="submit">Submit</button>
+                <button onclick="uploadProduct()" id="add-product-btn" type="submit">Submit</button>
             </div>
                         
             

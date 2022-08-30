@@ -69,13 +69,11 @@ document.getElementById("signupPassword").addEventListener("blur", () => {
     document.getElementById("message").style.display = "none"
 })
 
-function confirmPassword() {
+function confirmPasswordE() {
     let password = document.getElementById("signupPassword");
     let confirm = document.getElementById("confirmPassword");
     let password_message = document.getElementById("confirm-message")
     let button = document.getElementById("signup-btn")
-    console.log(password.value)
-    console.log(confirm.value)
     if (confirm.value == password.value) {
         button.disabled  = false;
         password_message.style.display = "none"
@@ -86,5 +84,5 @@ function confirmPassword() {
     }
 }
 
-setInterval(confirmPassword);
+// setInterval(confirmPassword);
 
