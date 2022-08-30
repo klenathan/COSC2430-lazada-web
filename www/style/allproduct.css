@@ -15,7 +15,7 @@ main {
 }
 
 .side-bar {
-    width: 30%;
+    width: 20%;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -42,8 +42,12 @@ main {
 }
 
 .filter-wrapper input {
-    width: 40%;
+    width: 60%;
+    outline: none;
+    height: 1.5rem
 }
+
+
 
 .filter-result-wrapper {
     display: grid;
