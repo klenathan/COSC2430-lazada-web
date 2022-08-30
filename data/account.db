@@ -1,59 +1,66 @@
-
 {
-  "one": {
-    "name": "",
-    "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-    "email": "",
-    "address": "qwsdqwdasd",
-    "accountType": "customer"
-  },
-  "1": {
-    "name": "User 1",
-    "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-    "email": "one@c.a",
-    "address": "Q7, HCM",
-    "accountType": "vendor"
-  },
-  "shipper": {
-    "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-    "name": "Shipper 1",
-    "email": "shipper@shipper.com",
-    "hub": "hub1",
-    "accountType": "shipper",
-    "address": "hub_q7"
-  },
-  "vendor": {
-    "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-    "name": "DucStoner",
-    "email": "vendor@mail.com",
-    "address": "702 Nguyễn Văn Linh",
-    "accountType": "vendor"
-  },
-  "nike": {
-    "name": "Nike Store"
-  },
-  "under_armour": {
-    "name": "Under Armour Store"
-  },
-  "invicta": {
-    "name": "Invicta Store"
-  },
-  "roxy": {
-    "name": "Roxy Store"
-  },
-  "fossil": {
-    "name": "Fossil Store"
-  },
-  "michael_kors": {
-    "name": "Michael Kors Store"
-  },
-  "samsung": {
-    "name": "Samsung Store"
-  },
-  "lowepro": {
-    "name": "Lowepro Store"
-  },
-  "dji_store": {
-    "name": "DJI Store"
-  }
+	"one": {
+		"name": "",
+		"password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+		"email": "",
+		"address": "qwsdqwdasd",
+		"accountType": "customer"
+	},
+	"1": {
+		"name": "User 1",
+		"password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+		"email": "one@c.a",
+		"address": "Q7, HCM",
+		"accountType": "vendor"
+	},
+	"shipper": {
+		"password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+		"name": "Shipper 1",
+		"email": "shipper@shipper.com",
+		"hub": "hub1",
+		"accountType": "shipper",
+		"address": "hub_q7"
+	},
+	"vendor": {
+		"password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+		"name": "DucStoner",
+		"email": "vendor@mail.com",
+		"address": "702 Nguyễn Văn Linh",
+		"accountType": "vendor"
+	},
+	"nike": {
+		"name": "Nike Store"
+	},
+	"under_armour": {
+		"name": "Under Armour Store"
+	},
+	"invicta": {
+		"name": "Invicta Store"
+	},
+	"roxy": {
+		"name": "Roxy Store"
+	},
+	"fossil": {
+		"name": "Fossil Store"
+	},
+	"michael_kors": {
+		"name": "Michael Kors Store"
+	},
+	"samsung": {
+		"name": "Samsung Store"
+	},
+	"lowepro": {
+		"name": "Lowepro Store"
+	},
+	"dji_store": {
+		"name": "DJI Store"
+	},
+	".....": {
+		"password": "fe491574d5376692185e9d9ff42017de0a02ac842bdd7f9de12c7712932b5992",
+		"name": "Dong",
+		"email": null,
+		"address": "ASddasd",
+		"accountType": "vendor",
+		"page": "signupforvendor"
+	}
 }
