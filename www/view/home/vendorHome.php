@@ -22,7 +22,7 @@
 
     <main>
         <h2>Welcome to Seller's page</h2>
-        <button onclick="showAddField()">Add New Product</button>
+        <button class="new-product-btn" onclick="showAddField()">Add New Product</button>
         <div id="blurred-background"></div>
         <form id="new-product-form" class="new-product-form" action="api/newProduct"
             method="post" enctype="multipart/form-data">
