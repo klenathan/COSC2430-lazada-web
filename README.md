@@ -53,17 +53,5 @@ Bui Viet Ha - - 25%
 
 ```
 
-Tóm tắt thấy thíu:
-Validate vendor address mà thằng vendor dc quyền trùng vời thằng custome
-Chưa validate username
-	username: contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters, unique
-Lỗi signup
-Minium length orther field 5 char
-Signout ở my accountpage
-Vendor View my product missing
-Length:
-Add new product name from 10 to 20
-
-
 
 
