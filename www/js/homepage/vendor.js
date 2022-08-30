@@ -17,17 +17,8 @@ function loadFile(event) {
 	image.src = URL.createObjectURL(event.target.files[0]);
 };
 
-
-document.getElementById("upload-product-img").addEventListener("mouseover", () => {
-    document.getElementById("image-hover").style.display = "flex";
-})
-
-document.getElementById("upload-product-img").addEventListener("mouseleave", () => {
-    document.getElementById("image-hover").style.display = "none"
-})
-
-document.getElementById("image-hover").addEventListener("click", () => {
-    clickUpload();
-    console.log("test2")
-})
-
+function uploadProduct() {
+    if (document.getElementById("pImg").value.length == 0) {
+        document.getElementById("file-upload-warn").style.display = "block"
+    }
+}
