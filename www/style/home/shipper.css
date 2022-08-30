@@ -37,23 +37,15 @@ h1{
 }
 
 #exit{
-    position: absolute;
+    position: sticky;
     width: 100%;
     height: 100%;
     z-index: 1;
     text-align: end;
-    /* right: 1; */
-    top: -1;
+    top: 0;
 }
 #exit:hover{
     cursor: pointer;
-}
-#exit img{
-	position: sticky;
-	top: 0;
-	width: 3rem;
-	height: auto;
-	right: -1;
 }
 .order-info{
     flex: 0.5;
@@ -64,11 +56,12 @@ h1{
     top: 0;
 }
 .product-info{
+    padding-top: 0;
     flex: 1;
 }
 .shipper-order-wrapper::-webkit-scrollbar{
     width: 0.25rem;
-    height:calc(fit-content - 2rem);
+    height:fit-content;
 }
 .shipper-order-wrapper::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);

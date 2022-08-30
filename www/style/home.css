@@ -280,10 +280,6 @@ main {
 	display: flex;
 	width: auto;
 	height: max-content;
-	/* border-radius: 50%; */
-	/* overflow: hidden; */
-	padding: -1rem;
-	/* text-align: center; */
 	justify-content: center;
 }
 .category-img img {

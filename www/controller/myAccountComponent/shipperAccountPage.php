@@ -36,6 +36,9 @@ class ShipperAccount
                         </div>
 
                         <div class="product-info">
+                        <div id="exit">
+                            <img onclick='exit("<?php echo $key;?>")'   src="../../assets/exit.jpg" alt="exit">
+                        </div>
                         <?php
                         foreach ($value["cart"] as $k => $v) {
                         ?>
@@ -51,9 +54,7 @@ class ShipperAccount
                         ?>
 
                         </div>
-                        <div id="exit">
-                            <img onclick='exit("<?php echo $key;?>")'   src="../../assets/exit.jpg" alt="exit">
-                        </div>
+                        
                     </div>
                     <?php
             }
