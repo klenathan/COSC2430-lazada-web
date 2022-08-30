@@ -22,13 +22,22 @@
         </a>
     </div>
 
-    <div class="header-mid">
-        <form action="search" method="get">
-            <input name="search" type="text" id="search" 
-            autocomplete="off" placeholder="Search product... ">
-            <input id="submit-btn" type="submit" value="">
-        </form>
-    </div>
+    <?php
+    if (isset($_SESSION["user_detail"])){
+        if (json_decode($_SESSION["user_detail"], true)["accountType"] == "customer") {
+            ?>
+        <div class="header-mid">
+                <form action="search" method="get">
+                    <input name="search" type="text" id="search" 
+                    autocomplete="off" placeholder="Search product... ">
+                    <input id="submit-btn" type="submit" value="">
+                </form>
+            </div>
+            <?php
+        }
+    }
+    
+    ?>
 
     <div class="header-right">
             <?php
