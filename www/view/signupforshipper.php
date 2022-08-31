@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="form-field">
                                     <input type="text" name="username" id="signupUsername"
-                                    placeholder="Username"  
+                                    placeholder="Username" minlength="5"
                                     class="input-field" required>
                                 </div>
                                 <div id="respond-message">
@@ -70,7 +70,8 @@
                                     <label for="signupPassword"><b>Password:</b></label>
                                 </div>
                                 <div class="form-field" >
-                                    <input type="password" name="password" id="signupPassword" placeholder="Password" class="input-field" 
+                                    <input type="password" minlength="8"
+                                    name="password" id="signupPassword" placeholder="Password" class="input-field" 
                                     pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" required>
                                     <div id="message">
                                         <h3>Password must contain the following:</h3>
@@ -88,7 +89,8 @@
                                     <label for="re-password"><b>Retype:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="password" name="confirmPassword" id="confirmPassword" 
+                                    <input type="password" name="confirmPassword" 
+                                    id="confirmPassword" minlength="8"
                                     placeholder="Retype password" class="input-field">
                                 </div>
                                 <div id="confirm-message">

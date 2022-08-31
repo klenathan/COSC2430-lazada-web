@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="form-field">
                                     <input type="text" name="username" id="signupUsername"
-                                    placeholder="Username"  
+                                    placeholder="Username" minlength="5"
                                     class="input-field" required>
                                 </div>
                                 <div id="respond-message">
@@ -73,6 +73,7 @@
                                 </div>
                                 <div class="form-field">
                                     <input type="email" name="email" id="signupEmail"
+                                    minlength="5"
                                     placeholder="Email" class="input-field" required>
                                 </div>
                             </div>
@@ -82,7 +83,8 @@
                                     <label for="signupPassword"><b>Password:</b></label>
                                 </div>
                                 <div class="form-field" >
-                                    <input type="password" name="password" id="signupPassword" placeholder="Password" class="input-field" 
+                                    <input type="password"
+                                    minlength="8" name="password" id="signupPassword" placeholder="Password" class="input-field" 
                                     pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" required>
                                     <div id="message">
                                         <h3>Password must contain the following:</h3>
@@ -100,7 +102,8 @@
                                     <label for="re-password"><b>Retype:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="password" name="confirmPassword" id="confirmPassword" 
+                                    <input type="password"
+                                    minlength="8" name="confirmPassword" id="confirmPassword" 
                                     placeholder="Retype password" class="input-field">
                                 </div>
                                 <div id="confirm-message">
@@ -113,7 +116,9 @@
                                     <label for="name"><b>Name:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" name="name" id="signupName" placeholder="Name" class="input-field">
+                                    <input type="text" name="name" 
+                                    id="signupName" minlength="5"
+                                    placeholder="Name" class="input-field">
                                 </div>
                             </div>
 
@@ -122,7 +127,8 @@
                                     <label for="address"><b>Address:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" name="address" id="signupAddress" placeholder="Address" class="input-field">
+                                    <input type="text" name="address" minlength="5"
+                                     id="signupAddress" placeholder="Address" class="input-field">
                                 </div>
                             </div>
 

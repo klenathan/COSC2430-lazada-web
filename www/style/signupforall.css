@@ -156,7 +156,8 @@ form {
     /* margin-top: 3rem; */
 }
 
-@media screen and (max-width: 1023px){
+
+@media screen and (max-height: 677px){
     .signup {
         /* height: 140vh; */
         height: fit-content;
@@ -234,4 +235,3 @@ form {
         width: 50vw;
     }
 }
-  
