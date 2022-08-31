@@ -82,6 +82,7 @@ h1{
     font-size: 1rem;
     background-color: white;
     border: solid 0.2rem;
+    cursor: pointer;
 }
 .order-total-bill {
     margin-left: 2rem

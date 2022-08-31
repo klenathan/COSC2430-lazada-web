@@ -91,35 +91,35 @@ class Home extends Controller
         <?php
         }
 
-        function getCategory($category)
-        {
-            $data = dataHandle::readToJson($this::$productFile);
-        ?>
-            <section class="product">
-                <div class="product-category">
-                    <h2><?php
-                        echo $category
-                        ?></h2>
-                    <a href="/allproduct"><em>View all product --></em></a>
+    function getCategory($category)
+    {
+        $data = dataHandle::readToJson($this::$productFile);
+    ?>
+        <section class="product">
+            <div class="product-category">
+                <h2><?php
+                    echo $category
+                    ?></h2>
+                <a href="/allproduct"><em>View all product --></em></a>
 
-                </div>
+            </div>
 
-                <div class="productContainer">
-                    <?php
-                    foreach ($data as $key => $value) {
-                        if ($value["category"] != $category) {
-                            continue;
-                        }
-                    ?>
-                        <?php
-                        $this->productCard($key, $value);
-                        ?>
-                    <?php
+            <div class="productContainer">
+                <?php
+                foreach ($data as $key => $value) {
+                    if ($value["category"] != $category) {
+                        continue;
                     }
+                ?>
+                    <?php
+                    $this->productCard($key, $value);
                     ?>
-                </div>
-            </section>
-        <?php
+                <?php
+                }
+                ?>
+            </div>
+        </section>
+    <?php
     }
 
     function getAllProduct()
