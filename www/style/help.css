@@ -16,7 +16,9 @@
 .content h3 {
   font-family: "Josefin Sans", sans-serif;
   color: rgb(118, 31, 118);
+  padding: 1% 0 1% 0;
   font-size: xx-large;
+  border-bottom: 1px dashed #9c9696b4;
 }
 .question {
   display: flex;
@@ -28,7 +30,9 @@
   color: red;
 }
 .question a {
+  padding: 1% 0 1% 0;
   font-size: large;
+  border-bottom: 1px dashed #9c9696b4;
 }
 .contact {
   font-family: "Josefin Sans", sans-serif;
@@ -54,4 +58,12 @@
 }
 .phone {
   margin-right: 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

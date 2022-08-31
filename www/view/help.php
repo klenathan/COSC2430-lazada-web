@@ -27,7 +27,7 @@
             </div>
 
             <div class="question">
-                <h3>Common questions</h3>
+                <h3>Common questions</h3>   <br>
                 <a href="#">[Scamming Alert] Safe shopping with Lazada</a> <br>
                 <a href="#">[Scamming Alert] Lazada fake orders</a><br>
                 <a href="#">[New Members] How to track order's delivery</a><br>
@@ -41,8 +41,8 @@
         <div class="contact">
                 <h3>More information? Be comfortable to contact us !</h3>
                 <div class="contactinfo">
-                    <div class="phone">Phone: 123456789</div>
-                    <div class="mail">Email: Lazada@rmit</div>
+                    <div class="phone"><img class="phoneicon" src="assets/image/phoneicon.png"></img> Phone: 123456789</div>
+                    <div class="mail"><img class="mailicon" src="assets/image/mailicon.png"></img>Email: Lazada@rmit</div>
                 </div>
             </div>
     </main>
