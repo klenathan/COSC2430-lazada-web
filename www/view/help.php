@@ -8,10 +8,10 @@
 
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/home.css">
-    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/help.css">
     
 
-    <title>About Us</title>
+    <title>Supporting Services</title>
 </head>
 
 <body>
@@ -21,8 +21,31 @@
         ?>
     </header>
     <main>
-        
-        </main>
+        <div class="content">
+            <div class="box">
+                <h1> Hello, What can Lazada do to help you?</h1>
+            </div>
+
+            <div class="question">
+                <h3>Common questions</h3>
+                <a href="#">[Scamming Alert] Safe shopping with Lazada</a> <br>
+                <a href="#">[Scamming Alert] Lazada fake orders</a><br>
+                <a href="#">[New Members] How to track order's delivery</a><br>
+                <a href="#">[New Members] How to make purchases</a><br>
+                <a href="#">[Lazada Accounts] Why does my account locked?</a><br>
+            </div>
+
+            
+            
+        </div>    
+        <div class="contact">
+                <h3>More information? Be comfortable to contact us !</h3>
+                <div class="contactinfo">
+                    <div class="phone">Phone: 123456789</div>
+                    <div class="mail">Email: Lazada@rmit</div>
+                </div>
+            </div>
+    </main>
 
 
     <footer>
