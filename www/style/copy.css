@@ -10,8 +10,11 @@
 .content p {
   margin-bottom: 5%;
 }
-.content h4 {
+.content h3 {
   font-family: "Josefin Sans", sans-serif;
   color: rgb(118, 31, 118);
   font-size: x-large;
+}
+.time {
+  font-style: italic;
 }

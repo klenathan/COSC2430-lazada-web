@@ -51,30 +51,30 @@
             $_SESSION["signupAddress"] = $_POST["address"];
         }
 
-        // private static function uploadProfileImage($userid) {
-        //     $target_direction = "assets/image/avatar/";
-        //     $target_file = $target_direction . $userid . "png";
-        //     $imageFile = "assets/image/avatar/";
-        //     $check = False;
+        private static function uploadProfileImage($userid) {
+            $target_direction = "assets/image/avatar/";
+            $target_file = $target_direction . $userid . "png";
+            $imageFile = "assets/image/avatar/";
+            $check = False;
 
-        //     if (!$_FILES["pImg"]["name"] == "") {
-        //         $check = True;
-        //     } else {
-        //         $check = False;
-        //     }
-        //     echo $imageFile = $_FILES["avatar"]["tmp_name"];
+            if (!$_FILES["pImg"]["name"] == "") {
+                $check = True;
+            } else {
+                $check = False;
+            }
+            echo $imageFile = $_FILES["avatar"]["tmp_name"];
 
-        //     if ($check !== false) {
-        //         $imageFile = $_FILES["avatar"]["tmp_name"];
+            if ($check !== false) {
+                $imageFile = $_FILES["avatar"]["tmp_name"];
 
-        //         move_uploaded_file($imageFile, $target_file);
-        //         return $target_file;
-        //     } else {
-        //         $imageFile = "assets/image/signupimage/avatar.png";
-        //         copy($imageFile, $target_file);
-        //         return $target_file;
-        //     }
-        // }
+                move_uploaded_file($imageFile, $target_file);
+                return $target_file;
+            } else {
+                $imageFile = "assets/image/signupimage/avatar.png";
+                copy($imageFile, $target_file);
+                return $target_file;
+            }
+        }
         private static function uploadProfileAvatar($userid) {
             $target_dir = "assets/image/avatar/";
             $target_file = $target_dir . $userid . ".jpg";
