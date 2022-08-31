@@ -24,7 +24,8 @@
         <h2>Welcome to Seller's page</h2>
         <button class="new-product-btn" onclick="showAddField()">Add New Product</button>
         <div id="blurred-background"></div>
-        <form id="new-product-form" class="new-product-form" action="api/newProduct"
+        <form id="new-product-form" class="new-product-form" 
+        action="api/newProduct"
             method="post" enctype="multipart/form-data">
             <div class="x-button">
                 <img src="assets/icons8-xbox-x-50.png" alt="" class="x-button" id="x-button" 
@@ -53,6 +54,7 @@
                     <div class="form-field">
                         <input type="numeber"
                         class="input-field"
+                        name="price"
                         id="price" placeholder="Product price" required>
                     </div>
                 </div>
