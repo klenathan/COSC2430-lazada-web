@@ -51,8 +51,13 @@
                                     <label for="username"><b>Username:</b></label>
                                 </div>
                                 <div class="form-field">
+<<<<<<< HEAD
                                     <input type="text" name="username" 
                                     id="signupUsername" minlength="5"
+=======
+                                    <input type="text" name="username"
+                                    pattern = "^(\d|\w){8,15}$" id="signupUsername"
+>>>>>>> 4b52f9db8d8448b45a97e8ed3b92b4a30d58db33
                                     placeholder="Username"  
                                     class="input-field" required>
                                 </div>
@@ -90,8 +95,13 @@
                                     <label for="re-password"><b>Retype:</b></label>
                                 </div>
                                 <div class="form-field">
+<<<<<<< HEAD
                                     <input type="password" name="confirmPassword" 
                                     id="confirmPassword" minlength="8"
+=======
+                                    <input type="password" name="confirmPassword"
+                                    oninput="confirmPasswordE()" id="confirmPassword" 
+>>>>>>> 4b52f9db8d8448b45a97e8ed3b92b4a30d58db33
                                     placeholder="Retype password" class="input-field">
                                 </div>
                                 <div id="confirm-message">

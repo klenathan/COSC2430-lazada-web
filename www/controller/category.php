@@ -14,6 +14,7 @@ class Category extends Controller {
     public function renderCategory() {
 
         $data = dataHandle::readToJson(Category::$productFile);
+
         foreach ($data as $key => $value) {
             if ($value["category"] == $this->category) {
                 include("view/component/productCard.php");
@@ -23,8 +24,8 @@ class Category extends Controller {
 
 // FOR HEADER ONLY
     public static function getAllCategory(){
-        $categories = array("Arts & Crafts", "Automotive", "Baby", 
-        "Beauty & Personal Care", "Books", "Computers", 
+        $categories = array("Arts and Crafts", "Automotive", "Baby", 
+        "Beauty and Personal Care", "Books", "Computers", 
         "Electronics", "Women Fashion", "Men Fashion", 
         "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
         ?>

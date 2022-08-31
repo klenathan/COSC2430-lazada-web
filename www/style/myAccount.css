@@ -123,7 +123,7 @@
       rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
-.button-wrapper {
+.button-wrapper, .signout {
     height: 12vh;
     width: 100%;
     display: flex;
@@ -131,7 +131,7 @@
     align-items: center;
 }
 
-.edit-profile-button {
+.edit-profile-button, .signout-item {
     border-radius: 25px;
     box-shadow: 0 1px 8px rgb(0 0 0 / 0.8);
     width: 12vw;
@@ -146,8 +146,12 @@
     transition: 0.4s;
     background-color: white;
 }
+.signout-item{
+    width: 13vw;
+    border: solid 0.1rem;
+}
 
-.edit-profile-button:hover {
+.edit-profile-button, .signout-item :hover {
     transform: scale(1.1);
 }
 
@@ -155,6 +159,7 @@
     outline: none;
     border: solid 2px gray;
 }
+
 
 .footer {
     margin: 0
@@ -202,12 +207,15 @@
         /* margin: 4% 0 4% 0; */
     }
     
-    .button-wrapper {
+    .button-wrapper, .signout  {
         height: 16vh;
     }
 
-    .edit-profile-button {
+    .edit-profile-button{
         width: 70vw;
+    }
+    .signout-item{
+        width: 76vw;
     }
 }
 
