@@ -11,6 +11,26 @@ Nguyen Hoang Minh Khoi - - 25%
 
 Bui Viet Ha - - 25%
 
+# Example Accounts
+
+## Shipper
+```js
+username: shipper
+password: Password1!
+```
+
+## Vendor
+```js
+username: vendor
+password: Password1!
+```
+
+## Customer
+```js
+username: customer
+password: Password1!
+```
+
 # Data structure
 
 ## Customer
