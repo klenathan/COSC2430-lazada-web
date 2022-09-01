@@ -56,12 +56,8 @@
                                 </div>
                                 <div class="form-field">
                                     <input type="text" name="username" id="signupUsername"
-<<<<<<< HEAD
-                                    placeholder="Username" minlength="5"
-=======
                                     pattern = "^(\d|\w){8,15}$"
                                     placeholder="Username"  
->>>>>>> 4b52f9db8d8448b45a97e8ed3b92b4a30d58db33
                                     class="input-field" required>
                                 </div>
                                 <div id="respond-message">
@@ -88,16 +84,10 @@
                                     <label for="signupPassword"><b>Password:</b></label>
                                 </div>
                                 <div class="form-field" >
-<<<<<<< HEAD
-                                    <input type="password"
-                                    minlength="8" name="password" id="signupPassword" placeholder="Password" class="input-field" 
-                                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" required>
-=======
                                     <input type="password" name="password" 
                                     
                                     id="signupPassword" placeholder="Password" class="input-field" 
                                     pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,20}" required>
->>>>>>> 4b52f9db8d8448b45a97e8ed3b92b4a30d58db33
                                     <div id="message">
                                         <h3>Password must contain the following:</h3>
                                         <p id="lowercasePassed">At least 1 lower case</p>
@@ -114,14 +104,9 @@
                                     <label for="re-password"><b>Retype:</b></label>
                                 </div>
                                 <div class="form-field">
-<<<<<<< HEAD
-                                    <input type="password"
-                                    minlength="8" name="confirmPassword" id="confirmPassword" 
-=======
                                     <input type="password" name="confirmPassword"
                                     oninput="confirmPasswordE()"
-                                     id="confirmPassword" 
->>>>>>> 4b52f9db8d8448b45a97e8ed3b92b4a30d58db33
+                                     id="confirmPassword"
                                     placeholder="Retype password" class="input-field">
                                 </div>
                                 <div id="confirm-message">
