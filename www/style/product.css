@@ -70,7 +70,7 @@ img {
 .main-img {
   width: 50%;
   height: auto;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   margin-bottom: 0.1rem;
   background-color: white;
 }
@@ -152,14 +152,14 @@ img {
   color: var(--primary-color);
   font-weight: bold;
   cursor: pointer;
-  font-style: none;
+  /* font-style: none; */
   text-decoration: none;
 }
 .product-info-vendor a:hover {
   color: var(--primary-color);
   font-weight: bold;
   cursor: pointer;
-  font-style: none;
+  /* font-style: none; */
   text-decoration: underline;
 }
 

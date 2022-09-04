@@ -35,7 +35,7 @@
 
             <div class="product-page">
                 <div class="product-page-img">
-                    <div class="sub-img-row">
+                    <!-- <div class="sub-img-row">
                         <div class="column"> 
                             <img class="sub-images" src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="<?php $this::$name?>" onload="tabbedImage(this);" onclick="tabbedImage(this);">
                         </div>
@@ -45,9 +45,11 @@
                         <div class="column"> 
                             <img class="sub-images" src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="<?php $this::$name?>" onclick="tabbedImage(this);">
                         </div>
-                    </div>
+                    </div> -->
                     <div class="container">
-                        <img id="expanded" style="width:100%">
+                        <img id="expanded"
+                        src="assets/image/product/<?php echo $_GET["productid"];?>.jpg" alt="<?php $this::$name?>"
+                        style="width:100%">
                         <div id="text">
                     </div>
                 </div>
@@ -59,7 +61,7 @@
                         <p class="product-info-name"><?php echo $this::$productData["name"];?></p>
                         
                         <p class="product-info-price"><?php echo number_format($this::$productData["price"]);?> ₫</p>
-                        <p class="product-info-vendor">Sold by:<?php echo $this::$productData["vendor"];?></p>
+                        <p class="product-info-vendor">Sold by: <?php echo strtoupper($this::$productData["vendor"]);?></p>
                         <p class="product-info-sold">Sold: <?php echo $this::$productData["sold"];?></p>
                         
                         <label class="product-info-quantity" for="quantity">Quantity</label>

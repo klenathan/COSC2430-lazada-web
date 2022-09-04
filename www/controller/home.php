@@ -48,7 +48,9 @@ class Home extends Controller
                         }
                     ?>
                     </div>
-                    <button onclick='disableLink(), addToCart("<?php echo $key?>");' class="add-to-cart-btn" id="buy-quantity" value="1">Add to cart</button>
+                    <button onclick='disableLink(), addToCart("<?php echo $key?>");' class="add-to-cart-btn" id="buy-quantity" value="1">
+                    Add to cart
+                </button>
 
                 </a>
             <?php
@@ -89,35 +91,35 @@ class Home extends Controller
         <?php
         }
 
-        function getCategory($category)
-        {
-            $data = dataHandle::readToJson($this::$productFile);
-        ?>
-            <section class="product">
-                <div class="product-category">
-                    <h2><?php
-                        echo $category
-                        ?></h2>
-                    <a href="/allproduct"><em>View all product --></em></a>
+    function getCategory($category)
+    {
+        $data = dataHandle::readToJson($this::$productFile);
+    ?>
+        <section class="product">
+            <div class="product-category">
+                <h2><?php
+                    echo $category
+                    ?></h2>
+                <a href="/allproduct"><em>View all product --></em></a>
 
-                </div>
+            </div>
 
-                <div class="productContainer">
-                    <?php
-                    foreach ($data as $key => $value) {
-                        if ($value["category"] != $category) {
-                            continue;
-                        }
-                    ?>
-                        <?php
-                        $this->productCard($key, $value);
-                        ?>
-                    <?php
+            <div class="productContainer">
+                <?php
+                foreach ($data as $key => $value) {
+                    if ($value["category"] != $category) {
+                        continue;
                     }
+                ?>
+                    <?php
+                    $this->productCard($key, $value);
                     ?>
-                </div>
-            </section>
-        <?php
+                <?php
+                }
+                ?>
+            </div>
+        </section>
+    <?php
     }
 
     function getAllProduct()
@@ -160,7 +162,7 @@ class Home extends Controller
         <?php
     }
     function getAllCategory(){
-        $categories = array("Arts & Crafts", "Automotive", "Baby", "Beauty & Personal Care", "Books", "Computers", "Electronics", "Women Fashion", "Men Fashion", "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
+        $categories = array("Arts and Crafts", "Automotive", "Baby", "Beauty and Personal Care", "Books", "Computers", "Electronics", "Women Fashion", "Men Fashion", "Home and Kitchen", "Pet supplies", "Sports and Outdoors");
         ?>
         <div class="category-contain">
                 

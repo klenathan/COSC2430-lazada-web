@@ -38,19 +38,19 @@
                         <ul class="tab-body">
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
-                                <p>Lorem ip sum</p>
+                                <p>No charging vendor's fees</p>
                             </li>
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
-                                <p>Lorem ip sum</p>
+                                <p>Enthusiastic support from A to Z</p>
                             </li>
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
-                                <p>Lorem ip sum</p>
+                                <p>Increase sales with regular big promotions</p>
                             </li>
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
-                                <p>Lorem ip sum</p>
+                                <p>No business license required</p>
                             </li>
                         </ul>
                     </div>
@@ -71,19 +71,19 @@
                         <ul class="tab-body">
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
-                                <p>Lorem ip sum</p>
+                                <p>Frequent promotions</p>
                             </li>
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
-                                <p>Lorem ip sum</p>
+                                <p>Guarantee affordable and competitive prices</p>
                             </li>
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
-                                <p>Lorem ip sum</p>
+                                <p>Guarantee product's quality</p>
                             </li>
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
-                                <p>Lorem ip sum</p>
+                                <p>Customer care at its finest</p>
                             </li>
                         </ul>
                     </div>
@@ -104,19 +104,23 @@
                         <ul class= "tab-body">
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
-                                <p>Lorem ip sum</p>
+                                <p>Be your own boss</p>
                             </li>
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
-                                <p>Lorem ip sum</p>
+                                <p>Reliable earnings</p>
                             </li>
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
-                                <p>Lorem ip sum</p>
+                                <p>Serving you always</p>
                             </li>
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
-                                <p>Lorem ip sum</p>
+                                <p>Rewarding for loyal partners</p>
+                            </li>
+                            <li>
+                                <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
+                                <p>Improving drivers/riders safety</p>
                             </li>
                         </ul>
                     </div>

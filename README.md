@@ -2,8 +2,34 @@
 
 ---
 
-# GROUP MEMBER
+# GROUP MEMBER AND CONTRIBUTION
+Nam Thai Tran - s3891890 - 25% 
 
+Pham Vo Dong - s3891968 - 25%
+
+Nguyen Hoang Minh Khoi - - 25%
+
+Bui Viet Ha - - 25%
+
+# Example Accounts
+
+## Shipper
+```js
+username: shipper
+password: Password1!
+```
+
+## Vendor
+```js
+username: vendor
+password: Password1!
+```
+
+## Customer
+```js
+username: customer
+password: Password1!
+```
 
 # Data structure
 

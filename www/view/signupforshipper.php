@@ -53,7 +53,8 @@
                                     <label for="username"><b>Username:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" name="username" id="signupUsername"
+                                    <input type="text" name="username"
+                                    pattern = "^(\d|\w){8,15}$" id="signupUsername"
                                     placeholder="Username"  
                                     class="input-field" required>
                                 </div>
@@ -71,7 +72,7 @@
                                 </div>
                                 <div class="form-field" >
                                     <input type="password" name="password" id="signupPassword" placeholder="Password" class="input-field" 
-                                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" required>
+                                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,20}" required>
                                     <div id="message">
                                         <h3>Password must contain the following:</h3>
                                         <p id="lowercasePassed">At least 1 lower case</p>
@@ -88,7 +89,8 @@
                                     <label for="re-password"><b>Retype:</b></label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="password" name="confirmPassword" id="confirmPassword" 
+                                    <input type="password" name="confirmPassword"
+                                    oninput="confirmPasswordE()" id="confirmPassword" 
                                     placeholder="Retype password" class="input-field">
                                 </div>
                                 <div id="confirm-message">
