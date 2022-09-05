@@ -1,5 +1,5 @@
 <?php
-class CpyRight extends Controller {
+class CopyRight extends Controller {
     
 }
 ?>
