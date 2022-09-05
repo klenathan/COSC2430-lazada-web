@@ -165,7 +165,7 @@ third parties to whom disclosure by us is for one or more of the Purposes and su
 
             <br><br><b> > 13.1.1</b> You may withdraw your consent for the collection, use and/or disclosure and/or request deletion of your personal data in our possession or under our control by sending an email to our Personal Data Protection Officer at dpo.sg@Lazada.com, and we will process such requests in accordance with this Privacy Policy and our obligations under the Privacy Laws and other applicable law. However, your withdrawal of consent may mean that we will not be able to continue providing the Services to you and we may need to terminate your existing relationship and/or the contract you have with us.
 
-            <br><br><b> > 13.1.2</b> Where you share YouTube Content, in addition to withdrawing your consent by emailing us pursuant to Section 13.1.1, you may also revoke Lazada's access to your personal data via the Google security settings page at https://security.google.com/settings/security/permissions
+            <br><br><b> > 13.1.2</b> Where you share YouTube Content, in addition to withdrawing your consent by emailing us pursuant to Section 13.1.1, you may also revoke Lazada's access to your personal data via the Google security settings page at <a href="https://security.google.com/settings/security/permissions" class="link">here</a>
 
 
             <br><br><b>  13.2</b> Requesting Access to or Correction of Personal Data
