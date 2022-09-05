@@ -22,8 +22,8 @@
     </header>
     <main>
         <div class="content">
-            <h1>Copyright Notice !</h1>
-            <p class="time">© 2022 Lazada. All rights reserved.</p> <br>
+            <h1>Copyright Notice </h1>
+            <p class="time">© 2022 Lazada. All rights reserved.</p> 
             <h3> Statement/Declaration of Rights </h3> <br>
             <p> Subject to the provisions of this notice, this website and all its content, information, or material is the copyright of Lazada, together with its licensors. Accordingly, your use of our website or its services does not constitute any license to use the copyright in our website. <br><br> 
 Except to the extent permitted by the applicable copyright law or Lazada, any form of use, reproduction, or redistribution of part of all of the content, information, or material on this website in any form is hereby prohibited. <br> <br> 

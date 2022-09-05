@@ -22,7 +22,7 @@ main {
 }
 
 .cart-container {
-  border: 10px solid black;
+  border: 0 solid black;
   background: white;
   margin: 2rem 0;
   padding: 1rem;

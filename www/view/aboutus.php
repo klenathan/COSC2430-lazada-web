@@ -71,7 +71,7 @@
                         <img src ="assets/image/vietnam.png"> <br>
                         <p>Viet Nam</p>
                     </div>
-                    <div class=""> 
+                    <div class="specific"> 
                         <img src ="assets/image/vietnam.png"> <br>
                         <p>Viet Nam</p>
                     </div>
