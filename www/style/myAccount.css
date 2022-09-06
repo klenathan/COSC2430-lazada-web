@@ -81,7 +81,9 @@
 
 .info-wrapper {
     border-radius: 16px;
-    width: fit-content;
+    /* width: 80%; */
+    /* max-width: 1188px; */
+    margin: 0;
     height: fit-content;
     /* background-color: white; */
     display: flex;
@@ -93,21 +95,22 @@
 .info-wrapper form {
     display: flex;
     flex-direction: column;
-    padding: 2vw;
+    padding: 2rem;
 }
 
 .info-row {
     height: 4vh;
+    width: max-content;
     display: flex;
     flex-direction: row;
     margin: 4% 0 4% 0;
 }
 
 .info-label {
-    width: 8vw;
+    width: 8rem;
 }
 .username-field {
-    width: 16vw;
+    flex: 1
 }
 
 .input-field {

@@ -1,74 +1,31 @@
 {
-	"one": {
-		"name": "Dong",
-		"password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-		"email": "",
-		"address": "qwsdqwdasd",
-		"accountType": "customer"
-	},
-	"1": {
-		"name": "User 1",
-		"password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-		"email": "one@c.a",
-		"address": "Q7, HCM",
-		"accountType": "vendor"
-	},
-	"shipper": {
-		"password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-		"name": "Shipper 1",
-		"email": "shipper@shipper.com",
-		"hub": "hub1",
-		"accountType": "shipper",
-		"address": "hub_q7"
-	},
-	"vendor": {
-		"password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-		"name": "DucStoner",
-		"email": "vendor@mail.com",
-		"address": "702 Nguyễn Văn Linh",
-		"accountType": "vendor"
-	},
-	"nike": {
-		"name": "Nike Store"
-	},
-	"under_armour": {
-		"name": "Under Armour Store"
-	},
-	"invicta": {
-		"name": "Invicta Store"
-	},
-	"roxy": {
-		"name": "Roxy Store"
-	},
-	"fossil": {
-		"name": "Fossil Store"
-	},
-	"michael_kors": {
-		"name": "Michael Kors Store"
-	},
-	"samsung": {
-		"name": "Samsung Store"
-	},
-	"lowepro": {
-		"name": "Lowepro Store"
-	},
-	"dji_store": {
-		"name": "DJI Store"
-	},
-	"one12344": {
-		"password": "df86714fc534e90b5ffa0726164516b16f207e7fb20a3b823be218c26c789f03",
-		"name": "asd asd",
-		"email": "aod@mkodas.c",
-		"address": "asd",
-		"accountType": "customer",
-		"page": "signupforcustomer"
-	},
-	"test123456": {
-		"password": "658fe8629091cc226477b4fe1578acb5600e7637a9cb4c8deedb5d7750ff4a1b",
-		"name": "Me",
-		"email": "aasdsds@gmail.com",
-		"address": "idontknow",
-		"accountType": "customer",
-		"page": "signupforcustomer"
-	}
+  "one": {
+    "name": "Dong",
+    "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+    "email": "",
+    "address": "Q7, HCM",
+    "accountType": "customer"
+  },
+  "customer": {
+    "name": "Example Customer",
+    "password": "1d707811988069ca760826861d6d63a10e8c3b7f171c4441a6472ea58c11711b",
+    "email": "customer@mail.com",
+    "address": "702 Nguyen Van Linh",
+    "accountType": "customer"
+  },
+  "shipper": {
+    "password": "1d707811988069ca760826861d6d63a10e8c3b7f171c4441a6472ea58c11711b",
+    "name": "Shipper 1",
+    "email": "shipper@shipper.com",
+    "hub": "hub1",
+    "accountType": "shipper",
+    "address": "hub_q7"
+  },
+  "vendor": {
+    "password": "1d707811988069ca760826861d6d63a10e8c3b7f171c4441a6472ea58c11711b",
+    "name": "Vendor",
+    "email": "vendor@mail.com",
+    "address": "702 Nguyễn Văn Linh",
+    "accountType": "vendor"
+  }
 }

@@ -57,7 +57,7 @@
                                 <div class="form-field">
                                     <input type="text" name="username" id="signupUsername"
                                     pattern = "^(\d|\w){8,15}$"
-                                    placeholder="Username"  
+                                    placeholder="Username (8 to 15 characters)"  
                                     class="input-field" required>
                                 </div>
                                 <div id="respond-message">
