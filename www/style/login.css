@@ -140,7 +140,8 @@ html {
   border: none;
   border-radius: 10px;
   transition: 1s ease-in-out;
-  background-color: rgb(185, 128, 250);
+  box-shadow: 0 1px 8px rgb(0 0 0 / 80%);
+
 }
 
 #login-btn:hover {

@@ -15,3 +15,10 @@
   color: rgb(118, 31, 118);
   font-size: x-large;
 }
+.link {
+  color: red;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+}
