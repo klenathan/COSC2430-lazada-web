@@ -1,41 +1,41 @@
 # COSC2430 LAZADA REPLICA WEB APPLICATION
 
----
 
-# GROUP MEMBER AND CONTRIBUTION
+===============================================
+======== GROUP MEMBER AND CONTRIBUTION ========
+
 Nam Thai Tran - s3891890 - 25% 
 
 Pham Vo Dong - s3891968 - 25%
 
 Nguyen Hoang Minh Khoi - s3759804 - 25%
 
-Bui Viet Ha - - 25%
+Bui Viet Ha - s3928433 - 25%
 
-# Example Accounts
+================================================
+=============== Example Accounts ===============
 
-## Shipper
-```js
+============= Shipper =============
+
 username: shipper
 password: Password1!
-```
 
-## Vendor
-```js
+
+============= Vendor =============
+
 username: vendor
 password: Password1!
-```
 
-## Customer
-```js
+
+============= Customer =============
+
 username: customer
 password: Password1!
-```
 
-# Data structure
+================================================
+================ Data structure ================
 
-## Customer
-
-```json
+================ Customer ================
 {
     "customer": {
         "password":"hashed_password",
@@ -46,10 +46,8 @@ password: Password1!
     }
 }
 
-```
-## Shipper
 
-```json
+================ Shipper ================
 {
     "shipper": {
         "password":"hashed_password",
@@ -60,10 +58,8 @@ password: Password1!
     }
 }
 
-```
-## Vendor
 
-```json
+================ Vendor ================
 {
     "vendor": {
         "password":"hashed_password",
@@ -73,8 +69,3 @@ password: Password1!
         "accountType": "vendor"
     }
 }
-
-```
-
-
-
