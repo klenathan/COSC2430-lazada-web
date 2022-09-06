@@ -7,7 +7,7 @@ Nam Thai Tran - s3891890 - 25%
 
 Pham Vo Dong - s3891968 - 25%
 
-Nguyen Hoang Minh Khoi - - 25%
+Nguyen Hoang Minh Khoi - s3759804 - 25%
 
 Bui Viet Ha - - 25%
 
