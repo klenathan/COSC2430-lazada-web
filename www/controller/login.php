@@ -14,7 +14,7 @@ class Login extends Controller {
             header("location: /");
         } elseif ($loginStatus == "wrong_password"){
             $_SESSION["loginUsername"] = $_POST["username"];
-            $_SESSION["err_name"] = "Wrong password". $_POST["password"];
+            $_SESSION["err_name"] = "Wrong password";
             header("location: /login");
         } elseif ($loginStatus == "wrong_username"){
             $_SESSION["loginUsername"] = $_POST["username"];
