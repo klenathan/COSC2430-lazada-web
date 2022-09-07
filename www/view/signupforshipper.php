@@ -105,9 +105,9 @@
                                 <div class="form-field" id="distribution-hub">
                                     <!-- <input type="password" name="re-password" id="shipper-signup-re-password" placeholder="Retype password" class="input-field"> -->
                                     <select name="hub" class="input-field">
-                                        <option value="hub 1">Hub 1</option>
-                                        <option value="hub 2">Hub 2</option>
-                                        <option value="hub 3">Hub 3</option>
+                                        <option value="hub1">Hub 1</option>
+                                        <option value="hub2">Hub 2</option>
+                                        <option value="hub3">Hub 3</option>
                                     </select>
                                 </div>
                             </div>
