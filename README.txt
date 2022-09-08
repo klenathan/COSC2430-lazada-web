@@ -1,5 +1,9 @@
 # COSC2430 LAZADA REPLICA WEB APPLICATION
 
+===============================================
+============= DEMONSTRATION VIDEO =============
+
+https://youtu.be/o8Rp6Yluw0I
 
 ===============================================
 ======== GROUP MEMBER AND CONTRIBUTION ========
