@@ -58,7 +58,6 @@ function checkPassword (passwordInput) {
 
 document.getElementById("signupPassword").addEventListener("input", () => {
     checkPassword(signupPassword.value);
-    // document.getElementById("message").style.display = "block";
 })
 
 document.getElementById("signupPassword").addEventListener("focus", () => {
@@ -83,6 +82,4 @@ function confirmPasswordE() {
         password_message.style.display = "block"
     }
 }
-
-// setInterval(confirmPassword);
 

@@ -26,7 +26,7 @@ class MyAccount extends Controller {
         <form action="api/editCustomerProfile" enctype="multipart/form-data" action="api/editCustomerProfile"
             method="post">
             <div class="profile-img">
-                <input type="file" id="avtImg" name="avatar" onchange="loadFile(event)" style="display:none" />
+                <input type="file" id="avtImg" name="avatar" onchange="loadFile(event)" />
                 <img class="avatar-image" id="avatar" src="assets/image/avatar/<?php echo $key?>.jpg"
                     alt="blank avatar">
                 <div id="image-hover" onclick="clickUpload()">
@@ -88,7 +88,7 @@ class MyAccount extends Controller {
         <form action="api/editCustomerProfile" enctype="multipart/form-data" action="api/editCustomerProfile"
             method="post">
             <div class="profile-img">
-                <input type="file" id="avtImg" name="avatar" onchange="loadFile(event)" style="display:none" />
+                <input type="file" id="avtImg" name="avatar" onchange="loadFile(event)" />
                 <img class="avatar-image" id="avatar" src="assets/image/avatar/<?php echo $key?>.jpg"
                     alt="blank avatar">
                 <div id="image-hover" onclick="clickUpload()">
@@ -149,7 +149,7 @@ class MyAccount extends Controller {
         <form action="api/editCustomerProfile" enctype="multipart/form-data" action="api/editCustomerProfile"
             method="post">
             <div class="profile-img">
-                <input type="file" id="avtImg" name="avatar" onchange="loadFile(event)" style="display:none" />
+                <input type="file" id="avtImg" name="avatar" onchange="loadFile(event)"  />
                 <img class="avatar-image" id="avatar" src="assets/image/avatar/<?php echo $key?>.jpg"
                     alt="blank avatar">
                 <div id="image-hover" onclick="clickUpload()">

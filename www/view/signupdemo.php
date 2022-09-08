@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/signupDemo.css">
     <link rel="stylesheet" href="style/style.css">
-    <!-- <link rel="stylesheet" href="style/home.css"> -->
     <script src="js/signupClickable.js"></script>
     <title>Signup</title>
 </head>
@@ -34,7 +33,6 @@
                     </div>
                     
                     <div class="main-content" >
-                        <!-- <img src="assets/image/signupimage/handshake.png" alt="icon" class="tab-img"> -->
                         <ul class="tab-body">
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
@@ -59,7 +57,6 @@
                             Join us now!
                         </a>
                     </div>
-                    <!-- <div class="hidden-tab" id="vendor-tab"></div> -->
                 </div>
                 <div class="tab" id="customer-tab">
                     <div class="tab-heading">
@@ -67,7 +64,6 @@
                     </div>
                     <div class="main-content">
                         
-                        <!-- <img src="assets/image/signupimage/client.png" alt="icon" class="tab-img"> -->
                         <ul class="tab-body">
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">
@@ -92,7 +88,7 @@
                             Join us now!
                         </a>
                     </div>
-                    <!-- <div class="hidden-tab" id="customer-tab"></div> -->
+    
                 </div>
                 <div class="tab" id="shipper-tab">
                     <div class="tab-heading">
@@ -100,7 +96,7 @@
                     </div>
                     <div class="main-content">
                         
-                        <!-- <img src="assets/image/signupimage/delivery_person.png" alt="icon" class="tab-img"> -->
+                        
                         <ul class= "tab-body">
                             <li>
                                 <img src="assets/image/signupimage/tick_box.png" alt="" class="tick">

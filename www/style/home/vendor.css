@@ -180,7 +180,6 @@ h2 {
 .vendor-product-info {
     display: flex;
     flex-direction: column;
-    /* width: 90%; */
 }
 
 .vendor-product-info p {
@@ -188,9 +187,7 @@ h2 {
 }
 
 .vendor-product-name {
-    /* width: 90%; */
     font-weight: bold;
-    /* height: 2rem; */
     white-space: nowrap;
     word-break: break-word;
     overflow: hidden;
