@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/signupforall.css">
     <title>Sign up for Shipper</title>
-    <!-- <script src="js/signupClickable.js"></script> -->
     <script src="js/changeImageHover.js" defer></script>
     <script src="js/updateProfileImg.js" defer></script>
     <script src="js/passwordCheck.js" defer></script>
@@ -40,7 +39,7 @@
                             <div class="form-row avatar">
                                 <input type="file" id="avtImg"
                                 name="avatar"
-                                onchange="loadFile(event)" style="display:none"/> 
+                                onchange="loadFile(event)"/> 
                                 <img class="avatar-image" id="avatar" 
                                 src="assets/image/avatar/default.jpeg" alt="blank avatar" >
                                 <div id="image-hover"  onclick="clickUpload()" >

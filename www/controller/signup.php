@@ -49,7 +49,6 @@ class Signup extends Controller {
         $data = array(
             "password"=>hash("sha256", $_POST["password"]),
             "name"=>$_POST["name"],
-            // "email"=>$_POST["email"],
             "hub"=>$_POST["hub"],
             "accountType"=>"shipper",
             "page" => "signupforshipper"
@@ -112,7 +111,6 @@ class Signup extends Controller {
     private static function uploadProfileAvatar($userid) {
         $target_dir = "assets/image/avatar/";
         $target_file = $target_dir . $userid . ".jpg";
-        // $target_file = $userid . ".jpg";
         $imageFile = "assets/image/avatar/";
         $check = False;
 
@@ -125,7 +123,6 @@ class Signup extends Controller {
 
         if($check !== false) {
             $imageFile = $_FILES["avatar"]["tmp_name"];
-            // echo $
             move_uploaded_file($imageFile, $target_file);
             return $target_file;
         } 

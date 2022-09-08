@@ -38,7 +38,7 @@
                             <div class="form-row avatar">
                                 <input type="file" id="avtImg"
                                 name="avatar"
-                                onchange="loadFile(event)" style="display:none"/> 
+                                onchange="loadFile(event)"/> 
                                 <img class="avatar-image" id="avatar" 
                                 src="assets/image/avatar/default.jpeg" alt="blank avatar" >
                                 <div id="image-hover"  onclick="clickUpload()" >
