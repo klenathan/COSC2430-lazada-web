@@ -65,7 +65,6 @@
                     </div>
                     <select name="category" id="category">
                         <?php
-                        // Lazy code :(
                         $category = array("Arts & Crafts", "Automotive", "Baby", 
                         "Beauty & Personal Care", "Books", "Computers", 
                         "Electronics", "Women's Fashion", "Men's Fashion", 
